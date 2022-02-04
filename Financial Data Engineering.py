@@ -9,14 +9,19 @@ import sklearn.ensemble
 from pyspark import SparkFiles
 from pyspark import SparkContext
 from pyspark.sql import functions
-from pyspark.sql.functions import avg, col, udf
+import pyspark.sql.functions #import avg, col, udf
 from pyspark.sql import SQLContext
 from pyspark.sql import DataFrame
 from pyspark.sql.types import *
-#import pyspark as ps
-import requests
 
 import json
+import urllib3
+import chardet
+
+#import urllib.request
+#import chardet
+#from urllib.parse import unquote
+import requests
 
 
 # COMMAND ----------
@@ -25,47 +30,18 @@ sc = spark.sparkContext
 
 # COMMAND ----------
 
-headers = {
-    'Content-Type': 'application/csv'
-}
+"""
 
-url_spy = "https://api.tiingo.com/tiingo/daily/spy/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
-df_spy=pandas.read_csv(url_spy)
+#Tiingo SPY
+urlfile_spy = requests.get("https://api.tiingo.com/tiingo/daily/spy/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily")
 
-url_xlb = "https://api.tiingo.com/tiingo/daily/xlb/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
-df_xlb=pandas.read_csv(url_xlb)
+csv_rdd = sc.parallelize(urlfile_spy)
 
-url_xlv = "https://api.tiingo.com/tiingo/daily/xlv/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
-df_xlv=pandas.read_csv(url_xlv)
+df_spy_csv_rdd = spark.read.csv(csv_rdd)
 
-url_xlc = "https://api.tiingo.com/tiingo/daily/xlc/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
-df_xlc = pandas.read_csv(url_xlc)
+display(df_spy_csv_rdd)
 
-url_xlk = "https://api.tiingo.com/tiingo/daily/xlk/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
-df_xlk = pandas.read_csv(url_xlk)
-
-url_xlf = "https://api.tiingo.com/tiingo/daily/xlf/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
-df_xlf = pandas.read_csv(url_xlf)
-
-url_xlp = "https://api.tiingo.com/tiingo/daily/xlp/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
-df_xlp = pandas.read_csv(url_xlp)
-
-url_xli = "https://api.tiingo.com/tiingo/daily/xli/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
-df_xli = pandas.read_csv(url_xli)
-
-url_xlu = "https://api.tiingo.com/tiingo/daily/xlu/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
-df_xlu = pandas.read_csv(url_xlu)
-
-url_xly = "https://api.tiingo.com/tiingo/daily/xly/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
-df_xly = pandas.read_csv(url_xly)
-
-url_xlre = "https://api.tiingo.com/tiingo/daily/xlre/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
-df_xlre = pandas.read_csv(url_xlre)
-
-url_xle = "https://api.tiingo.com/tiingo/daily/xle/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
-df_xle = pandas.read_csv(url_xle)
-
-df_xle
+"""
 
 # COMMAND ----------
 
@@ -73,8 +49,6 @@ df_xle
 spy_url ="https://api.tiingo.com/tiingo/daily/spy/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
 
 df_spy = spark.createDataFrame(pd.read_csv(spy_url))
-
-display(df_spy)
 
 #Tiingo XLB
 xlb_url ="https://api.tiingo.com/tiingo/daily/xlb/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
@@ -125,15 +99,56 @@ df_xly = spark.createDataFrame(pd.read_csv(xly_url))
 xlre_url ="https://api.tiingo.com/tiingo/daily/xlre/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
 
 df_xlre = spark.createDataFrame(pd.read_csv(xlre_url))
+display(df_xlre)
 
 #Tiingo XLE
 xle_url ="https://api.tiingo.com/tiingo/daily/xle/prices?startDate=2005-1-1&endDate=2021-12-31&token=ff008f598182931d7eb1f0b03600aebb4feeb732&format=csv&resampleFreq=daily"
 
 df_xle = spark.createDataFrame(pd.read_csv(xle_url))
 
+#CBOE VIX
+vix_url ="https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+
+df_vix = spark.createDataFrame(pd.read_csv(vix_url))
+
+#US Daily News Index
+#Reference: https://www.policyuncertainty.com/us_monthly.html
+all_daily_policy_data_url ="https://www.policyuncertainty.com/media/All_Daily_Policy_Data.csv"
+
+df_all_daily_policy_data = spark.createDataFrame(pd.read_csv(all_daily_policy_data_url))
+
 # COMMAND ----------
 
-#Rename SPY columns
+
+#Detect encoding type
+"""
+
+ads_url = "https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7"
+
+rawdata = urllib.request.urlopen(ads_url).read()
+
+chardet.detect(rawdata)
+
+"""
+
+# COMMAND ----------
+
+#Create Dataframe for .xlsx URL data
+
+#Aruoba-Diebold-Scotti Business Conditions Index (ADS)
+ads_url = "https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7"
+
+ads_url_r = requests.get(ads_url)
+#open('ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7', 'wb').write(ads_url_r.content)
+
+df_ads = spark.createDataFrame(pd.read_excel('ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7'))
+display(df_ads)
+
+# COMMAND ----------
+
+#Reference: https://sparkbyexamples.com/spark/rename-a-column-on-spark-dataframes/
+
+
 #Rename SPY columns
 df_spy_new = df_spy.withColumnRenamed("close", "spy_close").withColumnRenamed("high", "spy_high").withColumnRenamed("low", "spy_low").withColumnRenamed("open", "spy_open").withColumnRenamed("volume", "spy_volume").withColumnRenamed("adjClose", "spy_adjClose").withColumnRenamed("adjHigh", "spy_adjHigh").withColumnRenamed("adjLow", "spy_adjLow").withColumnRenamed("adjOpen", "spy_adjOpen").withColumnRenamed("adjVolume", "spy_adjVolume").withColumnRenamed("divCash", "spy_divCash").withColumnRenamed("splitFactor", "spy_splitFactor")
 
@@ -169,15 +184,47 @@ df_xly_new = df_xly.withColumnRenamed("close", "xly_close").withColumnRenamed("h
 #Rename XLRE columns
 df_xlre_new = df_xlre.withColumnRenamed("close", "xlre_close").withColumnRenamed("high", "xlre_high").withColumnRenamed("low", "xlre_low").withColumnRenamed("open", "xlre_open").withColumnRenamed("volume", "xlre_volume").withColumnRenamed("adjClose", "xlre_adjClose").withColumnRenamed("adjHigh", "xlre_adjHigh").withColumnRenamed("adjLow", "xlre_adjLow").withColumnRenamed("adjOpen", "xlre_adjOpen").withColumnRenamed("adjVolume", "xlre_adjVolume").withColumnRenamed("divCash", "xlre_divCash").withColumnRenamed("splitFactor", "xlre_splitFactor")
 
+display(df_xlre_new)
+print(df_xlre_new.select("date").dtypes)
+
 #Rename XLE columns
 df_xle_new = df_xle.withColumnRenamed("close", "xle_close").withColumnRenamed("high", "xle_high").withColumnRenamed("low", "xle_low").withColumnRenamed("open", "xle_open").withColumnRenamed("volume", "xle_volume").withColumnRenamed("adjClose", "xle_adjClose").withColumnRenamed("adjHigh", "xle_adjHigh").withColumnRenamed("adjLow", "xle_adjLow").withColumnRenamed("adjOpen", "xle_adjOpen").withColumnRenamed("adjVolume", "xle_adjVolume").withColumnRenamed("divCash", "xle_divCash").withColumnRenamed("splitFactor", "xle_splitFactor")
+
+#Rename CBOE VIX columns
+df_vix_new = df_vix.withColumnRenamed("DATE", "date").withColumnRenamed("CLOSE", "vix_close").withColumnRenamed("HIGH", "vix_high").withColumnRenamed("LOW", "vix_low").withColumnRenamed("OPEN", "vix_open")
+
+#Rename Aruoba-Diebold-Scotti Business Conditions Index (ADS) columns
+df_ads_new = df_ads.withColumnRenamed("Unnamed: 0", "date").withColumnRenamed("ADS_Index", "ads_close")
+display(df_ads_new)
+
+print(df_ads_new.select("date").dtypes)
+
+
 
 # COMMAND ----------
 
 #Combine ETFs Columns
 
-#import pyspark.sql.functions 
+combine_etf_columns = df_spy_new.join(df_xlb_new, ['date'], how='full').join(df_xlv_new, ['date'], how='full').join(df_xlc_new, ['date'], how='full').join(df_xlk_new, ['date'], how='full').join(df_xlf_new, ['date'], how='full').join(df_xlp_new, ['date'], how='full').join(df_xli_new, ['date'], how='full').join(df_xlu_new, ['date'], how='full').join(df_xly_new, ['date'], how='full').join(df_xle_new, ['date'], how='full').join(df_xlre_new, ['date'], how='full')
 
-combine_etf_columns = df_spy_new.join(df_xlb_new, ['date'], how='full').join(df_xlv_new, ['date'], how='full').join(df_xlc_new, ['date'], how='full').join(df_xlk_new, ['date'], how='full').join(df_xlf_new, ['date'], how='full').join(df_xlp_new, ['date'], how='full').join(df_xli_new, ['date'], how='full').join(df_xlu_new, ['date'], how='full').join(df_xly_new, ['date'], how='full').join(df_xlre_new, ['date'], how='full').join(df_xle_new, ['date'], how='full')
+display(combine_etf_columns)
 
-display(combine_columns)
+# COMMAND ----------
+
+df_spy_new.write.format("delta").mode("overwrite").saveAsTable("spy_delta")
+df_xlb_new.write.format("delta").mode("overwrite").saveAsTable("xlb_delta")
+df_xlv_new.write.format("delta").mode("overwrite").saveAsTable("xlv_delta")
+df_xlc_new.write.format("delta").mode("overwrite").saveAsTable("xlc_delta")
+df_xlk_new.write.format("delta").mode("overwrite").saveAsTable("xlk_delta")
+df_xlf_new.write.format("delta").mode("overwrite").saveAsTable("xlf_delta")
+df_xlp_new.write.format("delta").mode("overwrite").saveAsTable("xlp_delta")
+df_xli_new.write.format("delta").mode("overwrite").saveAsTable("xli_delta")
+df_xlu_new.write.format("delta").mode("overwrite").saveAsTable("xlu_delta")
+df_xly_new.write.format("delta").mode("overwrite").saveAsTable("xly_delta")
+df_xlre_new.write.format("delta").mode("overwrite").saveAsTable("xlre_delta")
+df_xle_new.write.format("delta").mode("overwrite").saveAsTable("xle_delta")
+df_xle_new.write.format("delta").mode("overwrite").saveAsTable("xle_delta")
+
+
+#spark.sql("select * from xle_delta").show()
+display(spark.sql('DESCRIBE xle_delta'))
