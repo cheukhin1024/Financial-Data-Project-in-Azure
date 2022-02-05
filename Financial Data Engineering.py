@@ -139,7 +139,7 @@ chardet.detect(rawdata)
 ads_url = "https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7"
 
 ads_url_r = requests.get(ads_url)
-#open('ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7', 'wb').write(ads_url_r.content)
+open('ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7', 'wb').write(ads_url_r.content)
 
 df_ads = spark.createDataFrame(pd.read_excel('ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7'))
 display(df_ads)
@@ -199,15 +199,16 @@ display(df_ads_new)
 
 print(df_ads_new.select("date").dtypes)
 
-
-
 # COMMAND ----------
 
 #Combine ETFs Columns
+#Reference: https://sparkbyexamples.com/pyspark/pyspark-join-explained-with-examples/
 
-combine_etf_columns = df_spy_new.join(df_xlb_new, ['date'], how='full').join(df_xlv_new, ['date'], how='full').join(df_xlc_new, ['date'], how='full').join(df_xlk_new, ['date'], how='full').join(df_xlf_new, ['date'], how='full').join(df_xlp_new, ['date'], how='full').join(df_xli_new, ['date'], how='full').join(df_xlu_new, ['date'], how='full').join(df_xly_new, ['date'], how='full').join(df_xle_new, ['date'], how='full').join(df_xlre_new, ['date'], how='full')
+df_combine_etf_columns = df_spy_new.join(df_xlb_new, ['date'], "full").join(df_xlv_new, ['date'], "full").join(df_xlc_new, ['date'], "full").join(df_xlk_new, ['date'], "full").join(df_xlf_new, ['date'], "full").join(df_xlp_new, ['date'], "full").join(df_xli_new, ['date'], "full").join(df_xlu_new, ['date'], "full").join(df_xly_new, ['date'], "full").join(df_xlre_new, ['date'], "full").join(df_xle_new, ['date'], "full")
 
-display(combine_etf_columns)
+df_combine_etf_columns_new = df_combine_etf_columns.sort("date")
+
+display(df_combine_etf_columns_new.tail(100))
 
 # COMMAND ----------
 
@@ -225,6 +226,8 @@ df_xlre_new.write.format("delta").mode("overwrite").saveAsTable("xlre_delta")
 df_xle_new.write.format("delta").mode("overwrite").saveAsTable("xle_delta")
 df_xle_new.write.format("delta").mode("overwrite").saveAsTable("xle_delta")
 
+df_vix_new.write.format("delta").mode("overwrite").saveAsTable("vix_delta")
+df_ads_new.write.format("delta").mode("overwrite").saveAsTable("ads_delta")
 
 #spark.sql("select * from xle_delta").show()
-display(spark.sql('DESCRIBE xle_delta'))
+display(spark.sql('DESCRIBE ads_delta'))
