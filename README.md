@@ -19,14 +19,14 @@ Dynamic Cloud Data lake, Financial Data Easy for Everyone.
 - [Economic Policy Uncertainity Index Website](https://www.policyuncertainty.com/).
 2. Rename columns
 3. Combine multiple columns of multiple dataframes
-4. Create Databricks Delta Data Lake
+4. Create Azure Databricks Delta Data Lake
 
 
 ###### Financial Machine Learning using pyspark ml.py
 
-1. K-mean Clustering using pyspark.ml
+1. K-mean Clustering using pyspark.ml on delta format data
 
 
 ###### Financial Machine Learning using sklearn.py
 
-1. K-mean Clustering using sklearn
+1. K-mean Clustering using sklearn on delta format data
