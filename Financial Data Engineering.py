@@ -2,10 +2,7 @@
 import mlflow
 import numpy as np
 import pandas as pd
-import sklearn.datasets
-import sklearn.metrics
-import sklearn.model_selection
-import sklearn.ensemble
+
 from pyspark import SparkFiles
 from pyspark import SparkContext
 from pyspark.sql import functions
@@ -18,9 +15,6 @@ import json
 import urllib3
 import chardet
 
-#import urllib.request
-#import chardet
-#from urllib.parse import unquote
 import requests
 
 
@@ -231,3 +225,72 @@ df_ads_new.write.format("delta").mode("overwrite").saveAsTable("ads_delta")
 
 #spark.sql("select * from xle_delta").show()
 display(spark.sql('DESCRIBE ads_delta'))
+
+# COMMAND ----------
+
+from pyspark.ml.clustering import KMeans
+from pyspark.ml.evaluation import ClusteringEvaluator
+from pyspark.ml.feature import VectorAssembler
+
+data = df_combine_etf_columns_new.select("spy_adjClose","xlb_adjClose","xlv_adjClose","xlc_adjClose","xlk_adjClose","xlf_adjClose","xlp_adjClose","xli_adjClose","xlu_adjClose","xly_adjClose","xlre_adjClose","xle_adjClose")
+
+data = data.na.drop()
+
+df_combine_etf_columns_new.write.format("delta").mode("overwrite").saveAsTable("dataset_delta")
+
+dataset = spark.read.format("delta").load("/user/hive/warehouse/dataset_delta")
+
+features =   ("spy_adjClose","xlb_adjClose","xlv_adjClose","xlc_adjClose","xlk_adjClose","xlf_adjClose","xlp_adjClose","xli_adjClose","xlu_adjClose","xly_adjClose","xlre_adjClose","xle_adjClose")      
+
+assemble = VectorAssembler(inputCols = features, outputCol = 'features')
+
+assembled_data = assemble.transform(data)
+
+assembled_data.show(2)
+
+# COMMAND ----------
+
+from pyspark.ml.feature import StandardScaler
+
+scale=StandardScaler(inputCol='features',outputCol='standardized')
+
+data_scale=scale.fit(assembled_data)
+
+data_scale_output=data_scale.transform(assembled_data)
+
+data_scale_output.show(2)
+
+# COMMAND ----------
+
+from pyspark.ml.clustering import KMeans
+from pyspark.ml.evaluation import ClusteringEvaluator
+
+silhouette_score=[]
+evaluator = ClusteringEvaluator(predictionCol='prediction', featuresCol='standardized', \
+                                metricName='silhouette', distanceMeasure='squaredEuclidean')
+
+for i in range(2,10):
+    
+    KMeans_algo=KMeans(featuresCol='standardized', k=i)
+    
+    KMeans_fit=KMeans_algo.fit(data_scale_output)
+    
+    output=KMeans_fit.transform(data_scale_output)
+    
+    
+    
+    score=evaluator.evaluate(output)
+    
+    silhouette_score.append(score)
+    
+    print("Silhouette Score:",score)
+
+# COMMAND ----------
+
+#Visualizing the silhouette scores in a plot
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(1,1, figsize =(8,6))
+ax.plot(range(2,10),silhouette_score)
+ax.set_xlabel('k')
+ax.set_ylabel('cost')
