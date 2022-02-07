@@ -234,7 +234,8 @@ from pyspark.ml.feature import VectorAssembler
 
 data = df_combine_etf_columns_new.select("spy_adjClose","xlb_adjClose","xlv_adjClose","xlc_adjClose","xlk_adjClose","xlf_adjClose","xlp_adjClose","xli_adjClose","xlu_adjClose","xly_adjClose","xlre_adjClose","xle_adjClose")
 
-data = data.na.drop()
+data = data.dropna()
+
 
 df_combine_etf_columns_new.write.format("delta").mode("overwrite").saveAsTable("dataset_delta")
 
@@ -269,7 +270,7 @@ silhouette_score=[]
 evaluator = ClusteringEvaluator(predictionCol='prediction', featuresCol='standardized', \
                                 metricName='silhouette', distanceMeasure='squaredEuclidean')
 
-for i in range(2,10):
+for i in range(2,30):
     
     KMeans_algo=KMeans(featuresCol='standardized', k=i)
     
@@ -291,6 +292,61 @@ for i in range(2,10):
 import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots(1,1, figsize =(8,6))
-ax.plot(range(2,10),silhouette_score)
+ax.plot(range(2,30),silhouette_score)
 ax.set_xlabel('k')
 ax.set_ylabel('cost')
+
+# COMMAND ----------
+
+from sklearn.cluster import KMeans, AgglomerativeClustering
+from sklearn.metrics import silhouette_score, silhouette_samples
+from sklearn.model_selection import train_test_split
+from scipy.cluster.hierarchy import dendrogram, set_link_color_palette
+ 
+import os
+
+import matplotlib.cm as cm
+import matplotlib.colors
+import seaborn as sns
+
+data_X_pd = data.toPandas()
+
+X = data_X_pd 
+
+X
+
+# COMMAND ----------
+
+# initial cluster count
+initial_n = 13
+ 
+# train the model
+initial_model = KMeans(
+  n_clusters=initial_n,
+  max_iter=1000
+  )
+ 
+# fit and predict per-household cluster assignment
+init_clusters = initial_model.fit_predict(X)
+ 
+# combine households with cluster assignments
+labeled_X_pd = (
+  pd.concat( 
+    [X, pd.DataFrame(init_clusters,columns=['cluster'])],
+    axis=1
+    )
+  )
+ 
+# visualize cluster assignments
+fig, ax = plt.subplots(figsize=(10,8))
+sns.scatterplot(
+  data=labeled_X_pd,
+  x='Dim_1',
+  y='Dim_2',
+  hue='cluster',
+  palette=[cm.nipy_spectral(float(i) / initial_n) for i in range(initial_n)],
+  legend='brief',
+  alpha=0.5,
+  ax = ax
+  )
+_ = ax.legend(loc='lower right', ncol=1, fancybox=True)
