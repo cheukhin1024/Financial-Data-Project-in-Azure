@@ -13,7 +13,7 @@ Dynamic Cloud Data lake, Financial Data Easy for Everyone.
 
 Financial Data Engineering.py
 
-- REST API getting data from Tiingo, US Fed, Economic Policy Uncertainity Website
+- REST API getting data from Tiingo, US Fed, Economic Policy Uncertainity Index Website
 - Rename columns
 - Combine multiple columns of multiple dataframes
 - Create Databricks Delta Data Lake
