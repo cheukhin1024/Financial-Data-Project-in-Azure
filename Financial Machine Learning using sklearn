@@ -1,4 +1,6 @@
 # Databricks notebook source
+#Example: https://databricks.com/notebooks/segment-p13n//sg_03_clustering.html
+
 from sklearn.cluster import KMeans, AgglomerativeClustering
 from sklearn.metrics import silhouette_score, silhouette_samples
 from sklearn.model_selection import train_test_split
