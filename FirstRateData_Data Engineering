@@ -1,1 +1,87 @@
+# Databricks notebook source
+import numpy as np
+import pandas as pd
+
+from pyspark import SparkFiles
+from pyspark import SparkContext
+from pyspark.sql import functions
+import pyspark.sql.functions #import avg, col, udf
+from pyspark.sql import SQLContext
+from pyspark.sql import DataFrame
+from pyspark.sql.types import *
+import json
+
+AAL_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AAL_30min.txt", header="true", inferSchema="true")
+AAPL_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AAPL_30min.txt", header="true", inferSchema="true")
+AAP_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AAP_30min.txt", header="true", inferSchema="true")
+AA_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AA_30min.txt", header="true", inferSchema="true")
+ABBV_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ABBV_30min.txt", header="true", inferSchema="true")
+ABC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ABC_30min.txt", header="true", inferSchema="true")
+ABMD_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ABMD_30min.txt", header="true", inferSchema="true")
+ABT_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ABT_30min.txt", header="true", inferSchema="true")
+ACN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ACN_30min.txt", header="true", inferSchema="true")
+ACV_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ACV_30min.txt", header="true", inferSchema="true")
+ADBE_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADBE_30min.txt", header="true", inferSchema="true")
+ADI_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADI_30min.txt", header="true", inferSchema="true")
+ADM_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADM_30min.txt", header="true", inferSchema="true")
+ADP_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADP_30min.txt", header="true", inferSchema="true")
+ADSK_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADSK_30min.txt", header="true", inferSchema="true")
+ADS_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADS_30min.txt", header="true", inferSchema="true")
+ADT_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADT_30min.txt", header="true", inferSchema="true")
+AEE_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AEE_30min.txt", header="true", inferSchema="true")
+AEP_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AEP_30min.txt", header="true", inferSchema="true")
+AES_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AES_30min.txt", header="true", inferSchema="true")
+AFL_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AFL_30min.txt", header="true", inferSchema="true")
+AIG_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AIG_30min.txt", header="true", inferSchema="true")
+AINV_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AINV_30min.txt", header="true", inferSchema="true")
+AIV_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AIV_30min.txt", header="true", inferSchema="true")
+AIZ_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AIZ_30min.txt", header="true", inferSchema="true")
+AJG_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AJG_30min.txt", header="true", inferSchema="true")
+AKAM_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AKAM_30min.txt", header="true", inferSchema="true")
+ALB_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ALB_30min.txt", header="true", inferSchema="true")
+ALGN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ALGN_30min.txt", header="true", inferSchema="true")
+ALK_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ALK_30min.txt", header="true", inferSchema="true")
+ALLE_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ALLE_30min.txt", header="true", inferSchema="true")
+ALL_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ALL_30min.txt", header="true", inferSchema="true")
+ALTR_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ALTR_30min.txt", header="true", inferSchema="true")
+AMAT_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMAT_30min.txt", header="true", inferSchema="true")
+AMBC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMBC_30min.txt", header="true", inferSchema="true")
+AMCR_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMCR_30min.txt", header="true", inferSchema="true")
+AMD_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMD_30min.txt", header="true", inferSchema="true")
+AME_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AME_30min.txt", header="true", inferSchema="true")
+AMGN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMGN_30min.txt", header="true", inferSchema="true")
+AMG_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMG_30min.txt", header="true", inferSchema="true")
+AMP_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMP_30min.txt", header="true", inferSchema="true")
+AMT_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMT_30min.txt", header="true", inferSchema="true")
+AMZN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMZN_30min.txt", header="true", inferSchema="true")
+ANET_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ANET_30min.txt", header="true", inferSchema="true")
+ANF_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ANF_30min.txt", header="true", inferSchema="true")
+ANSS_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ANSS_30min.txt", header="true", inferSchema="true")
+ANTM_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ANTM_30min.txt", header="true", inferSchema="true")
+AN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AN_30min.txt", header="true", inferSchema="true")
+AON_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AON_30min.txt", header="true", inferSchema="true")
+AOS_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AOS_30min.txt", header="true", inferSchema="true")
+APA_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/APA_30min.txt", header="true", inferSchema="true")
+APD_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/APD_30min.txt", header="true", inferSchema="true")
+APH_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/APH_30min.txt", header="true", inferSchema="true")
+APTV_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/APTV_30min.txt", header="true", inferSchema="true")
+ARE_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ARE_30min.txt", header="true", inferSchema="true")
+ARNC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ARNC_30min.txt", header="true", inferSchema="true")
+ASH_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ASH_30min.txt", header="true", inferSchema="true")
+ASO_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ASO_30min.txt", header="true", inferSchema="true")
+ATGE_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ATGE_30min.txt", header="true", inferSchema="true")
+ATI_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ATI_30min.txt", header="true", inferSchema="true")
+ATO_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ATO_30min.txt", header="true", inferSchema="true")
+ATVI_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ATVI_30min.txt", header="true", inferSchema="true")
+AVB_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AVB_30min.txt", header="true", inferSchema="true")
+AVGO_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AVGO_30min.txt", header="true", inferSchema="true")
+AVY_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AVY_30min.txt", header="true", inferSchema="true")
+AWK_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AWK_30min.txt", header="true", inferSchema="true")
+AXP_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AXP_30min.txt", header="true", inferSchema="true")
+AYI_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AYI_30min.txt", header="true", inferSchema="true")
+AZO_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AZO_30min.txt", header="true", inferSchema="true")
+A_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/A_30min.txt", header="true", inferSchema="true")
+
+
+# COMMAND ----------
 
