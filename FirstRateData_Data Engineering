@@ -11,43 +11,158 @@ from pyspark.sql import DataFrame
 from pyspark.sql.types import *
 import json
 
-AAL_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AAL_30min.txt", header="true", inferSchema="true")
-AAPL_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AAPL_30min.txt", header="true", inferSchema="true")
-AAP_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AAP_30min.txt", header="true", inferSchema="true")
-AA_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AA_30min.txt", header="true", inferSchema="true")
-ABBV_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ABBV_30min.txt", header="true", inferSchema="true")
-ABC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ABC_30min.txt", header="true", inferSchema="true")
-ABMD_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ABMD_30min.txt", header="true", inferSchema="true")
-ABT_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ABT_30min.txt", header="true", inferSchema="true")
-ACN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ACN_30min.txt", header="true", inferSchema="true")
-ACV_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ACV_30min.txt", header="true", inferSchema="true")
-ADBE_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADBE_30min.txt", header="true", inferSchema="true")
-ADI_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADI_30min.txt", header="true", inferSchema="true")
-ADM_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADM_30min.txt", header="true", inferSchema="true")
-ADP_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADP_30min.txt", header="true", inferSchema="true")
-ADSK_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADSK_30min.txt", header="true", inferSchema="true")
-ADS_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADS_30min.txt", header="true", inferSchema="true")
-ADT_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ADT_30min.txt", header="true", inferSchema="true")
-AEE_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AEE_30min.txt", header="true", inferSchema="true")
-AEP_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AEP_30min.txt", header="true", inferSchema="true")
-AES_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AES_30min.txt", header="true", inferSchema="true")
-AFL_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AFL_30min.txt", header="true", inferSchema="true")
-AIG_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AIG_30min.txt", header="true", inferSchema="true")
-AINV_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AINV_30min.txt", header="true", inferSchema="true")
-AIV_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AIV_30min.txt", header="true", inferSchema="true")
-AIZ_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AIZ_30min.txt", header="true", inferSchema="true")
-AJG_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AJG_30min.txt", header="true", inferSchema="true")
-AKAM_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AKAM_30min.txt", header="true", inferSchema="true")
-ALB_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ALB_30min.txt", header="true", inferSchema="true")
-ALGN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ALGN_30min.txt", header="true", inferSchema="true")
-ALK_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ALK_30min.txt", header="true", inferSchema="true")
-ALLE_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ALLE_30min.txt", header="true", inferSchema="true")
-ALL_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ALL_30min.txt", header="true", inferSchema="true")
-ALTR_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ALTR_30min.txt", header="true", inferSchema="true")
-AMAT_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMAT_30min.txt", header="true", inferSchema="true")
-AMBC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMBC_30min.txt", header="true", inferSchema="true")
-AMCR_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMCR_30min.txt", header="true", inferSchema="true")
-AMD_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMD_30min.txt", header="true", inferSchema="true")
+AAL_30min_spark_DF_newRow = StructType([StructField("AAL_date/time", StringType(), True),StructField("AAL_adjOpen", FloatType(), True),StructField("AAL_adjHigh", FloatType(), True),StructField("AAL_adjLow", FloatType(), True),StructField("AAL_adjClose", FloatType(), True),StructField("AAL_adjVolume", IntegerType(), True)])
+AAL_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AAL_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AAL_30min.txt")
+display(AAL_30min_spark_DF)
+
+AAPL_30min_spark_DF_newRow = StructType([StructField("AAPL_date/time", StringType(), True),StructField("AAPL_adjOpen", FloatType(), True),StructField("AAPL_adjHigh", FloatType(), True),StructField("AAPL_adjLow", FloatType(), True),StructField("AAPL_adjClose", FloatType(), True),StructField("AAPL_adjVolume", IntegerType(), True)])
+AAPL_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AAPL_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AAPL_30min.txt")
+display(AAPL_30min_spark_DF)
+
+AAP_30min_spark_DF_newRow = StructType([StructField("AAP_date/time", StringType(), True),StructField("AAP_adjOpen", FloatType(), True),StructField("AAP_adjHigh", FloatType(), True),StructField("AAP_adjLow", FloatType(), True),StructField("AAP_adjClose", FloatType(), True),StructField("AAP_adjVolume", IntegerType(), True)])
+AAP_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AAP_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AAP_30min.txt")
+display(AAP_30min_spark_DF)
+
+AA_30min_spark_DF_newRow = StructType([StructField("AA_date/time", StringType(), True),StructField("AA_adjOpen", FloatType(), True),StructField("AA_adjHigh", FloatType(), True),StructField("AA_adjLow", FloatType(), True),StructField("AA_adjClose", FloatType(), True),StructField("AA_adjVolume", IntegerType(), True)])
+AA_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AA_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AA_30min.txt")
+display(AA_30min_spark_DF)
+
+ABBV_30min_spark_DF_newRow = StructType([StructField("ABBV_date/time", StringType(), True),StructField("ABBV_adjOpen", FloatType(), True),StructField("ABBV_adjHigh", FloatType(), True),StructField("ABBV_adjLow", FloatType(), True),StructField("ABBV_adjClose", FloatType(), True),StructField("ABBV_adjVolume", IntegerType(), True)])
+ABBV_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ABBV_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ABBV_30min.txt")
+display(ABBV_30min_spark_DF)
+
+ABC_30min_spark_DF_newRow = StructType([StructField("ABC_date/time", StringType(), True),StructField("ABC_adjOpen", FloatType(), True),StructField("ABC_adjHigh", FloatType(), True),StructField("ABC_adjLow", FloatType(), True),StructField("ABC_adjClose", FloatType(), True),StructField("ABC_adjVolume", IntegerType(), True)])
+ABC_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ABC_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ABC_30min.txt")
+display(ABC_30min_spark_DF)
+
+ABMD_30min_spark_DF_newRow = StructType([StructField("ABMD_date/time", StringType(), True),StructField("ABMD_adjOpen", FloatType(), True),StructField("ABMD_adjHigh", FloatType(), True),StructField("ABMD_adjLow", FloatType(), True),StructField("ABMD_adjClose", FloatType(), True),StructField("ABMD_adjVolume", IntegerType(), True)])
+ABMD_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ABMD_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ABMD_30min.txt")
+display(ABMD_30min_spark_DF)
+
+ABMD_30min_spark_DF_newRow = StructType([StructField("ABMD_date/time", StringType(), True),StructField("ABMD_adjOpen", FloatType(), True),StructField("ABMD_adjHigh", FloatType(), True),StructField("ABMD_adjLow", FloatType(), True),StructField("ABMD_adjClose", FloatType(), True),StructField("ABMD_adjVolume", IntegerType(), True)])
+ABMD_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ABMD_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ABMD_30min.txt")
+display(ABMD_30min_spark_DF)
+
+ABT_30min_spark_DF_newRow = StructType([StructField("ABT_date/time", StringType(), True),StructField("ABT_adjOpen", FloatType(), True),StructField("ABT_adjHigh", FloatType(), True),StructField("ABT_adjLow", FloatType(), True),StructField("ABT_adjClose", FloatType(), True),StructField("ABT_adjVolume", IntegerType(), True)])
+ABT_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ABT_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ABT_30min.txt")
+display(ABT_30min_spark_DF)
+
+ACN_30min_spark_DF_newRow = StructType([StructField("ACN_date/time", StringType(), True),StructField("ACN_adjOpen", FloatType(), True),StructField("ACN_adjHigh", FloatType(), True),StructField("ACN_adjLow", FloatType(), True),StructField("ACN_adjClose", FloatType(), True),StructField("ACN_adjVolume", IntegerType(), True)])
+ACN_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ACN_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ACN_30min.txt")
+display(ACN_30min_spark_DF)
+
+ACV_30min_spark_DF_newRow = StructType([StructField("ACV_date/time", StringType(), True),StructField("ACV_adjOpen", FloatType(), True),StructField("ACV_adjHigh", FloatType(), True),StructField("ACV_adjLow", FloatType(), True),StructField("ACV_adjClose", FloatType(), True),StructField("ACV_adjVolume", IntegerType(), True)])
+ACV_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ACV_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ACV_30min.txt")
+display(ACV_30min_spark_DF)
+
+ADBE_30min_spark_DF_newRow = StructType([StructField("ADBE_date/time", StringType(), True),StructField("ADBE_adjOpen", FloatType(), True),StructField("ADBE_adjHigh", FloatType(), True),StructField("ADBE_adjLow", FloatType(), True),StructField("ADBE_adjClose", FloatType(), True),StructField("ADBE_adjVolume", IntegerType(), True)])
+ADBE_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ADBE_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ADBE_30min.txt")
+display(ADBE_30min_spark_DF)
+
+ADI_30min_spark_DF_newRow = StructType([StructField("ADI_date/time", StringType(), True),StructField("ADI_adjOpen", FloatType(), True),StructField("ADI_adjHigh", FloatType(), True),StructField("ADI_adjLow", FloatType(), True),StructField("ADI_adjClose", FloatType(), True),StructField("ADI_adjVolume", IntegerType(), True)])
+ADI_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ADI_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ADI_30min.txt")
+display(ADI_30min_spark_DF)
+
+ADM_30min_spark_DF_newRow = StructType([StructField("ADM_date/time", StringType(), True),StructField("ADM_adjOpen", FloatType(), True),StructField("ADM_adjHigh", FloatType(), True),StructField("ADM_adjLow", FloatType(), True),StructField("ADM_adjClose", FloatType(), True),StructField("ADM_adjVolume", IntegerType(), True)])
+ADM_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ADM_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ADM_30min.txt")
+display(ADM_30min_spark_DF)
+
+ADP_30min_spark_DF_newRow = StructType([StructField("ADP_date/time", StringType(), True),StructField("ADP_adjOpen", FloatType(), True),StructField("ADP_adjHigh", FloatType(), True),StructField("ADP_adjLow", FloatType(), True),StructField("ADP_adjClose", FloatType(), True),StructField("ADP_adjVolume", IntegerType(), True)])
+ADP_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ADP_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ADP_30min.txt")
+display(ADP_30min_spark_DF)
+
+ADSK_30min_spark_DF_newRow = StructType([StructField("ADSK_date/time", StringType(), True),StructField("ADSK_adjOpen", FloatType(), True),StructField("ADSK_adjHigh", FloatType(), True),StructField("ADSK_adjLow", FloatType(), True),StructField("ADSK_adjClose", FloatType(), True),StructField("ADSK_adjVolume", IntegerType(), True)])
+ADSK_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ADSK_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ADSK_30min.txt")
+display(ADSK_30min_spark_DF)
+
+ADS_30min_spark_DF_newRow = StructType([StructField("ADS_date/time", StringType(), True),StructField("ADS_adjOpen", FloatType(), True),StructField("ADS_adjHigh", FloatType(), True),StructField("ADS_adjLow", FloatType(), True),StructField("ADS_adjClose", FloatType(), True),StructField("ADS_adjVolume", IntegerType(), True)])
+ADS_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ADS_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ADS_30min.txt")
+display(ADS_30min_spark_DF)
+
+ADT_30min_spark_DF_newRow = StructType([StructField("ADT_date/time", StringType(), True),StructField("ADT_adjOpen", FloatType(), True),StructField("ADT_adjHigh", FloatType(), True),StructField("ADT_adjLow", FloatType(), True),StructField("ADT_adjClose", FloatType(), True),StructField("ADT_adjVolume", IntegerType(), True)])
+ADT_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ADT_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ADT_30min.txt")
+display(ADT_30min_spark_DF)
+
+AEE_30min_spark_DF_newRow = StructType([StructField("AEE_date/time", StringType(), True),StructField("AEE_adjOpen", FloatType(), True),StructField("AEE_adjHigh", FloatType(), True),StructField("AEE_adjLow", FloatType(), True),StructField("AEE_adjClose", FloatType(), True),StructField("AEE_adjVolume", IntegerType(), True)])
+AEE_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AEE_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AEE_30min.txt")
+display(AEE_30min_spark_DF)
+
+AEP_30min_spark_DF_newRow = StructType([StructField("AEP_date/time", StringType(), True),StructField("AEP_adjOpen", FloatType(), True),StructField("AEP_adjHigh", FloatType(), True),StructField("AEP_adjLow", FloatType(), True),StructField("AEP_adjClose", FloatType(), True),StructField("AEP_adjVolume", IntegerType(), True)])
+AEP_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AEP_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AEP_30min.txt")
+display(AEP_30min_spark_DF)
+
+AES_30min_spark_DF_newRow = StructType([StructField("AES_date/time", StringType(), True),StructField("AES_adjOpen", FloatType(), True),StructField("AES_adjHigh", FloatType(), True),StructField("AES_adjLow", FloatType(), True),StructField("AES_adjClose", FloatType(), True),StructField("AES_adjVolume", IntegerType(), True)])
+AES_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AES_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AES_30min.txt")
+display(AES_30min_spark_DF)
+
+AFL_30min_spark_DF_newRow = StructType([StructField("AFL_date/time", StringType(), True),StructField("AFL_adjOpen", FloatType(), True),StructField("AFL_adjHigh", FloatType(), True),StructField("AFL_adjLow", FloatType(), True),StructField("AFL_adjClose", FloatType(), True),StructField("AFL_adjVolume", IntegerType(), True)])
+AFL_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AFL_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AFL_30min.txt")
+display(AFL_30min_spark_DF)
+
+AIG_30min_spark_DF_newRow = StructType([StructField("AIG_date/time", StringType(), True),StructField("AIG_adjOpen", FloatType(), True),StructField("AIG_adjHigh", FloatType(), True),StructField("AIG_adjLow", FloatType(), True),StructField("AIG_adjClose", FloatType(), True),StructField("AIG_adjVolume", IntegerType(), True)])
+AIG_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AIG_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AIG_30min.txt")
+display(AIG_30min_spark_DF)
+
+AINV_30min_spark_DF_newRow = StructType([StructField("AINV_date/time", StringType(), True),StructField("AINV_adjOpen", FloatType(), True),StructField("AINV_adjHigh", FloatType(), True),StructField("AINV_adjLow", FloatType(), True),StructField("AINV_adjClose", FloatType(), True),StructField("AINV_adjVolume", IntegerType(), True)])
+AINV_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AINV_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AINV_30min.txt")
+display(AINV_30min_spark_DF)
+
+AIV_30min_spark_DF_newRow = StructType([StructField("AIV_date/time", StringType(), True),StructField("AIV_adjOpen", FloatType(), True),StructField("AIV_adjHigh", FloatType(), True),StructField("AIV_adjLow", FloatType(), True),StructField("AIV_adjClose", FloatType(), True),StructField("AIV_adjVolume", IntegerType(), True)])
+AIV_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AIV_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AIV_30min.txt")
+display(AIV_30min_spark_DF)
+
+AIZ_30min_spark_DF_newRow = StructType([StructField("AIZ_date/time", StringType(), True),StructField("AIZ_adjOpen", FloatType(), True),StructField("AIZ_adjHigh", FloatType(), True),StructField("AIZ_adjLow", FloatType(), True),StructField("AIZ_adjClose", FloatType(), True),StructField("AIZ_adjVolume", IntegerType(), True)])
+AIZ_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AIZ_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AIZ_30min.txt")
+display(AIZ_30min_spark_DF)
+
+AJG_30min_spark_DF_newRow = StructType([StructField("AJG_date/time", StringType(), True),StructField("AJG_adjOpen", FloatType(), True),StructField("AJG_adjHigh", FloatType(), True),StructField("AJG_adjLow", FloatType(), True),StructField("AJG_adjClose", FloatType(), True),StructField("AJG_adjVolume", IntegerType(), True)])
+AJG_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AJG_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AJG_30min.txt")
+display(AJG_30min_spark_DF)
+
+AKAM_30min_spark_DF_newRow = StructType([StructField("AKAM_date/time", StringType(), True),StructField("AKAM_adjOpen", FloatType(), True),StructField("AKAM_adjHigh", FloatType(), True),StructField("AKAM_adjLow", FloatType(), True),StructField("AKAM_adjClose", FloatType(), True),StructField("AKAM_adjVolume", IntegerType(), True)])
+AKAM_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AKAM_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AKAM_30min.txt")
+display(AKAM_30min_spark_DF)
+
+ALB_30min_spark_DF_newRow = StructType([StructField("ALB_date/time", StringType(), True),StructField("ALB_adjOpen", FloatType(), True),StructField("ALB_adjHigh", FloatType(), True),StructField("ALB_adjLow", FloatType(), True),StructField("ALB_adjClose", FloatType(), True),StructField("ALB_adjVolume", IntegerType(), True)])
+ALB_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ALB_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ALB_30min.txt")
+display(ALB_30min_spark_DF)
+
+ALGN_30min_spark_DF_newRow = StructType([StructField("ALGN_date/time", StringType(), True),StructField("ALGN_adjOpen", FloatType(), True),StructField("ALGN_adjHigh", FloatType(), True),StructField("ALGN_adjLow", FloatType(), True),StructField("ALGN_adjClose", FloatType(), True),StructField("ALGN_adjVolume", IntegerType(), True)])
+ALGN_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ALGN_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ALGN_30min.txt")
+display(ALGN_30min_spark_DF)
+
+ALK_30min_spark_DF_newRow = StructType([StructField("ALK_date/time", StringType(), True),StructField("ALK_adjOpen", FloatType(), True),StructField("ALK_adjHigh", FloatType(), True),StructField("ALK_adjLow", FloatType(), True),StructField("ALK_adjClose", FloatType(), True),StructField("ALK_adjVolume", IntegerType(), True)])
+ALK_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ALK_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ALK_30min.txt")
+display(ALK_30min_spark_DF)
+
+ALLE_30min_spark_DF_newRow = StructType([StructField("ALLE_date/time", StringType(), True),StructField("ALLE_adjOpen", FloatType(), True),StructField("ALLE_adjHigh", FloatType(), True),StructField("ALLE_adjLow", FloatType(), True),StructField("ALLE_adjClose", FloatType(), True),StructField("ALLE_adjVolume", IntegerType(), True)])
+ALLE_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ALLE_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ALLE_30min.txt")
+display(ALLE_30min_spark_DF)
+
+ALL_30min_spark_DF_newRow = StructType([StructField("ALL_date/time", StringType(), True),StructField("ALL_adjOpen", FloatType(), True),StructField("ALL_adjHigh", FloatType(), True),StructField("ALL_adjLow", FloatType(), True),StructField("ALL_adjClose", FloatType(), True),StructField("ALL_adjVolume", IntegerType(), True)])
+ALL_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ALL_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ALL_30min.txt")
+display(ALL_30min_spark_DF)
+
+ALTR_30min_spark_DF_newRow = StructType([StructField("ALTR_date/time", StringType(), True),StructField("ALTR_adjOpen", FloatType(), True),StructField("ALTR_adjHigh", FloatType(), True),StructField("ALTR_adjLow", FloatType(), True),StructField("ALTR_adjClose", FloatType(), True),StructField("ALTR_adjVolume", IntegerType(), True)])
+ALTR_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ALTR_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/ALTR_30min.txt")
+display(ALTR_30min_spark_DF)
+
+AMAT_30min_spark_DF_newRow = StructType([StructField("AMAT_date/time", StringType(), True),StructField("AMAT_adjOpen", FloatType(), True),StructField("AMAT_adjHigh", FloatType(), True),StructField("AMAT_adjLow", FloatType(), True),StructField("AMAT_adjClose", FloatType(), True),StructField("AMAT_adjVolume", IntegerType(), True)])
+AMAT_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AMAT_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AMAT_30min.txt")
+display(AMAT_30min_spark_DF)
+
+AMBC_30min_spark_DF_newRow = StructType([StructField("AMBC_date/time", StringType(), True),StructField("AMBC_adjOpen", FloatType(), True),StructField("AMBC_adjHigh", FloatType(), True),StructField("AMBC_adjLow", FloatType(), True),StructField("AMBC_adjClose", FloatType(), True),StructField("AMBC_adjVolume", IntegerType(), True)])
+AMBC_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AMBC_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AMBC_30min.txt")
+display(AMBC_30min_spark_DF)
+
+AMCR_30min_spark_DF_newRow = StructType([StructField("AMCR_date/time", StringType(), True),StructField("AMCR_adjOpen", FloatType(), True),StructField("AMCR_adjHigh", FloatType(), True),StructField("AMCR_adjLow", FloatType(), True),StructField("AMCR_adjClose", FloatType(), True),StructField("AMCR_adjVolume", IntegerType(), True)])
+AMCR_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AMCR_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AMCR_30min.txt")
+display(AMCR_30min_spark_DF)
+
+AMD_30min_spark_DF_newRow = StructType([StructField("AMD_date/time", StringType(), True),StructField("AMD_adjOpen", FloatType(), True),StructField("AMD_adjHigh", FloatType(), True),StructField("AMD_adjLow", FloatType(), True),StructField("AMD_adjClose", FloatType(), True),StructField("AMD_adjVolume", IntegerType(), True)])
+AMD_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AMD_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AMD_30min.txt")
+display(AMD_30min_spark_DF)
+
 AME_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AME_30min.txt", header="true", inferSchema="true")
 AMGN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMGN_30min.txt", header="true", inferSchema="true")
 AMG_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AMG_30min.txt", header="true", inferSchema="true")
@@ -82,6 +197,8 @@ AYI_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AYI_30min
 AZO_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/AZO_30min.txt", header="true", inferSchema="true")
 A_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/A_30min.txt", header="true", inferSchema="true")
 
+"""
+
 # COMMAND ----------
 
 BAC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/BAC_30min.txt", header="true", inferSchema="true")
@@ -112,6 +229,72 @@ BUD_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/BUD_30min
 BWA_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/BWA_30min.txt", header="true", inferSchema="true")
 BXP_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/BXP_30min.txt", header="true", inferSchema="true")
 
+
 # COMMAND ----------
 
-display(BXP_30min_spark_DF)
+BAC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CAG_30min.txt", header="true", inferSchema="true")
+BAX_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CAH_30min.txt", header="true", inferSchema="true")
+BA_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CARR_30min.txt", header="true", inferSchema="true")
+BBBY_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CAR_30min.txt", header="true", inferSchema="true")
+BBY_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CAT_30min.txt", header="true", inferSchema="true")
+BC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CBH_30min.txt", header="true", inferSchema="true")
+BDX_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CBOE_30min.txt", header="true", inferSchema="true")
+BEN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CBRE_30min.txt", header="true", inferSchema="true")
+BF_B_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CB_30min.txt", header="true", inferSchema="true")
+BIDU_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CCI_30min.txt", header="true", inferSchema="true")
+BIG_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CCK_30min.txt", header="true", inferSchema="true")
+BIIB_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CCL_30min.txt", header="true", inferSchema="true")
+BIO_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CCU_30min.txt", header="true", inferSchema="true")
+BKNG_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CC_30min.txt", header="true", inferSchema="true")
+BK_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CDAY_30min.txt", header="true", inferSchema="true")
+BLK_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CDNS_30min.txt", header="true", inferSchema="true")
+BLL_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CDW_30min.txt", header="true", inferSchema="true")
+BMRN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CERN_30min.txt", header="true", inferSchema="true")
+BMY_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CE_30min.txt", header="true", inferSchema="true")
+BRK_B_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CFG_30min.txt", header="true", inferSchema="true")
+BRO_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CF_30min.txt", header="true", inferSchema="true")
+BR_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CHD_30min.txt", header="true", inferSchema="true")
+BSX_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CHIR_30min.txt", header="true", inferSchema="true")
+BTU_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CHKP_30min.txt", header="true", inferSchema="true")
+BUD_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CHK_30min.txt", header="true", inferSchema="true")
+BWA_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CHRW_30min.txt", header="true", inferSchema="true")
+BXP_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CHTR_30min.txt", header="true", inferSchema="true")
+
+BAC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CIEN_30min.txt", header="true", inferSchema="true")
+BAX_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CINF_30min.txt", header="true", inferSchema="true")
+BA_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CIT_30min.txt", header="true", inferSchema="true")
+BBBY_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CI_30min.txt", header="true", inferSchema="true")
+BBY_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CLF_30min.txt", header="true", inferSchema="true")
+BC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CLX_30min.txt", header="true", inferSchema="true")
+BDX_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CL_30min.txt", header="true", inferSchema="true")
+BEN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CMA_30min.txt", header="true", inferSchema="true")
+BF_B_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CMCSA_30min.txt", header="true", inferSchema="true")
+BIDU_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CME_30min.txt", header="true", inferSchema="true")
+BIG_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CMG_30min.txt", header="true", inferSchema="true")
+BIIB_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CMI_30min.txt", header="true", inferSchema="true")
+BIO_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CMS_30min.txt", header="true", inferSchema="true")
+BKNG_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CNC_30min.txt", header="true", inferSchema="true")
+BK_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CNP_30min.txt", header="true", inferSchema="true")
+BLK_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CNX_30min.txt", header="true", inferSchema="true")
+BLL_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/COF_30min.txt", header="true", inferSchema="true")
+BMRN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/COOP_30min.txt", header="true", inferSchema="true")
+BMY_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/COO_30min.txt", header="true", inferSchema="true")
+BRK_B_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/COP_30min.txt", header="true", inferSchema="true")
+BRO_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/COST_30min.txt", header="true", inferSchema="true")
+BR_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/COTY_30min.txt", header="true", inferSchema="true")
+BSX_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CPB_30min.txt", header="true", inferSchema="true")
+BTU_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CPRI_30min.txt", header="true", inferSchema="true")
+BUD_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CPRT_30min.txt", header="true", inferSchema="true")
+BWA_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CRM_30min.txt", header="true", inferSchema="true")
+BXP_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CSCO_30min.txt", header="true", inferSchema="true")
+
+BAC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CSX_30min.txt", header="true", inferSchema="true")
+BAX_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CTAS_30min.txt", header="true", inferSchema="true")
+BA_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CTLT_30min.txt", header="true", inferSchema="true")
+BBBY_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CTSH_30min.txt", header="true", inferSchema="true")
+BBY_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CTVA_30min.txt", header="true", inferSchema="true")
+BC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CTXS_30min.txt", header="true", inferSchema="true")
+BDX_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CVS_30min.txt", header="true", inferSchema="true")
+BEN_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CVX_30min.txt", header="true", inferSchema="true")
+BF_B_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/CZR_30min.txt", header="true", inferSchema="true")
+BIDU_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/C_30min.txt", header="true", inferSchema="true")
