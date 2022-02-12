@@ -215,11 +215,26 @@ AOS_30min_spark_DF_newRow = StructType([StructField("AOS_date/time", StringType(
 AOS_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AOS_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AOS_30min.txt")
 display(AOS_30min_spark_DF)
 
-APA_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/APA_30min.txt", header="true", inferSchema="true")
-APD_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/APD_30min.txt", header="true", inferSchema="true")
-APH_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/APH_30min.txt", header="true", inferSchema="true")
-APTV_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/APTV_30min.txt", header="true", inferSchema="true")
-ARE_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ARE_30min.txt", header="true", inferSchema="true")
+APA_30min_spark_DF_newRow = StructType([StructField("APA_date/time", StringType(), True),StructField("APA_adjOpen", FloatType(), True),StructField("APA_adjHigh", FloatType(), True),StructField("APA_adjLow", FloatType(), True),StructField("APA_adjClose", FloatType(), True),StructField("APA_adjVolume", IntegerType(), True)])
+APA_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(APA_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/APA_30min.txt")
+display(APA_30min_spark_DF)
+
+APD_30min_spark_DF_newRow = StructType([StructField("APD_date/time", StringType(), True),StructField("APD_adjOpen", FloatType(), True),StructField("APD_adjHigh", FloatType(), True),StructField("APD_adjLow", FloatType(), True),StructField("APD_adjClose", FloatType(), True),StructField("APD_adjVolume", IntegerType(), True)])
+APD_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(APA_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/APD_30min.txt")
+display(APD_30min_spark_DF)
+
+APH_30min_spark_DF_newRow = StructType([StructField("APH_date/time", StringType(), True),StructField("APH_adjOpen", FloatType(), True),StructField("APH_adjHigh", FloatType(), True),StructField("APH_adjLow", FloatType(), True),StructField("APH_adjClose", FloatType(), True),StructField("APH_adjVolume", IntegerType(), True)])
+APH_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(APH_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/APH_30min.txt")
+display(APH_30min_spark_DF)
+
+APTV_30min_spark_DF_newRow = StructType([StructField("APTV_date/time", StringType(), True),StructField("APTV_adjOpen", FloatType(), True),StructField("APTV_adjHigh", FloatType(), True),StructField("APTV_adjLow", FloatType(), True),StructField("APTV_adjClose", FloatType(), True),StructField("APTV_adjVolume", IntegerType(), True)])
+APTV_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(APTV_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/APTV_30min.txt")
+display(APTV_30min_spark_DF)
+
+APTV_30min_spark_DF_newRow = StructType([StructField("APTV_date/time", StringType(), True),StructField("APTV_adjOpen", FloatType(), True),StructField("APTV_adjHigh", FloatType(), True),StructField("APTV_adjLow", FloatType(), True),StructField("APTV_adjClose", FloatType(), True),StructField("APTV_adjVolume", IntegerType(), True)])
+APTV_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(APTV_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/APTV_30min.txt")
+display(APTV_30min_spark_DF)
+
 ARNC_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ARNC_30min.txt", header="true", inferSchema="true")
 ASH_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ASH_30min.txt", header="true", inferSchema="true")
 ASO_30min_spark_DF = spark.read.csv("/FileStore/tables/FirstRate30mins/ASO_30min.txt", header="true", inferSchema="true")
