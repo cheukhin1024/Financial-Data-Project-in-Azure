@@ -544,3 +544,123 @@ display(CLX_30min_spark_DF)
 CL_30min_spark_DF_newRow = StructType([StructField("CL_date/time", StringType(), True),StructField("CL_adjOpen", FloatType(), True),StructField("CL_adjHigh", FloatType(), True),StructField("CL_adjLow", FloatType(), True),StructField("CL_adjClose", FloatType(), True),StructField("CL_adjVolume", IntegerType(), True)])
 CL_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CL_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CL_30min.txt")
 display(CL_30min_spark_DF)
+
+CMA_30min_spark_DF_newRow = StructType([StructField("CMA_date/time", StringType(), True),StructField("CMA_adjOpen", FloatType(), True),StructField("CMA_adjHigh", FloatType(), True),StructField("CMA_adjLow", FloatType(), True),StructField("CMA_adjClose", FloatType(), True),StructField("CMA_adjVolume", IntegerType(), True)])
+CMA_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CMA_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CMA_30min.txt")
+display(CMA_30min_spark_DF)
+
+CMCSA_30min_spark_DF_newRow = StructType([StructField("CMCSA_date/time", StringType(), True),StructField("CMCSA_adjOpen", FloatType(), True),StructField("CMCSA_adjHigh", FloatType(), True),StructField("CMCSA_adjLow", FloatType(), True),StructField("CMCSA_adjClose", FloatType(), True),StructField("CMCSA_adjVolume", IntegerType(), True)])
+CMCSA_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CMCSA_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CMCSA_30min.txt")
+display(CMCSA_30min_spark_DF)
+
+CME_30min_spark_DF_newRow = StructType([StructField("CME_date/time", StringType(), True),StructField("CME_adjOpen", FloatType(), True),StructField("CME_adjHigh", FloatType(), True),StructField("CME_adjLow", FloatType(), True),StructField("CME_adjClose", FloatType(), True),StructField("CME_adjVolume", IntegerType(), True)])
+CME_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CME_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CME_30min.txt")
+display(CME_30min_spark_DF)
+
+CMG_30min_spark_DF_newRow = StructType([StructField("CMG_date/time", StringType(), True),StructField("CMG_adjOpen", FloatType(), True),StructField("CMG_adjHigh", FloatType(), True),StructField("CMG_adjLow", FloatType(), True),StructField("CMG_adjClose", FloatType(), True),StructField("CMG_adjVolume", IntegerType(), True)])
+CMG_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CMG_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CMG_30min.txt")
+display(CMG_30min_spark_DF)
+
+CMI_30min_spark_DF_newRow = StructType([StructField("CMI_date/time", StringType(), True),StructField("CMI_adjOpen", FloatType(), True),StructField("CMI_adjHigh", FloatType(), True),StructField("CMI_adjLow", FloatType(), True),StructField("CMI_adjClose", FloatType(), True),StructField("CMI_adjVolume", IntegerType(), True)])
+CMI_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CMI_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CMI_30min.txt")
+display(CMI_30min_spark_DF)
+
+CMS_30min_spark_DF_newRow = StructType([StructField("CMS_date/time", StringType(), True),StructField("CMS_adjOpen", FloatType(), True),StructField("CMS_adjHigh", FloatType(), True),StructField("CMS_adjLow", FloatType(), True),StructField("CMS_adjClose", FloatType(), True),StructField("CMS_adjVolume", IntegerType(), True)])
+CMS_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CMS_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CMS_30min.txt")
+display(CMS_30min_spark_DF)
+
+CNC_30min_spark_DF_newRow = StructType([StructField("CNC_date/time", StringType(), True),StructField("CNC_adjOpen", FloatType(), True),StructField("CNC_adjHigh", FloatType(), True),StructField("CNC_adjLow", FloatType(), True),StructField("CNC_adjClose", FloatType(), True),StructField("CNC_adjVolume", IntegerType(), True)])
+CNC_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CNC_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CNC_30min.txt")
+display(CNC_30min_spark_DF)
+
+CNP_30min_spark_DF_newRow = StructType([StructField("CNP_date/time", StringType(), True),StructField("CNP_adjOpen", FloatType(), True),StructField("CNP_adjHigh", FloatType(), True),StructField("CNP_adjLow", FloatType(), True),StructField("CNP_adjClose", FloatType(), True),StructField("CNP_adjVolume", IntegerType(), True)])
+CNP_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CNP_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CNP_30min.txt")
+display(CNP_30min_spark_DF)
+
+CNX_30min_spark_DF_newRow = StructType([StructField("CNX_date/time", StringType(), True),StructField("CNX_adjOpen", FloatType(), True),StructField("CNX_adjHigh", FloatType(), True),StructField("CNX_adjLow", FloatType(), True),StructField("CNX_adjClose", FloatType(), True),StructField("CNX_adjVolume", IntegerType(), True)])
+CNX_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CNX_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CNX_30min.txt")
+display(CNX_30min_spark_DF)
+
+COF_30min_spark_DF_newRow = StructType([StructField("COF_date/time", StringType(), True),StructField("COF_adjOpen", FloatType(), True),StructField("COF_adjHigh", FloatType(), True),StructField("COF_adjLow", FloatType(), True),StructField("COF_adjClose", FloatType(), True),StructField("COF_adjVolume", IntegerType(), True)])
+COF_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(COF_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/COF_30min.txt")
+display(COF_30min_spark_DF)
+
+COOP_30min_spark_DF_newRow = StructType([StructField("COOP_date/time", StringType(), True),StructField("COOP_adjOpen", FloatType(), True),StructField("COOP_adjHigh", FloatType(), True),StructField("COOP_adjLow", FloatType(), True),StructField("COOP_adjClose", FloatType(), True),StructField("COOP_adjVolume", IntegerType(), True)])
+COOP_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(COOP_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/COOP_30min.txt")
+display(COOP_30min_spark_DF)
+
+COO_30min_spark_DF_newRow = StructType([StructField("COO_date/time", StringType(), True),StructField("COO_adjOpen", FloatType(), True),StructField("COO_adjHigh", FloatType(), True),StructField("COO_adjLow", FloatType(), True),StructField("COO_adjClose", FloatType(), True),StructField("COO_adjVolume", IntegerType(), True)])
+COO_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(COO_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/COO_30min.txt")
+display(COO_30min_spark_DF)
+
+COP_30min_spark_DF_newRow = StructType([StructField("COP_date/time", StringType(), True),StructField("COP_adjOpen", FloatType(), True),StructField("COP_adjHigh", FloatType(), True),StructField("COP_adjLow", FloatType(), True),StructField("COP_adjClose", FloatType(), True),StructField("COP_adjVolume", IntegerType(), True)])
+COP_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(COP_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/COP_30min.txt")
+display(COP_30min_spark_DF)
+
+COST_30min_spark_DF_newRow = StructType([StructField("COST_date/time", StringType(), True),StructField("COST_adjOpen", FloatType(), True),StructField("COST_adjHigh", FloatType(), True),StructField("COST_adjLow", FloatType(), True),StructField("COST_adjClose", FloatType(), True),StructField("COST_adjVolume", IntegerType(), True)])
+COST_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(COST_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/COST_30min.txt")
+display(COST_30min_spark_DF)
+
+COTY_30min_spark_DF_newRow = StructType([StructField("COTY_date/time", StringType(), True),StructField("COTY_adjOpen", FloatType(), True),StructField("COTY_adjHigh", FloatType(), True),StructField("COTY_adjLow", FloatType(), True),StructField("COTY_adjClose", FloatType(), True),StructField("COTY_adjVolume", IntegerType(), True)])
+COTY_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(COTY_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/COTY_30min.txt")
+display(COTY_30min_spark_DF)
+
+CPB_30min_spark_DF_newRow = StructType([StructField("CPB_date/time", StringType(), True),StructField("CPB_adjOpen", FloatType(), True),StructField("CPB_adjHigh", FloatType(), True),StructField("CPB_adjLow", FloatType(), True),StructField("CPB_adjClose", FloatType(), True),StructField("CPB_adjVolume", IntegerType(), True)])
+CPB_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CPB_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CPB_30min.txt")
+display(CPB_30min_spark_DF)
+
+CPRI_30min_spark_DF_newRow = StructType([StructField("CPRI_date/time", StringType(), True),StructField("CPRI_adjOpen", FloatType(), True),StructField("CPRI_adjHigh", FloatType(), True),StructField("CPRI_adjLow", FloatType(), True),StructField("CPRI_adjClose", FloatType(), True),StructField("CPRI_adjVolume", IntegerType(), True)])
+CPRI_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CPRI_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CPRI_30min.txt")
+display(CPRI_30min_spark_DF)
+
+CPRT_30min_spark_DF_newRow = StructType([StructField("CPRT_date/time", StringType(), True),StructField("CPRT_adjOpen", FloatType(), True),StructField("CPRT_adjHigh", FloatType(), True),StructField("CPRT_adjLow", FloatType(), True),StructField("CPRT_adjClose", FloatType(), True),StructField("CPRT_adjVolume", IntegerType(), True)])
+CPRT_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CPRT_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CPRT_30min.txt")
+display(CPRT_30min_spark_DF)
+
+CRM_30min_spark_DF_newRow = StructType([StructField("CRM_date/time", StringType(), True),StructField("CRM_adjOpen", FloatType(), True),StructField("CRM_adjHigh", FloatType(), True),StructField("CRM_adjLow", FloatType(), True),StructField("CRM_adjClose", FloatType(), True),StructField("CRM_adjVolume", IntegerType(), True)])
+CRM_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CRM_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CRM_30min.txt")
+display(CRM_30min_spark_DF)
+
+CSCO_30min_spark_DF_newRow = StructType([StructField("CSCO_date/time", StringType(), True),StructField("CSCO_adjOpen", FloatType(), True),StructField("CSCO_adjHigh", FloatType(), True),StructField("CSCO_adjLow", FloatType(), True),StructField("CSCO_adjClose", FloatType(), True),StructField("CSCO_adjVolume", IntegerType(), True)])
+CSCO_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CSCO_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CSCO_30min.txt")
+display(CSCO_30min_spark_DF)
+
+CSX_30min_spark_DF_newRow = StructType([StructField("CSX_date/time", StringType(), True),StructField("CSX_adjOpen", FloatType(), True),StructField("CSX_adjHigh", FloatType(), True),StructField("CSX_adjLow", FloatType(), True),StructField("CSX_adjClose", FloatType(), True),StructField("CSX_adjVolume", IntegerType(), True)])
+CSX_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CSX_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CSX_30min.txt")
+display(CSX_30min_spark_DF)
+
+CTAS_30min_spark_DF_newRow = StructType([StructField("CTAS_date/time", StringType(), True),StructField("CTAS_adjOpen", FloatType(), True),StructField("CTAS_adjHigh", FloatType(), True),StructField("CTAS_adjLow", FloatType(), True),StructField("CTAS_adjClose", FloatType(), True),StructField("CTAS_adjVolume", IntegerType(), True)])
+CTAS_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CTAS_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CTAS_30min.txt")
+display(CTAS_30min_spark_DF)
+
+CTLT_30min_spark_DF_newRow = StructType([StructField("CTLT_date/time", StringType(), True),StructField("CTLT_adjOpen", FloatType(), True),StructField("CTLT_adjHigh", FloatType(), True),StructField("CTLT_adjLow", FloatType(), True),StructField("CTLT_adjClose", FloatType(), True),StructField("CTLT_adjVolume", IntegerType(), True)])
+CTLT_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CTLT_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CTLT_30min.txt")
+display(CTLT_30min_spark_DF)
+
+CTSH_30min_spark_DF_newRow = StructType([StructField("CTSH_date/time", StringType(), True),StructField("CTSH_adjOpen", FloatType(), True),StructField("CTSH_adjHigh", FloatType(), True),StructField("CTSH_adjLow", FloatType(), True),StructField("CTSH_adjClose", FloatType(), True),StructField("CTSH_adjVolume", IntegerType(), True)])
+CTSH_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CTSH_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CTSH_30min.txt")
+display(CTSH_30min_spark_DF)
+
+CTVA_30min_spark_DF_newRow = StructType([StructField("CTVA_date/time", StringType(), True),StructField("CTVA_adjOpen", FloatType(), True),StructField("CTVA_adjHigh", FloatType(), True),StructField("CTVA_adjLow", FloatType(), True),StructField("CTVA_adjClose", FloatType(), True),StructField("CTVA_adjVolume", IntegerType(), True)])
+CTVA_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CTVA_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CTVA_30min.txt")
+display(CTVA_30min_spark_DF)
+
+CTXS_30min_spark_DF_newRow = StructType([StructField("CTXS_date/time", StringType(), True),StructField("CTXS_adjOpen", FloatType(), True),StructField("CTXS_adjHigh", FloatType(), True),StructField("CTXS_adjLow", FloatType(), True),StructField("CTXS_adjClose", FloatType(), True),StructField("CTXS_adjVolume", IntegerType(), True)])
+CTXS_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CTXS_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CTXS_30min.txt")
+display(CTXS_30min_spark_DF)
+
+CVS_30min_spark_DF_newRow = StructType([StructField("CVS_date/time", StringType(), True),StructField("CVS_adjOpen", FloatType(), True),StructField("CVS_adjHigh", FloatType(), True),StructField("CVS_adjLow", FloatType(), True),StructField("CVS_adjClose", FloatType(), True),StructField("CVS_adjVolume", IntegerType(), True)])
+CVS_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CVS_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CVS_30min.txt")
+display(CVS_30min_spark_DF)
+
+CVX_30min_spark_DF_newRow = StructType([StructField("CVX_date/time", StringType(), True),StructField("CVX_adjOpen", FloatType(), True),StructField("CVX_adjHigh", FloatType(), True),StructField("CVX_adjLow", FloatType(), True),StructField("CVX_adjClose", FloatType(), True),StructField("CVX_adjVolume", IntegerType(), True)])
+CVX_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CVX_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CVX_30min.txt")
+display(CVX_30min_spark_DF)
+
+CZR_30min_spark_DF_newRow = StructType([StructField("CZR_date/time", StringType(), True),StructField("CZR_adjOpen", FloatType(), True),StructField("CZR_adjHigh", FloatType(), True),StructField("CZR_adjLow", FloatType(), True),StructField("CZR_adjClose", FloatType(), True),StructField("CZR_adjVolume", IntegerType(), True)])
+CZR_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(CZR_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/CZR_30min.txt")
+display(CZR_30min_spark_DF)
+
+C_30min_spark_DF_newRow = StructType([StructField("C_date/time", StringType(), True),StructField("C_adjOpen", FloatType(), True),StructField("C_adjHigh", FloatType(), True),StructField("C_adjLow", FloatType(), True),StructField("C_adjClose", FloatType(), True),StructField("C_adjVolume", IntegerType(), True)])
+C_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(C_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/C_30min.txt")
+display(C_30min_spark_DF)
