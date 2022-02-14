@@ -906,3 +906,42 @@ display(EXPE_30min_spark_DF)
 EXR_30min_spark_DF_newRow = StructType([StructField("EXR_date/time", StringType(), True),StructField("EXR_adjOpen", FloatType(), True),StructField("EXR_adjHigh", FloatType(), True),StructField("EXR_adjLow", FloatType(), True),StructField("EXR_adjClose", FloatType(), True),StructField("EXR_adjVolume", IntegerType(), True)])
 EXR_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(EXR_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/EXR_30min.txt")
 display(EXR_30min_spark_DF)
+
+# COMMAND ----------
+
+import os
+import numpy as np
+import pandas as pd
+
+from pyspark import SparkFiles
+from pyspark import SparkContext
+from pyspark.sql import functions
+import pyspark.sql.functions #import avg, col, udf
+from pyspark.sql import SQLContext
+from pyspark.sql import DataFrame
+from pyspark.sql.types import *
+import json
+
+path = '/dbfs/FileStore/tables/FirstRate30mins'
+filename_lists = os.listdir(path)
+dict_ = {}
+for filename in os.listdir(path):
+    name = filename.split('_')[0]
+    temp = StructType([StructField(name+"_date/time", StringType(), True),StructField(name+"_adjOpen", FloatType(), True),StructField(name+"_adjHigh", FloatType(), True),StructField(name+"_adjLow", FloatType(), True),StructField(name+"_adjClose", FloatType(), True),StructField(name+"_adjVolume", IntegerType(), True)])
+    
+    temp_df = spark.read.format("csv").option("header", "false").schema(temp).load("/FileStore/tables/FirstRate30mins/")
+    dict_[name] = temp_df
+    print(dict_[name])
+#     display(temp_df)
+    #print(temp)
+
+
+# D_30min_spark_DF_newRow = StructType([StructField("D_date/time", StringType(), True),StructField("D_adjOpen", FloatType(), True),StructField("D_adjHigh", FloatType(), True),StructField("D_adjLow", FloatType(), True),StructField("D_adjClose", FloatType(), True),StructField("D_adjVolume", IntegerType(), True)])
+
+# D_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(D_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/")
+# display(D_30min_spark_DF)
+ 
+
+# COMMAND ----------
+
+display(dict_['AAL'])
