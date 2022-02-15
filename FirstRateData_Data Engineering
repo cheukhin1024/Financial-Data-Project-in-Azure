@@ -33,12 +33,10 @@ for filename in os.listdir(path):
     
     #name each table
     table_name = name+'_30mins_delta'
-    
-    #create delta lake for each dataframes
-
 
 # COMMAND ----------
 
+#create delta lake for each dataframes
 df_30mins_[name].write.format("delta").mode("overwrite").saveAsTable(table_name)
 
 # COMMAND ----------
@@ -49,7 +47,7 @@ display(df_30mins_['AA'])
 display(df_30mins_['A'])
 
 display(spark.sql('SELECT * FROM aal_30mins_delta'))
-display(spark.sql('SELECT * FROM a_30mins_delta'))
+display(spark.sql('SELECT * FROM aa_30mins_delta'))
 display(spark.sql('SELECT * FROM aapl_30mins_delta'))
 display(spark.sql('SELECT * FROM a_30mins_delta'))
 
