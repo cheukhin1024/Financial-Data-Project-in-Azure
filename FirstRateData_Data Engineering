@@ -37,4 +37,4 @@ for filename in os.listdir(path):
 # COMMAND ----------
 
 display(df_30mins_['AAL'])
-display(['AAL']_30mins_delta)
+display(spark.sql('DESCRIBE aal_30mins_delta'))
