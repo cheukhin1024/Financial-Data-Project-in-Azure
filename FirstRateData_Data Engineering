@@ -12,29 +12,37 @@ from pyspark.sql import DataFrame
 from pyspark.sql.types import *
 import json
 
+#LIST, RENAME, AND SAVE ALL FILES AS DELTA LAKE AUTOMATICALLY
 path = '/dbfs/FileStore/tables/FirstRate30mins'
 filename_lists = os.listdir(path)
+
 df_30mins_ = {}
 _delta ={}
 
 for filename in os.listdir(path):
+    #split file name
     name = filename.split('_')[0]
+    #create clolumn header names
     temp = StructType([StructField(name+"_date/time", StringType(), True),StructField(name+"_adjOpen", FloatType(), True),StructField(name+"_adjHigh", FloatType(), True),StructField(name+"_adjLow", FloatType(), True),StructField(name+"_adjClose", FloatType(), True),StructField(name+"_adjVolume", IntegerType(), True)])
     
-    temp_delta = StructType([StructField(name+"_30mins_delta", StringType(), True)])
+    #list and create csv dataframes
+    temp_df = spark.read.format("csv").option("header", "false").schema(temp).load("/FileStore/tables/FirstRate30mins/"+filename)
     
-    print(temp_delta)
-    
-    temp_df = spark.read.format("csv").option("header", "false").schema(temp).load("/FileStore/tables/FirstRate30mins/")
-   
+    #name each dataframes
     df_30mins_[name] = temp_df
     
-    table_name = name+'_30mins_delta'
-        
-    df_30mins_[name].write.format("delta").mode("overwrite").saveAsTable(table_name)
+    #name each table
+   # table_name = name+'_30mins_delta'
+    
+    #create delta lake for each dataframes
+    #df_30mins_[name].write.format("delta").mode("overwrite").saveAsTable(table_name)
 
 
 # COMMAND ----------
 
 display(df_30mins_['AAL'])
-display(spark.sql('DESCRIBE aal_30mins_delta'))
+display(df_30mins_['AAPL'])
+
+display(spark.sql('SELECT * FROM aal_30mins_delta'))
+display(spark.sql('SELECT * FROM a_30mins_delta'))
+display(spark.sql('SELECT * FROM aapl_30mins_delta'))
