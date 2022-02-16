@@ -55,207 +55,207 @@ Updates (Sept 2021): Added Match Group (MTCH), Ceridian (CDAY) Brown and Brown (
 
 Updates (August 2021) : Added Bio-Techne (TECH)
 
-A (Agilent Technologies Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AA (ALCOA CORPORATION) First Date:18-Oct-2016 -> Last Date:15-Feb-2022
-AAL (American Airlines Group) First Date:9-Dec-2013 -> Last Date:15-Feb-2022
-AAP (Advance Auto Parts) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AAPL (Apple) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ABBV (AbbVie) First Date:2-Jan-2013 -> Last Date:15-Feb-2022
-ABC (AmerisourceBergen Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ABMD (ABIOMED Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ABT (Abbott Laboratories) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ACN (Accenture plc) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
-ACV (Alberto-Culver Co.) First Date:22-May-2015 -> Last Date:15-Feb-2022
-ADBE (Adobe Systems Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ADI (Analog Devices) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ADM (Archer-Daniels-Midland Co) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ADP (Automatic Data Processing) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ADS (Alliance Data Systems) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ADSK (Autodesk) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ADT (ADT) First Date:19-Jan-2018 -> Last Date:15-Feb-2022
-AEE (Ameren Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AEP (American Electric Power) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AES (AES Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AFL (AFLAC Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AIG (American International Group) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AINV (Apollo Investment Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AIV (Apartment Investment & Management) First Date:21-Jul-2009 -> Last Date:15-Feb-2022
-AIZ (Assurant) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AJG (Arthur J. Gallagher & Co.) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AKAM (Akamai Technologies Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ALB (Albemarle Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ALGN (Align Technology) First Date:1-May-2007 -> Last Date:15-Feb-2022
-ALK (Alaska Air Group Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ALL (Allstate Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ALLE (Allegion) First Date:18-Nov-2013 -> Last Date:15-Feb-2022
-ALTR (ALTAIR ENGINEERING) First Date:1-Nov-2017 -> Last Date:15-Feb-2022
-AMAT (Applied Materials) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AMBC (Ambac Financial Group) First Date:1-May-2013 -> Last Date:15-Feb-2022
-AMCR (AMCOR PLC) First Date:11-Jun-2019 -> Last Date:15-Feb-2022
-AMD (Advanced Micro Devices Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AME (AMETEK) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AMG (Affiliated Managers Group Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AMGN (Amgen) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AMP (Ameriprise Financial) First Date:3-Oct-2005 -> Last Date:15-Feb-2022
-AMT (American Tower) First Date:3-Jan-2012 -> Last Date:15-Feb-2022
-AMZN (Amazon.com) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AN (AUTONATION) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ANET (Arista Networks) First Date:6-Jun-2014 -> Last Date:15-Feb-2022
-ANF (ABERCROMBIE & FITCH COMPANY) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ANSS (ANSYS) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ANTM (Anthem) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
-AON (Aon plc) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
-AOS (A.O. Smith Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-APA (Apache Corporation) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-APD (Air Products & Chemicals Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-APH (Amphenol Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-APTV (Aptiv Plc) First Date:17-Nov-2011 -> Last Date:15-Feb-2022
-ARE (Alexandria Real Estate Equities) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ARNC (Arconic) First Date:1-Apr-2020 -> Last Date:15-Feb-2022
-ASH (ASHLAND GLOBAL HOLDINGS) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ASO (AmSouth Ban) First Date:2-Oct-2020 -> Last Date:15-Feb-2022
-ATGE (DeVry) First Date:1-May-2007 -> Last Date:15-Feb-2022
-ATI (ALLEGHENY TECHNOLOGIES INCORPORATED) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ATO (Atmos Energy Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ATVI (Activision Blizzard) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
-AVB (AvalonBay Communities) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AVGO (Broadcom) First Date:1-Feb-2016 -> Last Date:15-Feb-2022
-AVY (Avery Dennison Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AWK (American Water Works Company Inc) First Date:23-Apr-2008 -> Last Date:15-Feb-2022
-AXP (American Express Co) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AYI (ACUITY BRANDS) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-AZO (AutoZone Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BA (Boeing Company) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BAC (Bank of America Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BAX (Baxter International) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BBBY (BED BATH & BEYOND) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BBY (Best Buy Co.) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BC (BRUNSWICK CORPORATION) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BDX (Becton Dickinson) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BEN (Franklin Resources) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BF.B (Brown-Forman) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BIDU (Bidu) First Date:5-Aug-2005 -> Last Date:15-Feb-2022
-BIG (BIG LOTS) First Date:1-Sep-2006 -> Last Date:15-Feb-2022
-BIIB (Biogen) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BIO (Bio-Rad Laboratories) First Date:8-May-2007 -> Last Date:15-Feb-2022
-BK (The Bank of New York Mellon) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
-BKNG (Booking Holdings Inc) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
-BLK (BlackRock) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BLL (Ball Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BMRN (BioMarin Pharmaceutical) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BMY (Bristol-Myers Squibb) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BR (Broadridge Financial Solutions) First Date:1-May-2007 -> Last Date:15-Feb-2022
-BRK.B (BERKSHIRE HATHAWAY) First Date:2-May-2007 -> Last Date:15-Feb-2022
-BRO (Brown & Brown) First Date:3-Jan-2007 -> Last Date:15-Feb-2022
-BSX (Boston Scientific) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BTU (PEABODY ENERGY CORPORATION) First Date:3-Apr-2017 -> Last Date:15-Feb-2022
-BUD (ANHEUSER-BUSCH INBEV SA) First Date:16-Sep-2009 -> Last Date:15-Feb-2022
-BWA (BorgWarner) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-BXP (Boston Properties) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-C (Citigroup) First Date:9-May-2011 -> Last Date:15-Feb-2022
-CAG (Conagra Brands) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-CAH (Cardinal Health) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-CAR (Avis Budget Group) First Date:5-Sep-2006 -> Last Date:15-Feb-2022
-CARR (Carrier Global) First Date:19-Mar-2020 -> Last Date:15-Feb-2022
-CAT (Caterpillar) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-CB (Chubb Limited) First Date:18-Jul-2008 -> Last Date:15-Feb-2022
-CBH (ALLIANZGI CONVERTIBLE & INCOME 2024 TARGET TERM FUND) First Date:28-Jun-2017 -> Last Date:15-Feb-2022
-CBOE (Cboe Global Markets) First Date:15-Jun-2010 -> Last Date:15-Feb-2022
-CBRE (CBRE Group) First Date:3-Jan-2017 -> Last Date:15-Feb-2022
-CC (CHEMOURS COMPANY (THE)) First Date:19-Jun-2015 -> Last Date:15-Feb-2022
-CCI (Crown Castle International) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-CCK (CROWN HOLDINGS) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-CCL (Carnival) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-CCU (COMPANIA CERVECERIAS UNIDAS S.A.) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
-CDAY (Ceridian HCM Holding) First Date:26-Apr-2018 -> Last Date:15-Feb-2022
-CDNS (Cadence Design Systems) First Date:31-Oct-2005 -> Last Date:15-Feb-2022
-CDW (CDW CORPORATION) First Date:27-Jun-2013 -> Last Date:15-Feb-2022
-CE (Celanese) First Date:1-Mar-2005 -> Last Date:15-Feb-2022
-CERN (Cerner) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-CF (CF Industries Holdings Inc) First Date:3-Oct-2005 -> Last Date:15-Feb-2022
-CFG (Citizens Financial Group) First Date:24-Sep-2014 -> Last Date:15-Feb-2022
-CHD (Church & Dwight) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CHIR (Chiron) First Date:11-Dec-2018 -> Last Date:15-Feb-2022
-CHK (CHESAPEAKE ENERGY CORPORATION) First Date:10-Feb-2021 -> Last Date:15-Feb-2022
-CHKP (Check Point Software Technologies Ltd) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CHRW (C. H. Robinson Worldwide) First Date:3-Jan-2006 -> Last Date:15-Feb-2022
-CHTR (Charter Communications) First Date:14-Sep-2010 -> Last Date:15-Feb-2022
-CI (CIGNA) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CIEN (CIENA CORPORATION) First Date:1-Dec-2006 -> Last Date:15-Feb-2022
-CINF (Cincinnati Financial) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CIT (CIT GROUP INC (DEL)) First Date:10-Dec-2009 -> Last Date:15-Feb-2022
-CL (Colgate-Palmolive) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CLF (CLEVELAND-CLIFFS) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CLX (The Clorox Company) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CMA (Comerica) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CMCSA (Comcast) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CME (CME Group) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CMG (Chipotle Mexican Grill) First Date:26-Jan-2006 -> Last Date:15-Feb-2022
-CMI (Cummins) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CMS (CMS Energy) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CNC (Centene Corporation) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CNP (CenterPoint Energy) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CNX (CNX RESOURCES CORPORATION) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-COF (Capital One Financial) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-COO (The Cooper Companies) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-COOP (Mr. Cooper Group) First Date:28-Mar-2012 -> Last Date:15-Feb-2022
-COP (ConocoPhillips) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-COST (Costco Wholesale) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
-COTY (Coty) First Date:13-Jun-2013 -> Last Date:15-Feb-2022
-CPB (Campbell Soup) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CPRI (Capri Holdings) First Date:15-Dec-2011 -> Last Date:15-Feb-2022
-CPRT (Copart Inc) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CRM (Salesforce.com) First Date:23-Jun-2004 -> Last Date:15-Feb-2022
-CSCO (Cisco Systems) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CSX (CSX) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CTAS (Cintas Corporation) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CTLT (Catalent) First Date:31-Jul-2014 -> Last Date:15-Feb-2022
-CTSH (Cognizant Technology Solutions) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CTVA (CORTEVA) First Date:24-May-2019 -> Last Date:15-Feb-2022
-CTXS (Citrix Systems) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CVS (CVS Health) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CVX (Chevron) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
-CZR (Caesars Entertainment Corporation) First Date:22-Sep-2014 -> Last Date:15-Feb-2022
-D (Dominion Energy) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DAL (Delta Air Lines) First Date:16-May-2007 -> Last Date:15-Feb-2022
-DAN (Dana) First Date:1-Feb-2008 -> Last Date:15-Feb-2022
-DD (DUPONT DE NEMOURS) First Date:24-May-2019 -> Last Date:15-Feb-2022
-DDS (DILLARD'S) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DE (Deere & Co.) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DELL (DELL TECHNOLOGIES) First Date:1-May-2007 -> Last Date:15-Feb-2022
-DFS (Discover Financial Services) First Date:2-Jul-2007 -> Last Date:15-Feb-2022
-DG (Dollar General) First Date:13-Nov-2009 -> Last Date:15-Feb-2022
-DGX (Quest Diagnostics) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DHI (D. R. Horton) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DHR (Danaher) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DIS (The Walt Disney Company) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DISCA (Discovery Class A) First Date:2-May-2007 -> Last Date:15-Feb-2022
-DISCK (Discovery Class C) First Date:18-Sep-2008 -> Last Date:15-Feb-2022
-DISH (Dish Network) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DLR (Digital Realty Trust Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DLTR (Dollar Tree) First Date:27-Apr-2007 -> Last Date:15-Feb-2022
-DLX (Deluxe) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DNB (DUN & BRADSTREET CORPORATION (T) First Date:30-Jun-2020 -> Last Date:15-Feb-2022
-DOV (Dover) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DOW (DOW) First Date:20-Mar-2019 -> Last Date:15-Feb-2022
-DPZ (Domino's Pizza) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DRE (Duke Realty Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DRI (Darden Restaurants) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DTE (DTE Energy Co.) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DUK (Duke Energy) First Date:15-Jun-2012 -> Last Date:15-Feb-2022
-DVA (DaVita) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DVN (Devon Energy) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-DXC (DXC Technology) First Date:16-Mar-2017 -> Last Date:15-Feb-2022
-DXCM (Dexcom) First Date:2-May-2005 -> Last Date:15-Feb-2022
-EA (Electronic Arts) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
-EBAY (eBay) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ECL (Ecolab) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ED (Consolidated Edison) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-EFX (Equifax) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-EIX (Edison Int'l) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
-EL (Estee Lauder Cos.) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-EMN (Eastman Chemical) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-EMR (Emerson Electric Company) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- A (Agilent Technologies Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AA (ALCOA CORPORATION) First Date:18-Oct-2016 -> Last Date:15-Feb-2022
+- AAL (American Airlines Group) First Date:9-Dec-2013 -> Last Date:15-Feb-2022
+- AAP (Advance Auto Parts) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AAPL (Apple) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ABBV (AbbVie) First Date:2-Jan-2013 -> Last Date:15-Feb-2022
+- ABC (AmerisourceBergen Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ABMD (ABIOMED Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ABT (Abbott Laboratories) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ACN (Accenture plc) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
+- ACV (Alberto-Culver Co.) First Date:22-May-2015 -> Last Date:15-Feb-2022
+- ADBE (Adobe Systems Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ADI (Analog Devices) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ADM (Archer-Daniels-Midland Co) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ADP (Automatic Data Processing) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ADS (Alliance Data Systems) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ADSK (Autodesk) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ADT (ADT) First Date:19-Jan-2018 -> Last Date:15-Feb-2022
+- AEE (Ameren Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AEP (American Electric Power) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AES (AES Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AFL (AFLAC Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AIG (American International Group) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AINV (Apollo Investment Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AIV (Apartment Investment & Management) First Date:21-Jul-2009 -> Last Date:15-Feb-2022
+- AIZ (Assurant) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AJG (Arthur J. Gallagher & Co.) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AKAM (Akamai Technologies Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ALB (Albemarle Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ALGN (Align Technology) First Date:1-May-2007 -> Last Date:15-Feb-2022
+- ALK (Alaska Air Group Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ALL (Allstate Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ALLE (Allegion) First Date:18-Nov-2013 -> Last Date:15-Feb-2022
+- ALTR (ALTAIR ENGINEERING) First Date:1-Nov-2017 -> Last Date:15-Feb-2022
+- AMAT (Applied Materials) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AMBC (Ambac Financial Group) First Date:1-May-2013 -> Last Date:15-Feb-2022
+- AMCR (AMCOR PLC) First Date:11-Jun-2019 -> Last Date:15-Feb-2022
+- AMD (Advanced Micro Devices Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AME (AMETEK) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AMG (Affiliated Managers Group Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AMGN (Amgen) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AMP (Ameriprise Financial) First Date:3-Oct-2005 -> Last Date:15-Feb-2022
+- AMT (American Tower) First Date:3-Jan-2012 -> Last Date:15-Feb-2022
+- AMZN (Amazon.com) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AN (AUTONATION) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ANET (Arista Networks) First Date:6-Jun-2014 -> Last Date:15-Feb-2022
+- ANF (ABERCROMBIE & FITCH COMPANY) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ANSS (ANSYS) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ANTM (Anthem) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
+- AON (Aon plc) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
+- AOS (A.O. Smith Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- APA (Apache Corporation) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- APD (Air Products & Chemicals Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- APH (Amphenol Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- APTV (Aptiv Plc) First Date:17-Nov-2011 -> Last Date:15-Feb-2022
+- ARE (Alexandria Real Estate Equities) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ARNC (Arconic) First Date:1-Apr-2020 -> Last Date:15-Feb-2022
+- ASH (ASHLAND GLOBAL HOLDINGS) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ASO (AmSouth Ban) First Date:2-Oct-2020 -> Last Date:15-Feb-2022
+- ATGE (DeVry) First Date:1-May-2007 -> Last Date:15-Feb-2022
+- ATI (ALLEGHENY TECHNOLOGIES INCORPORATED) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ATO (Atmos Energy Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ATVI (Activision Blizzard) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
+- AVB (AvalonBay Communities) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AVGO (Broadcom) First Date:1-Feb-2016 -> Last Date:15-Feb-2022
+- AVY (Avery Dennison Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AWK (American Water Works Company Inc) First Date:23-Apr-2008 -> Last Date:15-Feb-2022
+- AXP (American Express Co) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AYI (ACUITY BRANDS) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- AZO (AutoZone Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BA (Boeing Company) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BAC (Bank of America Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BAX (Baxter International) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BBBY (BED BATH & BEYOND) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BBY (Best Buy Co.) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BC (BRUNSWICK CORPORATION) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BDX (Becton Dickinson) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BEN (Franklin Resources) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BF.B (Brown-Forman) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BIDU (Bidu) First Date:5-Aug-2005 -> Last Date:15-Feb-2022
+- BIG (BIG LOTS) First Date:1-Sep-2006 -> Last Date:15-Feb-2022
+- BIIB (Biogen) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BIO (Bio-Rad Laboratories) First Date:8-May-2007 -> Last Date:15-Feb-2022
+- BK (The Bank of New York Mellon) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
+- BKNG (Booking Holdings Inc) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
+- BLK (BlackRock) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BLL (Ball Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BMRN (BioMarin Pharmaceutical) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BMY (Bristol-Myers Squibb) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BR (Broadridge Financial Solutions) First Date:1-May-2007 -> Last Date:15-Feb-2022
+- BRK.B (BERKSHIRE HATHAWAY) First Date:2-May-2007 -> Last Date:15-Feb-2022
+- BRO (Brown & Brown) First Date:3-Jan-2007 -> Last Date:15-Feb-2022
+- BSX (Boston Scientific) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BTU (PEABODY ENERGY CORPORATION) First Date:3-Apr-2017 -> Last Date:15-Feb-2022
+- BUD (ANHEUSER-BUSCH INBEV SA) First Date:16-Sep-2009 -> Last Date:15-Feb-2022
+- BWA (BorgWarner) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BXP (Boston Properties) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- C (Citigroup) First Date:9-May-2011 -> Last Date:15-Feb-2022
+- CAG (Conagra Brands) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- CAH (Cardinal Health) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- CAR (Avis Budget Group) First Date:5-Sep-2006 -> Last Date:15-Feb-2022
+- CARR (Carrier Global) First Date:19-Mar-2020 -> Last Date:15-Feb-2022
+- CAT (Caterpillar) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- CB (Chubb Limited) First Date:18-Jul-2008 -> Last Date:15-Feb-2022
+- CBH (ALLIANZGI CONVERTIBLE & INCOME 2024 TARGET TERM FUND) First Date:28-Jun-2017 -> Last Date:15-Feb-2022
+- CBOE (Cboe Global Markets) First Date:15-Jun-2010 -> Last Date:15-Feb-2022
+- CBRE (CBRE Group) First Date:3-Jan-2017 -> Last Date:15-Feb-2022
+- CC (CHEMOURS COMPANY (THE)) First Date:19-Jun-2015 -> Last Date:15-Feb-2022
+- CCI (Crown Castle International) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- CCK (CROWN HOLDINGS) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- CCL (Carnival) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- CCU (COMPANIA CERVECERIAS UNIDAS S.A.) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
+- CDAY (Ceridian HCM Holding) First Date:26-Apr-2018 -> Last Date:15-Feb-2022
+- CDNS (Cadence Design Systems) First Date:31-Oct-2005 -> Last Date:15-Feb-2022
+- CDW (CDW CORPORATION) First Date:27-Jun-2013 -> Last Date:15-Feb-2022
+- CE (Celanese) First Date:1-Mar-2005 -> Last Date:15-Feb-2022
+- CERN (Cerner) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- CF (CF Industries Holdings Inc) First Date:3-Oct-2005 -> Last Date:15-Feb-2022
+- CFG (Citizens Financial Group) First Date:24-Sep-2014 -> Last Date:15-Feb-2022
+- CHD (Church & Dwight) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CHIR (Chiron) First Date:11-Dec-2018 -> Last Date:15-Feb-2022
+- CHK (CHESAPEAKE ENERGY CORPORATION) First Date:10-Feb-2021 -> Last Date:15-Feb-2022
+- CHKP (Check Point Software Technologies Ltd) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CHRW (C. H. Robinson Worldwide) First Date:3-Jan-2006 -> Last Date:15-Feb-2022
+- CHTR (Charter Communications) First Date:14-Sep-2010 -> Last Date:15-Feb-2022
+- CI (CIGNA) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CIEN (CIENA CORPORATION) First Date:1-Dec-2006 -> Last Date:15-Feb-2022
+- CINF (Cincinnati Financial) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CIT (CIT GROUP INC (DEL)) First Date:10-Dec-2009 -> Last Date:15-Feb-2022
+- CL (Colgate-Palmolive) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CLF (CLEVELAND-CLIFFS) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CLX (The Clorox Company) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CMA (Comerica) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CMCSA (Comcast) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CME (CME Group) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CMG (Chipotle Mexican Grill) First Date:26-Jan-2006 -> Last Date:15-Feb-2022
+- CMI (Cummins) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CMS (CMS Energy) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CNC (Centene Corporation) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CNP (CenterPoint Energy) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CNX (CNX RESOURCES CORPORATION) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- COF (Capital One Financial) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- COO (The Cooper Companies) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- COOP (Mr. Cooper Group) First Date:28-Mar-2012 -> Last Date:15-Feb-2022
+- COP (ConocoPhillips) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- COST (Costco Wholesale) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
+- COTY (Coty) First Date:13-Jun-2013 -> Last Date:15-Feb-2022
+- CPB (Campbell Soup) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CPRI (Capri Holdings) First Date:15-Dec-2011 -> Last Date:15-Feb-2022
+- CPRT (Copart Inc) First Date:2-Jan-2004 -> Last Date:15-Feb-2022-
+- CRM (Salesforce.com) First Date:23-Jun-2004 -> Last Date:15-Feb-2022
+- CSCO (Cisco Systems) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CSX (CSX) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CTAS (Cintas Corporation) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CTLT (Catalent) First Date:31-Jul-2014 -> Last Date:15-Feb-2022
+- CTSH (Cognizant Technology Solutions) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CTVA (CORTEVA) First Date:24-May-2019 -> Last Date:15-Feb-2022
+- CTXS (Citrix Systems) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CVS (CVS Health) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CVX (Chevron) First Date:2-Jan-2004 -> Last Date:15-Feb-2022
+- CZR (Caesars Entertainment Corporation) First Date:22-Sep-2014 -> Last Date:15-Feb-2022
+- D (Dominion Energy) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DAL (Delta Air Lines) First Date:16-May-2007 -> Last Date:15-Feb-2022
+- DAN (Dana) First Date:1-Feb-2008 -> Last Date:15-Feb-2022
+- DD (DUPONT DE NEMOURS) First Date:24-May-2019 -> Last Date:15-Feb-2022
+- DDS (DILLARD'S) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DE (Deere & Co.) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DELL (DELL TECHNOLOGIES) First Date:1-May-2007 -> Last Date:15-Feb-2022
+- DFS (Discover Financial Services) First Date:2-Jul-2007 -> Last Date:15-Feb-2022
+- DG (Dollar General) First Date:13-Nov-2009 -> Last Date:15-Feb-2022
+- DGX (Quest Diagnostics) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DHI (D. R. Horton) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DHR (Danaher) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DIS (The Walt Disney Company) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DISCA (Discovery Class A) First Date:2-May-2007 -> Last Date:15-Feb-2022
+- DISCK (Discovery Class C) First Date:18-Sep-2008 -> Last Date:15-Feb-2022
+- DISH (Dish Network) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DLR (Digital Realty Trust Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DLTR (Dollar Tree) First Date:27-Apr-2007 -> Last Date:15-Feb-2022
+- DLX (Deluxe) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DNB (DUN & BRADSTREET CORPORATION (T) First Date:30-Jun-2020 -> Last Date:15-Feb-2022
+- DOV (Dover) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DOW (DOW) First Date:20-Mar-2019 -> Last Date:15-Feb-2022
+- DPZ (Domino's Pizza) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DRE (Duke Realty Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DRI (Darden Restaurants) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DTE (DTE Energy Co.) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DUK (Duke Energy) First Date:15-Jun-2012 -> Last Date:15-Feb-2022
+- DVA (DaVita) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DVN (Devon Energy) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- DXC (DXC Technology) First Date:16-Mar-2017 -> Last Date:15-Feb-2022
+- DXCM (Dexcom) First Date:2-May-2005 -> Last Date:15-Feb-2022
+- EA (Electronic Arts) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
+- EBAY (eBay) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ECL (Ecolab) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ED (Consolidated Edison) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- EFX (Equifax) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- EIX (Edison Int'l) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
+- EL (Estee Lauder Cos.) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- EMN (Eastman Chemical) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- EMR (Emerson Electric Company) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
 ENDP (ENDO INTERNATIONAL PLC) First Date:3-Mar-2014 -> Last Date:15-Feb-2022
 ENPH (Enphase Energy) First Date:30-Mar-2012 -> Last Date:15-Feb-2022
 EPAM (EPAM Systems) First Date:8-Feb-2012 -> Last Date:15-Feb-2022
