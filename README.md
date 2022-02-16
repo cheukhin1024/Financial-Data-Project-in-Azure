@@ -256,67 +256,67 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 - EL (Estee Lauder Cos.) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
 - EMN (Eastman Chemical) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
 - EMR (Emerson Electric Company) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ENDP (ENDO INTERNATIONAL PLC) First Date:3-Mar-2014 -> Last Date:15-Feb-2022
-ENPH (Enphase Energy) First Date:30-Mar-2012 -> Last Date:15-Feb-2022
-EPAM (EPAM Systems) First Date:8-Feb-2012 -> Last Date:15-Feb-2022
-EOG (EOG Resources) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-EQ (EQUILLIUM) First Date:12-Oct-2018 -> Last Date:15-Feb-2022
-EQIX (Equinix) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-EQR (Equity Residential) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-EQT (EQT CORPORATION) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ES (Eversource Energy) First Date:26-Apr-2007 -> Last Date:15-Feb-2022
-ESS (Essex Property Trust) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ETN (Eaton Corporation) First Date:15-May-2012 -> Last Date:15-Feb-2022
-ETR (Entergy) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-ETSY (Etsy) First Date:16-Apr-2015 -> Last Date:15-Feb-2022
-EVRG (Evergy) First Date:2-May-2007 -> Last Date:15-Feb-2022
-EW (Edwards Lifesciences) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-EXC (Exelon) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-EXPD (Expeditors) First Date:6-Jun-2005 -> Last Date:15-Feb-2022
-EXPE (Expedia Group) First Date:9-Aug-2005 -> Last Date:15-Feb-2022
-EXR (Extra Space Storage) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-F (Ford Motor) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FANG (Diamondback Energy) First Date:12-Oct-2012 -> Last Date:15-Feb-2022
-FAST (Fastenal Co) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FB (Facebook) First Date:18-May-2012 -> Last Date:15-Feb-2022
-FBHS (Fortune Brands Home & Security) First Date:4-Oct-2011 -> Last Date:15-Feb-2022
-FCX (Freeport-McMoRan) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FDX (FedEx Corporation) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FDS (Factset Research Systems) First Date:1-May-2007 -> Last Date:15-Feb-2022
-FE (FirstEnergy Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FFIV (F5 Networks) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FHN (FIRST HORIZON NATIONAL CORPORATION) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FIS (Fidelity National Information Services) First Date:1-Feb-2006 -> Last Date:15-Feb-2022
-FISV (Fiserv Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FITB (Fifth Third Bancorp) First Date:20-Jan-2011 -> Last Date:15-Feb-2022
-FL (Foot Locker Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FLEX (Flex Ltd) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FLR (Fluor) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FLS (Flowserve Corporation) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FLT (FleetCor Technologies Inc) First Date:15-Dec-2010 -> Last Date:15-Feb-2022
-FMC (FMC Corporation) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FOSL (FOSSIL GROUP) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FOX (Twenty-First Century Fox Class B) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
-FOXA (Twenty-First Century Fox Class A) First Date:27-Feb-2019 -> Last Date:15-Feb-2022
-FPL (FIRST TRUST NEW OPPORTUNITIES MLP & ENERGY FUND) First Date:27-Mar-2014 -> Last Date:15-Feb-2022
-FRC (First Republic Bank) First Date:9-Dec-2010 -> Last Date:15-Feb-2022
-FRT (Federal Realty Investment Trust) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-FSLR (FIRST SOLAR) First Date:17-Nov-2006 -> Last Date:15-Feb-2022
-FTI (TechnipFMC) First Date:17-Jan-2017 -> Last Date:15-Feb-2022
-FTNT (Fortinet) First Date:18-Nov-2009 -> Last Date:15-Feb-2022
-FTV (Fortive Corp) First Date:5-Jul-2016 -> Last Date:15-Feb-2022
-GCI (GANNETT CO.) First Date:4-Feb-2014 -> Last Date:15-Feb-2022
-GD (General Dynamics) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-GE (General Electric) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-GHC (GRAHAM HOLDINGS COMPANY) First Date:16-May-2007 -> Last Date:15-Feb-2022
-GILD (Gilead Sciences) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-GIS (General Mills) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-GL (GLOBE LIFE) First Date:1-May-2007 -> Last Date:15-Feb-2022
-GLW (Corning) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-GM (General Motors) First Date:18-Nov-2010 -> Last Date:15-Feb-2022
-GME (GAMESTOP CORPORATION) First Date:10-Oct-2005 -> Last Date:15-Feb-2022
-GNRC (Generac Holdings) First Date:11-Feb-2010 -> Last Date:15-Feb-2022
-GNW (GENWORTH FINANCIAL INC) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ENDP (ENDO INTERNATIONAL PLC) First Date:3-Mar-2014 -> Last Date:15-Feb-2022
+- ENPH (Enphase Energy) First Date:30-Mar-2012 -> Last Date:15-Feb-2022
+- EPAM (EPAM Systems) First Date:8-Feb-2012 -> Last Date:15-Feb-2022
+- EOG (EOG Resources) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- EQ (EQUILLIUM) First Date:12-Oct-2018 -> Last Date:15-Feb-2022
+- EQIX (Equinix) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- EQR (Equity Residential) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- EQT (EQT CORPORATION) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ES (Eversource Energy) First Date:26-Apr-2007 -> Last Date:15-Feb-2022
+- ESS (Essex Property Trust) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ETN (Eaton Corporation) First Date:15-May-2012 -> Last Date:15-Feb-2022
+- ETR (Entergy) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- ETSY (Etsy) First Date:16-Apr-2015 -> Last Date:15-Feb-2022
+- EVRG (Evergy) First Date:2-May-2007 -> Last Date:15-Feb-2022
+- EW (Edwards Lifesciences) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- EXC (Exelon) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- EXPD (Expeditors) First Date:6-Jun-2005 -> Last Date:15-Feb-2022
+- EXPE (Expedia Group) First Date:9-Aug-2005 -> Last Date:15-Feb-2022
+- EXR (Extra Space Storage) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- F (Ford Motor) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FANG (Diamondback Energy) First Date:12-Oct-2012 -> Last Date:15-Feb-2022
+- FAST (Fastenal Co) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FB (Facebook) First Date:18-May-2012 -> Last Date:15-Feb-2022
+- FBHS (Fortune Brands Home & Security) First Date:4-Oct-2011 -> Last Date:15-Feb-2022
+- FCX (Freeport-McMoRan) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FDX (FedEx Corporation) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FDS (Factset Research Systems) First Date:1-May-2007 -> Last Date:15-Feb-2022
+- FE (FirstEnergy Corp) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FFIV (F5 Networks) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FHN (FIRST HORIZON NATIONAL CORPORATION) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FIS (Fidelity National Information Services) First Date:1-Feb-2006 -> Last Date:15-Feb-2022
+- FISV (Fiserv Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FITB (Fifth Third Bancorp) First Date:20-Jan-2011 -> Last Date:15-Feb-2022
+- FL (Foot Locker Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FLEX (Flex Ltd) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FLR (Fluor) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FLS (Flowserve Corporation) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FLT (FleetCor Technologies Inc) First Date:15-Dec-2010 -> Last Date:15-Feb-2022
+- FMC (FMC Corporation) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FOSL (FOSSIL GROUP) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FOX (Twenty-First Century Fox Class B) First Date:30-Apr-2007 -> Last Date:15-Feb-2022
+- FOXA (Twenty-First Century Fox Class A) First Date:27-Feb-2019 -> Last Date:15-Feb-2022
+- FPL (FIRST TRUST NEW OPPORTUNITIES MLP & ENERGY FUND) First Date:27-Mar-2014 -> Last Date:15-Feb-2022
+- FRC (First Republic Bank) First Date:9-Dec-2010 -> Last Date:15-Feb-2022
+- FRT (Federal Realty Investment Trust) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- FSLR (FIRST SOLAR) First Date:17-Nov-2006 -> Last Date:15-Feb-2022
+- FTI (TechnipFMC) First Date:17-Jan-2017 -> Last Date:15-Feb-2022
+- FTNT (Fortinet) First Date:18-Nov-2009 -> Last Date:15-Feb-2022
+- FTV (Fortive Corp) First Date:5-Jul-2016 -> Last Date:15-Feb-2022
+- GCI (GANNETT CO.) First Date:4-Feb-2014 -> Last Date:15-Feb-2022
+- GD (General Dynamics) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- GE (General Electric) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- GHC (GRAHAM HOLDINGS COMPANY) First Date:16-May-2007 -> Last Date:15-Feb-2022
+- GILD (Gilead Sciences) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- GIS (General Mills) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- GL (GLOBE LIFE) First Date:1-May-2007 -> Last Date:15-Feb-2022
+- GLW (Corning) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- GM (General Motors) First Date:18-Nov-2010 -> Last Date:15-Feb-2022
+- GME (GAMESTOP CORPORATION) First Date:10-Oct-2005 -> Last Date:15-Feb-2022
+- GNRC (Generac Holdings) First Date:11-Feb-2010 -> Last Date:15-Feb-2022
+- GNW (GENWORTH FINANCIAL INC) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
 GOOG (Alphabet Inc Class C) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
 GOOGL (Alphabet Inc Class A) First Date:27-Apr-2007 -> Last Date:15-Feb-2022
 GP (Georgia-Pacific Group) First Date:28-Aug-2020 -> Last Date:15-Feb-2022
