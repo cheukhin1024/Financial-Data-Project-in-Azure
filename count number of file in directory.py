@@ -1,5 +1,3 @@
-%python
-
 import os
 APP_FOLDER = '/dbfs/FileStore/tables/FirstRate30mins_Delisted'
 totalFiles = 0
