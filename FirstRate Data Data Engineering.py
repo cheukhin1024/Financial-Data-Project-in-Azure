@@ -50,7 +50,3 @@ display(spark.sql('SELECT * FROM aal_30mins_delta'))
 display(spark.sql('SELECT * FROM aa_30mins_delta'))
 display(spark.sql('SELECT * FROM aapl_30mins_delta'))
 display(spark.sql('SELECT * FROM a_30mins_delta'))
-
-# COMMAND ----------
-
-display(spark.sql('SELECT * FROM zts_30mins_delta'))
