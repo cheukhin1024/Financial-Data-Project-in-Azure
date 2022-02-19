@@ -1,6 +1,4 @@
 # Databricks notebook source
-"""
-
 import os
 import numpy as np
 import pandas as pd
@@ -49,14 +47,10 @@ display(spark.sql('SELECT * FROM aa_30mins_delta'))
 display(spark.sql('SELECT * FROM aapl_30mins_delta'))
 display(spark.sql('SELECT * FROM a_30mins_delta'))
 
-"""
-
 # COMMAND ----------
 
-"""
-
 import os
-import glob 
+#import glob 
 import numpy as np
 import pandas as pd
 
@@ -74,9 +68,9 @@ import json
 df_30mins_delisted_ = {}
 _delisted_delta ={}
 
-os.chdir("/dbfs/FileStore/tables/FirstRate30mins_Delisted")
+path_delisted = "/dbfs/FileStore/tables/FirstRate30mins_Delisted"
 
-for filename_delisted in glob.glob("*.txt"):
+for filename_delisted in os.listdir(path_delisted):
     name_delisted = filename_delisted.split('_')[0]
     
     temp_delisted = StructType([StructField(name_delisted+"_date/time", StringType(), True),StructField(name_delisted+"_adjOpen", FloatType(), True),StructField(name_delisted+"_adjHigh", FloatType(), True),StructField(name_delisted+"_adjLow", FloatType(), True),StructField(name_delisted+"_adjClose", FloatType(), True),StructField(name_delisted+"_adjVolume", IntegerType(), True)])
@@ -91,20 +85,35 @@ for filename_delisted in glob.glob("*.txt"):
     #name each table
     table_name_delisted = name_delisted+'_30mins_delisted_delta'
     
-#create delta lake for each dataframes
-df_30mins_delisted_[name_delisted].write.format("delta").mode("overwrite").saveAsTable(table_name_delisted)
+    #create delta lake for each dataframes
+    df_30mins_delisted_[name_delisted].write.format("delta").mode("overwrite").saveAsTable(table_name_delisted)
 
 display(df_30mins_delisted_['AABA'])
 display(df_30mins_delisted_['ABI'])
-display(df_30mins_delisted_['AET'])
-display(df_30mins_delisted_['YHOO'])
  
-display(spark.sql('SELECT * FROM aaba_30mins_delta'))
-display(spark.sql('SELECT * FROM abi_30mins_delta'))
-display(spark.sql('SELECT * FROM aet_30mins_delta'))
-display(spark.sql('SELECT * FROM yhoo_30mins_delta'))
+display(spark.sql('SELECT * FROM aaba_30mins_delisted_delta'))
+display(spark.sql('SELECT * FROM abi_30mins_delisted_delta'))
+display(spark.sql('SELECT * FROM aet_30mins_delisted_delta'))
+display(spark.sql('SELECT * FROM yhoo_30mins_delisted_delta'))
 
-"""
+# COMMAND ----------
+
+import os
+# check if size of file is 0
+
+for filename_delisted in os.listdir(path_delisted):
+    if os.stat(filename_delisted).st_size == 0:
+        print(f'File {filename_delisted.split("_")[0]} is empty')
+        dbutils.fs.rm("/FileStore/tables/FirstRate30mins_Delisted/" + filename_delisted)
+
+# COMMAND ----------
+
+ABI_30min_spark_DF_newRow = StructType([StructField("ABI_date/time", StringType(), True),StructField("ABI_adjOpen", FloatType(), True),StructField("ABI_adjHigh", FloatType(), True),StructField("ABI_adjLow", FloatType(), True),StructField("ABI_adjClose", FloatType(), True),StructField("ABI_adjVolume", IntegerType(), True)])
+ABI_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(ABI_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins_Delisted/ABI_DELISTED_30min.txt")
+display(ABI_30min_spark_DF)
+
+ABI_30min_spark_DF.write.format("delta").mode("overwrite").saveAsTable("ABI_30mins_delisted_delta")
+display(spark.sql('SELECT * FROM abi_30mins_delisted_delta'))
 
 # COMMAND ----------
 
