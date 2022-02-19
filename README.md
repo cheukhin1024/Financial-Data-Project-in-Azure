@@ -37,8 +37,8 @@ Dynamic Cloud Data lake, Financial Data Easy for Everyone.
 This bundle contains 1-minute, 5-minute, 30-minute and 1-hour historical intraday data for :
 
 500 component stocks of the S&P500
-146 active stocks previously included in the S&P500
-198 delisted stocks previously included in the S&P500
+active stocks previously included in the S&P500
+delisted stocks previously included in the S&P500
 SPX index
 Listing of S&P500 component changes back to 2004
 Data is adjusted for dividends and splits. Out-of-hours trades are included.
