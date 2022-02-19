@@ -32,7 +32,7 @@ Dynamic Cloud Data lake, Financial Data Easy for Everyone.
 1. K-mean Clustering using sklearn on delta format data
 
 
-###### FirstRate Data Data Engineering 
+###### FirstRate Data Data Engineering.py 
 
 This bundle contains 1-minute, 5-minute, 30-minute and 1-hour historical intraday data for :
 
