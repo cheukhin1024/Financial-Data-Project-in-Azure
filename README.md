@@ -1,5 +1,7 @@
 # Finance in Azure Databricks and Apache Spark
 
+## Contributor 
+1. Jesstlyn Clarissa (The University of Hong Kong)
 
 ## Description
 Dynamic Cloud Data lake, Financial Data Easy for Everyone.
