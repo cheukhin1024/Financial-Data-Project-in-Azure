@@ -1,4 +1,5 @@
 # Financial Data Engineering And Machine Learning in Azure Databricks
+![Me main3](https://user-images.githubusercontent.com/70860455/160253345-b4b9484a-966d-4f03-9419-1354fc8b1934.PNG)
 
 ## Description
 Dynamic Cloud Data lake, Financial Data Easy for Everyone.
@@ -6,12 +7,8 @@ Dynamic Cloud Data lake, Financial Data Easy for Everyone.
 ## Contributor 
 1. Jesstlyn Clarissa (The University of Hong Kong)
 
-## Python Libraries 
 
-![image](https://user-images.githubusercontent.com/70860455/152734547-d4aed8a8-21de-4b49-8b47-82c355de4f2c.png)
-
-
-## Files Explanations:
+## Main Files Explanations:
 
 ###### Financial Data Engineering.py
 
@@ -20,7 +17,7 @@ Dynamic Cloud Data lake, Financial Data Easy for Everyone.
 - [Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads), 
 - [Economic Policy Uncertainity Index Website](https://www.policyuncertainty.com/),
 - [NASA](https://data.nasa.gov/).
-2. Rename columns
+2. Rename column names
 3. Combine multiple columns of multiple dataframes
 4. Create Azure Databricks Delta Data Lake
 
@@ -37,15 +34,15 @@ Dynamic Cloud Data lake, Financial Data Easy for Everyone.
 
 ###### FirstRate Data Data Engineering.py 
 
-This bundle contains 1-minute, 5-minute, 30-minute and 1-hour historical intraday data for :
-
-500 component stocks of the S&P500
-active stocks previously included in the S&P500
-delisted stocks previously included in the S&P500
-SPX index
-Listing of S&P500 component changes back to 2004
-Data is adjusted for dividends and splits. Out-of-hours trades are included.
-Data is loaded to the Azure Databricks Delta Lake. 
+1. Contains 1-minute, 5-minute, 30-minute and 1-hour historical intraday data for :
+   500 component stocks of the S&P500
+   active stocks previously included in the S&P500
+   delisted stocks previously included in the S&P500
+   SPX index
+   Listing of S&P500 component changes back to 2004
+   Data is adjusted for dividends and splits. Out-of-hours trades are included.
+2. Add headers and Rename column names 
+3. Create Azure Databricks Delta Data Lake. 
 
 The intraday bars and tick data for stocks and ETFs are aggregated from trades on the below exchanges:
 
