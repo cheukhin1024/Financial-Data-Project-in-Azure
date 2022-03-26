@@ -45,6 +45,7 @@ delisted stocks previously included in the S&P500
 SPX index
 Listing of S&P500 component changes back to 2004
 Data is adjusted for dividends and splits. Out-of-hours trades are included.
+Data is loaded to the Azure Databricks Delta Lake. 
 
 The intraday bars and tick data for stocks and ETFs are aggregated from trades on the below exchanges:
 
