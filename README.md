@@ -10,6 +10,17 @@ Dynamic Cloud Data lake, Financial Data Easy for Everyone.
 
 ## Main Files Explanations:
 
+###### Count satallite image color area.py
+
+![ms image](https://user-images.githubusercontent.com/70860455/160276772-a8624e36-8d0d-438c-8b98-20c90c29aea5.PNG)
+1. Count the color area of the satallite image using OpenCV
+
+
+###### Stream Count satallite image color area.py
+
+1. Stream Count the color area of the satallite image using OpenCV
+
+
 ###### Financial Data Engineering.py
 
 1. REST API getting data from: 
