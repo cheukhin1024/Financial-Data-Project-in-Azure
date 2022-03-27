@@ -18,7 +18,7 @@ count=np.count_nonzero(mask)
 print('count:', count)
 
 # save output
-cv2.imwrite('blue_bag_mask.png', mask)
+cv2.imwrite('ms image_mask.PNG', mask)
 
 # Display various images to see the steps
 cv2.imshow('mask',mask)
