@@ -34,7 +34,7 @@ Notice:
 
 ## Main Files Explanations:
 
-###### [Count satallite image color area.py](https://github.com/cheukhin1024/Financial-Data-Engineering-AND-ML-in-Azure-Databricks/blob/main/Count%20satallite%20image%20color%20area.py)
+###### Count satallite image color area.py
 
 ![ms image](https://user-images.githubusercontent.com/70860455/160276772-a8624e36-8d0d-438c-8b98-20c90c29aea5.PNG)
 1. Count the color area of the satallite image using OpenCV
