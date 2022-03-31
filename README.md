@@ -17,14 +17,14 @@ https://matroidevolved.com/
 
 ## How to access the data?
 
-1. Finish the form https://forms.gle/LrF1vK9zxo3UiCt3A
+- Finish the form https://forms.gle/LrF1vK9zxo3UiCt3A
 
-2. After you submit the form, we will take 1-2 working days to view it. If there is no problem, we will add a "Reader: View all     
+- After you submit the form, we will take 1-2 working days to view it. If there is no problem, we will add a "Reader: View all     
    resources, but does not allow you to make any changes" role assignment to your Azure email. Then, you can access the data and download data.
 
-3. If there is any problem, we will send email to your contact mail box.
+- If there is any problem, we will send email to your contact mail box.
 
-4. Contact email can be different from Azure email. 
+- Contact email can be different from Azure email. 
 
 
 ## Main Files Explanations:
