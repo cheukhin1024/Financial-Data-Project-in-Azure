@@ -5,9 +5,9 @@
 - Free High-Quality Financial Data.
 - Over 200 GB Financial Cloud Data Delta Lake.
 - Easy for Everyone.
-- Providing historical S&P 500 constituents high-frequency data (No survivorship bias), and alternative data.
+- Providing historical S&P 500 constituents high-frequency data (No survivorship bias), and alternative data.Data is back to 2004
 - 100x times faster than traditional database using Koalas, Apache Spark.
--Specially designed for feature selection and Machine Learning.
+- Specially designed for feature selection and Machine Learning.
 
 ## Website
 https://matroidevolved.com/
