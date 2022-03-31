@@ -2,7 +2,15 @@
 ![Me main3](https://user-images.githubusercontent.com/70860455/160253345-b4b9484a-966d-4f03-9419-1354fc8b1934.PNG)
 
 ## Description
-Dynamic Cloud Data lake, Financial Data Easy for Everyone.
+- Free High-Quality Financial Data.
+- Over 200 GB Financial Cloud Data Delta Lake.
+- Easy for Everyone.
+- Providing historical S&P 500 constituents high-frequency data (No survivorship bias), and alternative data.
+- 100x times faster than traditional database using Koalas, Apache Spark.
+-Specially designed for feature selection and Machine Learning.
+
+## Website
+https://matroidevolved.com/
 
 ## Contributor 
 1. Jesstlyn Clarissa (The University of Hong Kong)
