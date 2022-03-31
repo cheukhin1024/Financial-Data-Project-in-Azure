@@ -26,6 +26,9 @@ https://matroidevolved.com/
 
 - Contact email can be different from Azure email. 
 
+Notice:
+- As Databricks Delta Sharing is still in beta, Access data through Azure IAM is the only way.
+
 
 ## Main Files Explanations:
 
