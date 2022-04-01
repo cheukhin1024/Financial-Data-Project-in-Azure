@@ -53,7 +53,7 @@ Notice:
 - Current S&P 500 constituents 30-mins stock data
 - Delisted S&P 500 constituents 30-mins stock data
 - [Aruoba-Diebold-Scotti Business Conditions Index](https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7) in [Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads) 
-- Ec
+- [US Daily News Index](https://www.policyuncertainty.com/media/All_Daily_Policy_Data.csv) in [Economic Policy Uncertainty](https://www.policyuncertainty.com/us_monthly.html)
 
 ###### Financial Data Engineering.py
 
