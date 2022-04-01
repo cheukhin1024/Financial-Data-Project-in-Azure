@@ -48,6 +48,12 @@ Notice:
 ###### Get data from Delta Lake.py
 
 1. Examples of getting different datasets from Delta Lake in Azure Databricks 
+- Current S&P 500 constituents 1-min stock data
+- Delisted S&P 500 constituents 1-min stock data
+- Current S&P 500 constituents 30-mins stock data
+- Delisted S&P 500 constituents 30-mins stock data
+- [Aruoba-Diebold-Scotti Business Conditions Index](https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7) in [Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads) 
+- Ec
 
 ###### Financial Data Engineering.py
 
