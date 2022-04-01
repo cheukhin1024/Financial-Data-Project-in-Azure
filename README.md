@@ -45,6 +45,10 @@ Notice:
 1. Stream Count the color area of the satallite image using OpenCV
 
 
+###### Get data from Delta Lake.py
+
+1. Examples of getting different datasets from Delta Lake in Azure Databricks 
+
 ###### Financial Data Engineering.py
 
 1. REST API getting data from: 
