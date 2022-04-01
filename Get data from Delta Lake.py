@@ -20,13 +20,13 @@ from pyspark.sql.types import *
 # If you want to get delisted S&P 500 components 30-minutes data, please code: "ticker name" + '_30mins_delisted_delta'. Example of getting YAHOO! (ticker: YHOO) stock data: yhoo_30mins_delta.
 
 
-# Example of displaying Apple (ticker: AAPL) 1-minute data
+# Example of displaying all Apple (ticker: AAPL) 1-minute data
 display(spark.sql('SELECT * FROM aapl_1min_delta'))
-# Example of displaying delisted Yahoo! (ticker: YHOO) 1-minute data
+# Example of displaying all delisted Yahoo! (ticker: YHOO) 1-minute data
 display(spark.sql('SELECT * FROM yhoo_1min_delta'))
-# Example of displaying Apple (ticker: AAPL) 30-minutes data
+# Example of displaying all Apple (ticker: AAPL) 30-minutes data
 display(spark.sql('SELECT * FROM aapl_30mins_delta'))
-# Example of displaying delisted YAHOO! (ticker: YHOO) 30-minutes data
+# Example of displaying all delisted YAHOO! (ticker: YHOO) 30-minutes data
 display(spark.sql('SELECT * FROM yhoo_30mins_delta'))
 
 # After displaying the Spark Dataframe, you can press "Download" button.
