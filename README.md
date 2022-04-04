@@ -40,9 +40,9 @@ Notice:
 1. Count the color area of the satallite image using OpenCV
 
 
-###### Stream Count satallite image color area.py
+###### Stream Count satallite image color area.py [testing]
 
-1. Stream Count the color area of the satallite image using OpenCV
+1. Stream Count the color area of the satallite image using OpenCV and Microsoft Planetary Computer.
 
 
 ###### Get data from Delta Lake.py
