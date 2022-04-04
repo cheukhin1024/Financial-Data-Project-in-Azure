@@ -29,4 +29,6 @@ display(spark.sql('SELECT * FROM aapl_30mins_delta'))
 # Example of displaying all delisted YAHOO! (ticker: YHOO) 30-minutes data
 display(spark.sql('SELECT * FROM yhoo_30mins_delta'))
 
+#Example of displaying all ADS data
+display(spark.sql('SELECT * FROM ads_delta'))
 # After displaying the Spark Dataframe, you can press "Download" button.
