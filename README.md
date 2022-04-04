@@ -27,7 +27,7 @@ https://matroidevolved.com/
 - Contact email can be different from Azure email. 
 
 Notice:
-- As Databricks Delta Sharing is still in beta, access data through Azure IAM is the only way.
+- As Databricks Delta Sharing is still in beta, access data through Azure RBAC role assignment is the only way.
   
   https://databricks.com/product/delta-sharing#:~:text=Delta%20Sharing%20is%20the%20world's,shared%20data%20on%20one%20platform.
 
