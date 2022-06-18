@@ -1,9 +1,9 @@
-# Free High-Quality Financial Data in Azure Databricks
+# Free High-Quality Financial Data in Azure
 ![Me main3](https://user-images.githubusercontent.com/70860455/160253345-b4b9484a-966d-4f03-9419-1354fc8b1934.PNG)
 
 ## Description
 - Free High-Quality Financial Data.
-- Over 200 GB Financial Cloud Data Delta Lake.
+- Over 20 billions data rows in Financial Cloud Data Delta Lake.
 - Easy for Everyone.
 - Providing historical S&P 500 constituents high-frequency data (No survivorship bias), and alternative data.Data is back to 2004
 - 10x times faster than traditional database using Koalas, Apache Spark.
@@ -13,7 +13,7 @@
 https://matroidevolved.com/
 
 ## Contributor 
-1. Jesstlyn Clarissa (The University of Hong Kong)
+1. Jesstlyn Clarissa (The University of Hong Kong) :smiling_face_with_three_hearts:
 
 ## StackOverflow
 https://stackoverflow.com/c/algorithmic-trading-for-beginners
@@ -25,7 +25,7 @@ Notice:
 
 
 
-There are 4 solutions:
+There are 2 solutions:
 
 1. Download raw .txt zip files from Google Drive
 
@@ -38,18 +38,16 @@ We can assign you as a "Storage Blob Data Contributor
 Allows for read, write and delete access to Azure Storage blob containers and data". Then, you can accept the email invitation and access the data.
 
 
-3. Access data through Azure Databricks Delta Sharing (Developing)
+3. Access data through Azure Databricks Delta Sharing (Developing:sweat:)
 
 For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
 
 
-4. Acess data through Azure Data Share (Developing)
+4. Acess data through Azure Data Share (Developing:sweat:)
 
 For details, https://docs.microsoft.com/en-us/azure/databricks/data-sharing/delta-sharing/
 
-Azure Data Share service is super expensive :)
-
-
+(Azure Data Share is so expensive :cry:)
 ## Main Files Explanations:
 
 ###### Count satallite image color area.py
