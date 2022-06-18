@@ -6,7 +6,7 @@
 - Over 200 GB Financial Cloud Data Delta Lake.
 - Easy for Everyone.
 - Providing historical S&P 500 constituents high-frequency data (No survivorship bias), and alternative data.Data is back to 2004
-- 100x times faster than traditional database using Koalas, Apache Spark.
+- 10x times faster than traditional database using Koalas, Apache Spark.
 - Specially designed for feature selection and Machine Learning.
 
 ## Website
@@ -15,21 +15,73 @@ https://matroidevolved.com/
 ## Contributor 
 1. Jesstlyn Clarissa (The University of Hong Kong)
 
+## StackOverflow
+https://stackoverflow.com/c/algorithmic-trading-for-beginners
+
+Notice: 
+- Email invitation required. 
+
 ## How to access the data?
 
-- Finish the form https://forms.gle/LrF1vK9zxo3UiCt3A
 
-- After you submit the form, we will take 1-2 working days to view it. If there is no problem, we will add a "Reader: View all     
-   resources, but does not allow you to make any changes" role assignment to your Azure email. Then, you can access the data and download data.
 
-- If there is any problem, we will send email to your contact mail box.
+There are 4 solutions:
 
-- Contact email can be different from Azure email. 
+1. Download raw .txt zip files from Google Drive
 
-Notice:
-- As Databricks Delta Sharing is still in beta, access data through Azure RBAC role assignment is the only way.
-  
-  https://databricks.com/product/delta-sharing#:~:text=Delta%20Sharing%20is%20the%20world's,shared%20data%20on%20one%20platform.
+S&P 500 tickers ReadMe
+https://drive.google.com/file/d/1dOUtgC1_UB9kb69ji_fagAv1fNC1HsSK/view?usp=sharing
+
+S&P 500 tickers A-D 30min
+https://drive.google.com/file/d/1dOUtgC1_UB9kb69ji_fagAv1fNC1HsSK/view?usp=sharing
+
+S&P 500 tickers E-K 30min
+https://drive.google.com/file/d/1P6F-RfevTIW5mc6OdjhOQWBgQleZ9Rp8/view?usp=sharing
+
+S&P 500 tickers L-Q 30min
+https://drive.google.com/file/d/1Z__xclCPKX1YU8uUZNxoZdD_d7i-1X6b/view?usp=sharing
+
+S&P 500 tickers R-Z 30min
+https://drive.google.com/file/d/1mVhIwQ2pMgsvRgGp7MvJccY95RGJG0_T/view?usp=sharing
+
+S&P 500 tickers A-D 1min
+https://drive.google.com/file/d/1ADDyl72p4nY2w_xOJIbMkOfH3bEWFBvM/view?usp=sharing
+
+S&P 500 tickers E-K 1min
+https://drive.google.com/file/d/1EpXiwmxvbQA0kU5vxDrJpB58bRG8fVgl/view?usp=sharing
+
+S&P 500 tickers L-Q 1min
+https://drive.google.com/file/d/1cIVytwEbsFQwv5SprTqJCbee8qTo-sss/view?usp=sharing
+
+S&P 500 tickers R-Z 1min
+https://drive.google.com/file/d/1a2UooUhcZ1zonKPmgfZrUA2k5LQCqpTO/view?usp=sharing
+
+SPX 1min
+https://drive.google.com/file/d/1QlGDxVWLXiErhta2o8FgXOXqr0kRzgrO/view?usp=sharing
+
+Index Change
+https://drive.google.com/file/d/1Fx1zBmkWtJnyvXdCld3oD1OwQXtyfB0Z/view?usp=sharing
+
+Delisted Tickers
+https://drive.google.com/file/d/1i1e3xdE3xl2bFjdiDybCOhOfV5KtBVB6/view?usp=sharing
+
+
+2. Access Azure Blob Storage
+
+We can assign you as a "Storage Blob Data Contributor
+Allows for read, write and delete access to Azure Storage blob containers and data". Then, you can accept the email invitation and access the data.
+
+
+3. Access data through Azure Databricks Delta Sharing (Developing)
+
+For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
+
+
+4. Acess data through Azure Data Share (Developing)
+
+For details, https://docs.microsoft.com/en-us/azure/databricks/data-sharing/delta-sharing/
+
+Azure Data Share service is super expensive :)
 
 
 ## Main Files Explanations:
