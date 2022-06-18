@@ -1,4 +1,4 @@
-# Free High-Quality Financial Data in Azure
+# Financial Project in Azure 
 ![Me main3](https://user-images.githubusercontent.com/70860455/160253345-b4b9484a-966d-4f03-9419-1354fc8b1934.PNG)
 
 ## Description
@@ -7,7 +7,7 @@
 - Easy for Everyone.
 - Providing historical S&P 500 constituents high-frequency data (No survivorship bias), and alternative data.Data is back to 2004
 - 10x times faster than traditional database using Koalas, Apache Spark.
-- Specially designed for feature selection and Machine Learning.
+- With examples 
 
 ## Website
 https://matroidevolved.com/
