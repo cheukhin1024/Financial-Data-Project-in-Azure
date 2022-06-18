@@ -29,41 +29,7 @@ There are 4 solutions:
 
 1. Download raw .txt zip files from Google Drive
 
-S&P 500 tickers ReadMe
-https://drive.google.com/file/d/1dOUtgC1_UB9kb69ji_fagAv1fNC1HsSK/view?usp=sharing
-
-S&P 500 tickers A-D 30min
-https://drive.google.com/file/d/1dOUtgC1_UB9kb69ji_fagAv1fNC1HsSK/view?usp=sharing
-
-S&P 500 tickers E-K 30min
-https://drive.google.com/file/d/1P6F-RfevTIW5mc6OdjhOQWBgQleZ9Rp8/view?usp=sharing
-
-S&P 500 tickers L-Q 30min
-https://drive.google.com/file/d/1Z__xclCPKX1YU8uUZNxoZdD_d7i-1X6b/view?usp=sharing
-
-S&P 500 tickers R-Z 30min
-https://drive.google.com/file/d/1mVhIwQ2pMgsvRgGp7MvJccY95RGJG0_T/view?usp=sharing
-
-S&P 500 tickers A-D 1min
-https://drive.google.com/file/d/1ADDyl72p4nY2w_xOJIbMkOfH3bEWFBvM/view?usp=sharing
-
-S&P 500 tickers E-K 1min
-https://drive.google.com/file/d/1EpXiwmxvbQA0kU5vxDrJpB58bRG8fVgl/view?usp=sharing
-
-S&P 500 tickers L-Q 1min
-https://drive.google.com/file/d/1cIVytwEbsFQwv5SprTqJCbee8qTo-sss/view?usp=sharing
-
-S&P 500 tickers R-Z 1min
-https://drive.google.com/file/d/1a2UooUhcZ1zonKPmgfZrUA2k5LQCqpTO/view?usp=sharing
-
-SPX 1min
-https://drive.google.com/file/d/1QlGDxVWLXiErhta2o8FgXOXqr0kRzgrO/view?usp=sharing
-
-Index Change
-https://drive.google.com/file/d/1Fx1zBmkWtJnyvXdCld3oD1OwQXtyfB0Z/view?usp=sharing
-
-Delisted Tickers
-https://drive.google.com/file/d/1i1e3xdE3xl2bFjdiDybCOhOfV5KtBVB6/view?usp=sharing
+Notice: download links are in StackOverFlow private team.
 
 
 2. Access Azure Blob Storage
