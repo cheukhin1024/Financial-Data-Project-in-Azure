@@ -1,3 +1,6 @@
+# Databricks notebook source
+
+
 import os
 # check if size of file is 0
 path_remove = "/dbfs/user/hive/warehouse"
@@ -9,7 +12,7 @@ for filename_remove in os.listdir(path_remove):
     dbutils.fs.rm("/dbfs/user/hive/warehouse/" + filename_remove)
     
     
-    
+ # COMMAND ----------   
     
     
     
