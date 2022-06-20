@@ -223,7 +223,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 - BC (BRUNSWICK CORPORATION) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
 - BDX (Becton Dickinson) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
 - BEN (Franklin Resources) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
-- BF.B (Brown-Forman) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
+- BFB (Brown-Forman) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
 - BIDU (Bidu) First Date:5-Aug-2005 -> Last Date:15-Feb-2022
 - BIG (BIG LOTS) First Date:1-Sep-2006 -> Last Date:15-Feb-2022
 - BIIB (Biogen) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
@@ -235,7 +235,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 - BMRN (BioMarin Pharmaceutical) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
 - BMY (Bristol-Myers Squibb) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
 - BR (Broadridge Financial Solutions) First Date:1-May-2007 -> Last Date:15-Feb-2022
-- BRK.B (BERKSHIRE HATHAWAY) First Date:2-May-2007 -> Last Date:15-Feb-2022
+- BRKB (BERKSHIRE HATHAWAY) First Date:2-May-2007 -> Last Date:15-Feb-2022
 - BRO (Brown & Brown) First Date:3-Jan-2007 -> Last Date:15-Feb-2022
 - BSX (Boston Scientific) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
 - BTU (PEABODY ENERGY CORPORATION) First Date:3-Apr-2017 -> Last Date:15-Feb-2022
