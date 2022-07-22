@@ -2,54 +2,78 @@
 #Example: https://databricks.com/notebooks/segment-p13n//sg_03_clustering.html
 
 from sklearn.cluster import KMeans, AgglomerativeClustering
+from sklearn.pipeline import make_pipeline
 from sklearn.metrics import silhouette_score, silhouette_samples
 from sklearn.model_selection import train_test_split
 from scipy.cluster.hierarchy import dendrogram, set_link_color_palette
  
 import os
 
+from pyspark import SparkFiles
+from pyspark import SparkContext
+from pyspark.sql import SparkSession
+from pyspark.sql import functions
+from pyspark.sql.functions import * #import avg, col, udf
+from pyspark.sql import SQLContext
+from pyspark.sql import DataFrame
+from pyspark.sql.types import *
+import json
+
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import matplotlib.colors
 import seaborn as sns
  
+import databricks.koalas as ks
+
 import numpy as np
-import pandas as pd
- 
-import mlflow
-import os
+import pyspark.pandas as ps
+
+import mlflow.sklearn
 
 # COMMAND ----------
 
-data = spark.read.format("delta").load("/user/hive/warehouse/dataset_delta").select("spy_adjClose","xlb_adjClose","xlv_adjClose","xlc_adjClose","xlk_adjClose","xlf_adjClose","xlp_adjClose","xli_adjClose","xlu_adjClose","xly_adjClose","xlre_adjClose","xle_adjClose")
+spark.sql("set spark.databricks.delta.autoCompact.enabled = true")
 
-data = data.dropna()
+# COMMAND ----------
 
-data_X_pd = data.toPandas()
+#data = spark.select('Ticker').where("Ticker like '%30min'")
 
-X = data_X_pd.pct_change(1)
+#data = spark.sql(" SELECT A_adjClose, AA_adjClose, AAL_adjClose, AAP_adjClose, AAPL_adjClose, ABBV_adjClose, ABC_adjClose, ABMD_adjClose, ABT_adjClose, ACN_adjClose, ACV_adjClose FROM deltabase.a_30min_delta, deltabase.aa_30min_delta, deltabase.aal_30min_delta, deltabase.aap_30min_delta ,deltabase.aapl_30min_delta ,deltabase.abbv_30min_delta ,deltabase.abc_30min_delta , deltabase.abmd_30min_delta, deltabase.abt_30min_delta, deltabase.acn_30min_delta, deltabase.acv_30min_delta ORDER BY A_dateTime")
 
-X = X.dropna()
+data = spark.sql("select A_adjClose, AA_adjClose from deltabase.a_30min_delta FULL JOIN deltabase.aa_30min_delta ON A_dateTime == AA_dateTime")
+
+display(data)
+
+# COMMAND ----------
+
+spark.conf.set("spark.sql.execution.arrow.enabled", "true")
+
+#https://cumsum.wordpress.com/2021/03/05/pandas-attributeerror-function-object-has-no-attribute-xxx/
+data_pd = data.pandas_api()
+
+# COMMAND ----------
+
+data_pd_pct = data_pd.pct_change()
+
+display(data_pd_pct)
 
 
 # COMMAND ----------
 
-# initial cluster count
-initial_n = 13
+mlflow.sklearn.autolog()
 
-# train the model
-initial_model = KMeans(
-  n_clusters=initial_n,
-  max_iter=1000
-  )
- 
-# fit and predict per-household cluster assignment
-init_clusters = initial_model.fit_predict(X)
- 
+with mlflow.start_run():
+    
+# create a K-means model with 10 clusters
+initial_model = KMeans(n_clusters=10, max_iter=1000)
+
+init_clusters = initial_model.fit_predict(data_pd_pct)
+
 # combine households with cluster assignments
-labeled_X_pd = (
+labeled_df_pct = (
   pd.concat( 
-    [X, pd.DataFrame(init_clusters,columns=['cluster'])],
+    [data_pd_pct, pd.DataFrame(init_clusters,columns=['cluster'])],
     axis=1
     )
   )
@@ -57,9 +81,9 @@ labeled_X_pd = (
 # visualize cluster assignments
 fig, ax = plt.subplots(figsize=(10,8))
 sns.scatterplot(
-  data=labeled_X_pd,
-  x='spy_adjClose',
-  y='xlb_adjClose',
+  data=labeled_df_pct,
+  x='Dim_1',
+  y='Dim_2',
   hue='cluster',
   palette=[cm.nipy_spectral(float(i) / initial_n) for i in range(initial_n)],
   legend='brief',
