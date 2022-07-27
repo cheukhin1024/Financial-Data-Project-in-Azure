@@ -14,6 +14,10 @@ dbutils.fs.mount(
 
 # MAGIC %sql
 # MAGIC USE DATABASE deltabase
+# MAGIC 
+# MAGIC --Enable Auto Optimization
+# MAGIC set spark.databricks.delta.properties.defaults.autoOptimize.optimizeWrite = true;
+# MAGIC set spark.databricks.delta.properties.defaults.autoOptimize.autoCompact = true;
 
 # COMMAND ----------
 
@@ -156,40 +160,3 @@ for filename_delisted in os.listdir(path_delisted):
 
 display(df_30mins_delisted_['AABA'])
 display(spark.sql('SELECT * FROM aaba_30mins_delisted_delta'))
-
-# COMMAND ----------
-
-import os
-import numpy as np
-import pandas as pd
-
-from pyspark import SparkFiles
-from pyspark import SparkContext
-from pyspark.sql import functions
-import pyspark.sql.functions #import avg, col, udf
-from pyspark.sql import SQLContext
-from pyspark.sql import DataFrame
-from pyspark.sql.types import *
-import json
-
-import databricks.koalas as ks 
-import seaborn as sns 
-
-AAPL_30min_spark_DF_newRow = StructType([StructField("AAPL_date/time", StringType(), True),StructField("AAPL_adjOpen", FloatType(), True),StructField("AAPL_adjHigh", FloatType(), True),StructField("AAPL_adjLow", FloatType(), True),StructField("AAPL_adjClose", FloatType(), True),StructField("AAPL_adjVolume", IntegerType(), True)])
-
-AAPL_30min_spark_DF = spark.read.format("csv").option("header", "false").schema(AAPL_30min_spark_DF_newRow).load("/FileStore/tables/FirstRate30mins/AAPL_30min.txt")
-
-display(AAPL_30min_spark_DF)
-
-AAPL_30min_koalas_DF = ks.DataFrame(AAPL_30min_spark_DF)
-
-AAPL_30min_koalas_DF.head()
-
-#AAPL_30min_koalas_DF.AAPL_adjCLose.sort_index().pct_change(periods=1)
-ks.set_option('compute.ops_on_diff_frames', True)
-AAPL_30min_koalas_DF_pct = AAPL_30min_koalas_DF['AAPL_adjClose'] .sort_index().pct_change(periods=1)
-
-AAPL_30min_koalas_DF.sort_index().head()
-
-AAPL_30min_koalas_DF_new = ks.concat([AAPL_30min_koalas_DF, AAPL_30min_koalas_DF_pct])
-AAPL_30min_koalas_DF_new.head()
