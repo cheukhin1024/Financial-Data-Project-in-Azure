@@ -13,7 +13,7 @@
 https://matroidevolved.com/
 
 ## Contributor 
-1. Jesstlyn Clarissa (The University of Hong Kong) :smiling_face_with_three_hearts:
+1. Jesstlyn Clarissa (The University of Hong Kong) 
 
 ## StackOverflow
 https://stackoverflow.com/c/algorithmic-trading-for-beginners
