@@ -38,16 +38,15 @@ We can assign you as a "Storage Blob Data Contributor
 Allows for read, write and delete access to Azure Storage blob containers and data". Then, you can accept the email invitation and access the data.
 
 
-3. Access data through Azure Databricks Delta Sharing (Developing:sweat:)
+3. Access data through Azure Databricks Delta Sharing (Developing)
 
 For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
 
 
-4. Acess data through Azure Data Share (Developing:sweat:)
+4. Acess data through Azure Data Share (Developing)
 
 For details, https://docs.microsoft.com/en-us/azure/databricks/data-sharing/delta-sharing/
 
-(Azure Data Share is so expensive :cry:)
 ## Main Files Explanations:
 
 ###### Count satallite image color area.py
