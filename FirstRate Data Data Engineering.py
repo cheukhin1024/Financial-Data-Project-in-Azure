@@ -114,10 +114,6 @@ for filename_30min in os.listdir(path_30min):
 
 # COMMAND ----------
 
-df_30min_[name_30min].write.format("delta").mode("overwrite").option("overwriteSchema","True").saveAsTable(table_name_30min)
-
-# COMMAND ----------
-
 import os
 #import glob 
 import numpy as np
@@ -158,5 +154,5 @@ for filename_delisted in os.listdir(path_delisted):
     #create delta lake for each dataframes
     df_30mins_delisted_[name_delisted].write.format("delta").mode("overwrite").saveAsTable(table_name_delisted)
 
-display(df_30mins_delisted_['AABA'])
-display(spark.sql('SELECT * FROM aaba_30mins_delisted_delta'))
+#display(df_30mins_delisted_['AABA'])
+#display(spark.sql('SELECT * FROM aaba_30mins_delisted_delta'))
