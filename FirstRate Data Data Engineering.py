@@ -13,6 +13,7 @@ dbutils.fs.mount(
 # COMMAND ----------
 
 # MAGIC %sql
+# MAGIC --CREATE DATABASE IF NOT EXISTS deltabase;
 # MAGIC USE DATABASE deltabase
 # MAGIC 
 # MAGIC --Enable Auto Optimization
