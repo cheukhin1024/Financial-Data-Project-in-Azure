@@ -64,11 +64,16 @@ display(data_pd_pct)
 mlflow.sklearn.autolog()
 
 with mlflow.start_run():
-    
-# create a K-means model with 10 clusters
-initial_model = KMeans(n_clusters=10, max_iter=1000)
 
-init_clusters = initial_model.fit_predict(data_pd_pct)
+silhouette_avg = []
+
+for num_clusters in range(1,20):
+# create a K-means model with 10 clusters
+initial_model = KMeans(n_clusters=num_clusters)
+
+init_clusters = initial_model.fit(data_pd_pct)
+
+cluster_labels = kmeans.labels_
 
 # combine households with cluster assignments
 labeled_df_pct = (
