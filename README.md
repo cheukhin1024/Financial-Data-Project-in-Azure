@@ -92,7 +92,7 @@ For details, https://docs.microsoft.com/en-us/azure/databricks/data-sharing/delt
 1. K-mean Clustering using sklearn on delta format data
 
 
-###### FirstRate Data Data Engineering.py 
+###### FirstRate 1 min data ETL.py / FirstRate 30 min data ETL.py / FirstRate 1 hour data ETL.py
 
 1. Contains 1-minute, 5-minute, 30-minute and 1-hour historical intraday data for :
    500 component stocks of the S&P500
