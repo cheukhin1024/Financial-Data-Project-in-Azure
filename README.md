@@ -12,8 +12,9 @@
 ## Website
 https://matroidevolved.com/
 
-## Contributor 
+## Contributors 
 1. Jesstlyn Clarissa (The University of Hong Kong) 
+2. Suet Wa Li (City University of Hong Kong)
 
 ## StackOverflow
 https://stackoverflow.com/c/algorithmic-trading-for-beginners
