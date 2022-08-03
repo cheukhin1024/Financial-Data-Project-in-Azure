@@ -26,7 +26,7 @@ Notice:
 
 
 
-There are 2 solutions:
+There are 3 solutions:
 
 1. Download raw .txt zip files from Google Drive
 
@@ -35,16 +35,21 @@ Notice: download links are in StackOverFlow private team.
 
 2. Access Azure Blob Storage
 
-We can assign you as a "Storage Blob Data Contributor
+We can assign you as a "Storage Blob Data Contributor -
 Allows for read, write and delete access to Azure Storage blob containers and data". Then, you can accept the email invitation and access the data.
 
+3. Access Azure Databricks Delta Lake
+We can assign you as a "Contributor -
+Allows for read, write and delete access to Azure Databricks". Then, you can accept the email invitation and access the data.
 
-3. Access data through Azure Databricks Delta Sharing (Developing)
+4. Access data through Azure Databricks Delta Sharing (Developing)
 
 For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
 
 
-4. Acess data through Azure Data Share (Developing)
+5. Acess data through Azure Data Share 
+
+Accept the email invitation and access the data.
 
 For details, https://docs.microsoft.com/en-us/azure/databricks/data-sharing/delta-sharing/
 
