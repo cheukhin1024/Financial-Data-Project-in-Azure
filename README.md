@@ -85,7 +85,7 @@ For details, https://docs.microsoft.com/en-us/azure/databricks/data-sharing/delt
 - [NASA](https://data.nasa.gov/).
 2. Rename column names
 3. Combine multiple columns of multiple dataframes
-4. Create Azure Databricks Delta Data Lake
+4. Create Azure Databricks Delta Lake
 
 
 ###### Financial Machine Learning using pyspark ml.py
