@@ -26,7 +26,7 @@ Notice:
 
 
 
-There are 3 solutions:
+There are 4 solutions:
 
 1. Download raw .txt zip files from Google Drive
 
