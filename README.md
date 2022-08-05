@@ -2,12 +2,10 @@
 ![Me main3](https://user-images.githubusercontent.com/70860455/160253345-b4b9484a-966d-4f03-9419-1354fc8b1934.PNG)
 
 ## Description
-- Free High-Quality Financial Data.
-- Over 20 billions data rows in Financial Cloud Data Delta Lake.
-- Easy for Everyone.
-- Providing historical S&P 500 constituents high-frequency data (No survivorship bias), and alternative data.Data is back to 2004
-- 10x times faster than traditional database using Koalas, Apache Spark.
-- With examples 
+• Provide over 2 billion historical S&P 500 constituents with high-frequency data rows (no survivorship bias) to different users in Azure Databricks Delta Lake.
+• Increased query performance by at least 1000% compared to a traditional database.
+• Introduce a dynamic machine learning sector classification alternative solution (such as K-mean clustering, hierarchical clustering) to S&P GICS sector classification.
+• Provide alternative data (such as data from Federal Reserve Bank of Philadelphia, Bloomberg TV real-time market sentiment data, Twitter sentiment, and NASA satellite images).
 
 ## Website
 https://matroidevolved.com/
