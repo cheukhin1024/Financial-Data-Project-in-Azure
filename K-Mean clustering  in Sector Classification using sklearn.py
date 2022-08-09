@@ -386,6 +386,158 @@ data = spark.sql("SELECT AAPL_adjClose, \
                          KR_adjClose, \
                          KSS_adjClose, \
                          KSU_adjClose, \
+                         L_adjClose, \
+                         LBTYK_adjClose, \
+                         LDOS_adjClose, \
+                         LEG_adjClose, \
+                         LEN_adjClose, \
+                         LH_adjClose, \
+                         LHX_adjClose, \
+                         LIFE_adjClose, \
+                         LIN_adjClose, \
+                         LKQ_adjClose, \
+                         LLY_adjClose, \
+                         LMT_adjClose, \
+                         LNC_adjClose, \
+                         LNT_adjClose, \
+                         LOGI_adjClose, \
+                         LOW_adjClose, \
+                         LRCX_adjClose, \
+                         LSI_adjClose, \
+                         LU_adjClose, \
+                         LUMN_adjClose, \
+                         LUV_adjClose, \
+                         LVS_adjClose, \
+                         LW_adjClose, \
+                         LYB_adjClose, \
+                         LYV_adjClose, \
+                         M_adjClose, \
+                         MA_adjClose, \
+                         MAA_adjClose, \
+                         MAC_adjClose, \
+                         MAR_adjClose, \
+                         MAS_adjClose, \
+                         MAT_adjClose, \
+                         MBI_adjClose, \
+                         MCD_adjClose, \
+                         MCHP_adjClose, \
+                         MCK_adjClose, \
+                         MCO_adjClose, \
+                         MDLZ_adjClose, \
+                         MDP_adjClose, \
+                         MDT_adjClose, \
+                         MET_adjClose, \
+                         MGM_adjClose, \
+                         MHK_adjClose, \
+                         MKC_adjClose \
+                         MKTX_adjClose, \
+                         MLM_adjClose, \
+                         MMC_adjClose, \
+                         MMI_adjClose, \
+                         MMM_adjClose, \
+                         MNST_adjClose, \
+                         MO_adjClose, \
+                         MOH_adjClose, \
+                         MOS_adjClose, \
+                         MPC_adjClose, \
+                         MPWR_adjClose, \
+                         MRK_adjClose, \
+                         MRO_adjClose, \
+                         MRVL_adjClose, \
+                         MS_adjClose, \
+                         MSCI_adjClose, \
+                         MSFT_adjClose, \
+                         MSI_adjClose, \
+                         MTB_adjClose, \
+                         MTCH_adjClose, \
+                         MTD_adjClose, \
+                         MTW_adjClose, \
+                         MU_adjClose, \
+                         MUR_adjClose, \
+                         NAVI_adjClose, \
+                         NBR_adjClose, \
+                         NCLH_adjClose, \
+                         NDAQ_adjClose, \
+                         NDSN_adjClose, \
+                         NE_adjClose, \
+                         NEE_adjClose, \
+                         NEM_adjClose, \
+                         NFLX_adjClose, \
+                         NI_adjClose, \
+                         NKE_adjClose, \
+                         NKTR_adjClose, \
+                         NLOK_adjClose, \
+                         NLSN_adjClose, \
+                         NOC_adjClose, \
+                         NOV_adjClose, \
+                         NOW_adjClose, \
+                         NRG_adjClose, \
+                         NSC_adjClose, \
+                         NTAP_adjClose, \
+                         NTES_adjClose, \
+                         NTRS_adjClose, \
+                         NUE_adjClose, \
+                         NVDA_adjClose, \
+                         NVR_adjClose, \
+                         NWL_adjClose, \
+                         NWS_adjClose, \
+                         NWSA_adjClose, \
+                         NXPI_adjClose, \
+                         NYT_adjClose, \
+                         O_adjClose, \
+                         ODFL_adjClose, \
+                         ODP_adjClose, \
+                         OGN_adjClose, \
+                         OI_adjClose, \
+                         OKE_adjClose, \
+                         OMC_adjClose, \
+                         ONE_adjClose, \
+                         ORCL_adjClose, \
+                         ORLY_adjClose, \
+                         OTIS_adjClose, \
+                         OXY_adjClose, \
+                         PAR_adjClose, \
+                         PAYC_adjClose, \
+                         PAYX_adjClose, \
+                         PBCT_adjClose \
+                         PBI_adjClose, \
+                         PCAR_adjClose, \
+                         PCG_adjClose, \
+                         PDCO_adjClose, \
+                         PEAK_adjClose, \
+                         PEG_adjClose, \
+                         PENN_adjClose, \
+                         PEP_adjClose, \
+                         PFE_adjClose, \
+                         PFG_adjClose, \
+                         PG_adjClose, \
+                         PGR_adjClose, \
+                         PH_adjClose, \
+                         PHM_adjClose, \
+                         PKG_adjClose, \
+                         PKI_adjClose, \
+                         PLD_adjClose, \
+                         PLL_adjClose, \
+                         PM_adjClose, \
+                         PNC_adjClose, \
+                         PNR_adjClose, \
+                         PNW_adjClose, \
+                         POOL_adjClose, \
+                         PPG_adjClose, \
+                         PPL_adjClose, \
+                         PRGO_adjClose, \
+                         PRI_adjClose, \
+                         PRU_adjClose, \
+                         PSA_adjClose, \
+                         PSX_adjClose, \
+                         PTC_adjClose, \
+                         PVH_adjClose, \
+                         PWR_adjClose, \
+                         PXD_adjClose, \
+                         PYPL_adjClose, \
+                         QCOM_adjClose, \
+                         QGEN_adjClose, \
+                         QRVO_adjClose, \
           FROM deltabase.aapl_30min_delta \
      FULL JOIN deltabase.aa_30min_delta ON aapl_30min_delta.AAPL_dateTime = AA_dateTime \
      FULL JOIN deltabase.aal_30min_delta ON aapl_30min_delta.AAPL_dateTime = AAL_dateTime \
@@ -660,6 +812,149 @@ data = spark.sql("SELECT AAPL_adjClose, \
      FULL JOIN deltabase.GT_30min_delta ON aapl_30min_delta.AAPL_dateTime = GT_dateTime \
      FULL JOIN deltabase.GWW_30min_delta ON aapl_30min_delta.AAPL_dateTime = GWW_dateTime \
      FULL JOIN deltabase.HAL_30min_delta ON aapl_30min_delta.AAPL_dateTime = HAL_dateTime \
+     FULL JOIN deltabase.HAS_30min_delta ON aapl_30min_delta.AAPL_dateTime = HAS_dateTime \
+     FULL JOIN deltabase.HBAN_30min_delta ON aapl_30min_delta.AAPL_dateTime = HBAN_dateTime \
+     FULL JOIN deltabase.HBI_30min_delta ON aapl_30min_delta.AAPL_dateTime = HBI_dateTime \
+     FULL JOIN deltabase.HCA_30min_delta ON aapl_30min_delta.AAPL_dateTime = HCA_dateTime \
+     FULL JOIN deltabase.HD_30min_delta ON aapl_30min_delta.AAPL_dateTime = HD_dateTime \
+     FULL JOIN deltabase.HES_30min_delta ON aapl_30min_delta.AAPL_dateTime = HES_dateTime \
+     FULL JOIN deltabase.HFC_30min_delta ON aapl_30min_delta.AAPL_dateTime = HFC_dateTime \
+     FULL JOIN deltabase.HIG_30min_delta ON aapl_30min_delta.AAPL_dateTime = HIG_dateTime \
+     FULL JOIN deltabase.HII_30min_delta ON aapl_30min_delta.AAPL_dateTime = HII_dateTime \
+     FULL JOIN deltabase.HLT_30min_delta ON aapl_30min_delta.AAPL_dateTime = HLT_dateTime \
+     FULL JOIN deltabase.HOG_30min_delta ON aapl_30min_delta.AAPL_dateTime = HOG_dateTime \
+     FULL JOIN deltabase.HOLX_30min_delta ON aapl_30min_delta.AAPL_dateTime = HOLX_dateTime \
+     FULL JOIN deltabase.HON_30min_delta ON aapl_30min_delta.AAPL_dateTime = HON_dateTime \
+     FULL JOIN deltabase.HP_30min_delta ON aapl_30min_delta.AAPL_dateTime = HP_dateTime \
+     FULL JOIN deltabase.HPE_30min_delta ON aapl_30min_delta.AAPL_dateTime = HPE_dateTime \
+     FULL JOIN deltabase.HPQ_30min_delta ON aapl_30min_delta.AAPL_dateTime = HPQ_dateTime \
+     FULL JOIN deltabase.HRB_30min_delta ON aapl_30min_delta.AAPL_dateTime = HRB_dateTime \
+     FULL JOIN deltabase.HRL_30min_delta ON aapl_30min_delta.AAPL_dateTime = HRL_dateTime \
+     FULL JOIN deltabase.HSIC_30min_delta ON aapl_30min_delta.AAPL_dateTime = HSIC_dateTime \
+     FULL JOIN deltabase.HST_30min_delta ON aapl_30min_delta.AAPL_dateTime = HST_dateTime \
+     FULL JOIN deltabase.HSY_30min_delta ON aapl_30min_delta.AAPL_dateTime = HSY_dateTime \
+     FULL JOIN deltabase.HUM_30min_delta ON aapl_30min_delta.AAPL_dateTime = HUM_dateTime \
+     FULL JOIN deltabase.IAC_30min_delta ON aapl_30min_delta.AAPL_dateTime = IAC_dateTime \
+     FULL JOIN deltabase.IBM_30min_delta ON aapl_30min_delta.AAPL_dateTime = IBM_dateTime \
+     FULL JOIN deltabase.ICE_30min_delta ON aapl_30min_delta.AAPL_dateTime = ICE_dateTime \
+     FULL JOIN deltabase.IDXX_30min_delta ON aapl_30min_delta.AAPL_dateTime = IDXX_dateTime \
+     FULL JOIN deltabase.IEX_30min_delta ON aapl_30min_delta.AAPL_dateTime = IEX_dateTime \
+     FULL JOIN deltabase.IFF_30min_delta ON aapl_30min_delta.AAPL_dateTime = IFF_dateTime \
+     FULL JOIN deltabase.IGT_30min_delta ON aapl_30min_delta.AAPL_dateTime = IGT_dateTime \
+     FULL JOIN deltabase.IHRT_30min_delta ON aapl_30min_delta.AAPL_dateTime = IHRT_dateTime \
+     FULL JOIN deltabase.ILMN_30min_delta ON aapl_30min_delta.AAPL_dateTime = ILMN_dateTime \
+     FULL JOIN deltabase.INCY_30min_delta ON aapl_30min_delta.AAPL_dateTime = INCY_dateTime \
+     FULL JOIN deltabase.INFO_30min_delta ON aapl_30min_delta.AAPL_dateTime = INFO_dateTime \
+     FULL JOIN deltabase.INFY_30min_delta ON aapl_30min_delta.AAPL_dateTime = INFY_dateTime \
+     FULL JOIN deltabase.INTC_30min_delta ON aapl_30min_delta.AAPL_dateTime = INTC_dateTime \
+     FULL JOIN deltabase.INTU_30min_delta ON aapl_30min_delta.AAPL_dateTime = INTU_dateTime \
+     FULL JOIN deltabase.IP_30min_delta ON aapl_30min_delta.AAPL_dateTime = IP_dateTime \
+     FULL JOIN deltabase.IPG_30min_delta ON aapl_30min_delta.AAPL_dateTime = IPG_dateTime \
+     FULL JOIN deltabase.IPGP_30min_delta ON aapl_30min_delta.AAPL_dateTime = IPGP_dateTime \
+     FULL JOIN deltabase.IQV_30min_delta ON aapl_30min_delta.AAPL_dateTime = IQV_dateTime \
+     FULL JOIN deltabase.IR_30min_delta ON aapl_30min_delta.AAPL_dateTime = IR_dateTime \
+     FULL JOIN deltabase.IRM_30min_delta ON aapl_30min_delta.AAPL_dateTime = IRM_dateTime \
+     FULL JOIN deltabase.ISRG_30min_delta ON aapl_30min_delta.AAPL_dateTime = ISRG_dateTime \
+     FULL JOIN deltabase.IT_30min_delta ON aapl_30min_delta.AAPL_dateTime = IT_dateTime \
+     FULL JOIN deltabase.ITT_30min_delta ON aapl_30min_delta.AAPL_dateTime = ITT_dateTime \
+     FULL JOIN deltabase.ITW_30min_delta ON aapl_30min_delta.AAPL_dateTime = ITW_dateTime \
+     FULL JOIN deltabase.IVZ_30min_delta ON aapl_30min_delta.AAPL_dateTime = IVZ_dateTime \
+     FULL JOIN deltabase.J_30min_delta ON aapl_30min_delta.AAPL_dateTime = J_dateTime \
+     FULL JOIN deltabase.JBHT_30min_delta ON aapl_30min_delta.AAPL_dateTime = JBHT_dateTime \
+     FULL JOIN deltabase.JBL_30min_delta ON aapl_30min_delta.AAPL_dateTime = JBL_dateTime \
+     FULL JOIN deltabase.JCI_30min_delta ON aapl_30min_delta.AAPL_dateTime = JCI_dateTime \
+     FULL JOIN deltabase.JD_30min_delta ON aapl_30min_delta.AAPL_dateTime = JD_dateTime \
+     FULL JOIN deltabase.JEF_30min_delta ON aapl_30min_delta.AAPL_dateTime = JEF_dateTime \
+     FULL JOIN deltabase.JKHY_30min_delta ON aapl_30min_delta.AAPL_dateTime = JKHY_dateTime \
+     FULL JOIN deltabase.JNJ_30min_delta ON aapl_30min_delta.AAPL_dateTime = JNJ_dateTime \
+     FULL JOIN deltabase.JNPR_30min_delta ON aapl_30min_delta.AAPL_dateTime = JNPR_dateTime \
+     FULL JOIN deltabase.JP_30min_delta ON aapl_30min_delta.AAPL_dateTime = JP_dateTime \
+     FULL JOIN deltabase.JPM_30min_delta ON aapl_30min_delta.AAPL_dateTime = JPM_dateTime \
+     FULL JOIN deltabase.JWN_30min_delta ON aapl_30min_delta.AAPL_dateTime = JWN_dateTime \
+     FULL JOIN deltabase.K_30min_delta ON aapl_30min_delta.AAPL_dateTime = K_dateTime \
+     FULL JOIN deltabase.KBH_30min_delta ON aapl_30min_delta.AAPL_dateTime = KBH_dateTime \
+     FULL JOIN deltabase.KEY_30min_delta ON aapl_30min_delta.AAPL_dateTime = KEY_dateTime \
+     FULL JOIN deltabase.KEYS_30min_delta ON aapl_30min_delta.AAPL_dateTime = KEYS_dateTime \
+     FULL JOIN deltabase.KHC_30min_delta ON aapl_30min_delta.AAPL_dateTime = KHC_dateTime \
+     FULL JOIN deltabase.KIM_30min_delta ON aapl_30min_delta.AAPL_dateTime = KIM_dateTime \
+     FULL JOIN deltabase.KLAC_30min_delta ON aapl_30min_delta.AAPL_dateTime = KLAC_dateTime \
+     FULL JOIN deltabase.KMB_30min_delta ON aapl_30min_delta.AAPL_dateTime = KMB_dateTime \
+     FULL JOIN deltabase.KMI_30min_delta ON aapl_30min_delta.AAPL_dateTime = KMI_dateTime \
+     FULL JOIN deltabase.KMX_30min_delta ON aapl_30min_delta.AAPL_dateTime = KMX_dateTime \
+     FULL JOIN deltabase.KO_30min_delta ON aapl_30min_delta.AAPL_dateTime = KO_dateTime \
+     FULL JOIN deltabase.KODK_30min_delta ON aapl_30min_delta.AAPL_dateTime = KODK_dateTime \
+     FULL JOIN deltabase.KR_30min_delta ON aapl_30min_delta.AAPL_dateTime = KR_dateTime \
+     FULL JOIN deltabase.KSS_30min_delta ON aapl_30min_delta.AAPL_dateTime = KSS_dateTime \
+     FULL JOIN deltabase.KSU_30min_delta ON aapl_30min_delta.AAPL_dateTime = KSU_dateTime \
+     FULL JOIN deltabase.L_30min_delta ON aapl_30min_delta.AAPL_dateTime = L_dateTime \
+     FULL JOIN deltabase.LBTYK_30min_delta ON aapl_30min_delta.AAPL_dateTime = AAL_dateTime \
+     FULL JOIN deltabase.LDOS_30min_delta ON aapl_30min_delta.AAPL_dateTime = AAP_dateTime \
+     FULL JOIN deltabase.LEG_30min_delta ON aapl_30min_delta.AAPL_dateTime = A_dateTime \
+     FULL JOIN deltabase.LEN_30min_delta ON aapl_30min_delta.AAPL_dateTime = ABBV_dateTime \
+     FULL JOIN deltabase.LH_30min_delta ON aapl_30min_delta.AAPL_dateTime = ABC_dateTime \
+     FULL JOIN deltabase.LHX_30min_delta ON aapl_30min_delta.AAPL_dateTime = ABMD_dateTime \
+     FULL JOIN deltabase.LIFE_30min_delta ON aapl_30min_delta.AAPL_dateTime = ABT_dateTime \
+     FULL JOIN deltabase.LIN_30min_delta ON aapl_30min_delta.AAPL_dateTime = ACN_dateTime \
+     FULL JOIN deltabase.LKQ_30min_delta ON aapl_30min_delta.AAPL_dateTime = ACV_dateTime \
+     FULL JOIN deltabase.LLY_30min_delta ON aapl_30min_delta.AAPL_dateTime = ADBE_dateTime \
+     FULL JOIN deltabase.LMT_30min_delta ON aapl_30min_delta.AAPL_dateTime = ADI_dateTime \
+     FULL JOIN deltabase.LNC_30min_delta ON aapl_30min_delta.AAPL_dateTime = ADM_dateTime \
+     FULL JOIN deltabase.LNT_30min_delta ON aapl_30min_delta.AAPL_dateTime = ADP_dateTime \
+     FULL JOIN deltabase.LOGI_30min_delta ON aapl_30min_delta.AAPL_dateTime = ADS_dateTime \
+     FULL JOIN deltabase.LOW_30min_delta ON aapl_30min_delta.AAPL_dateTime = ADSK_dateTime \
+     FULL JOIN deltabase.LRCX_30min_delta ON aapl_30min_delta.AAPL_dateTime = ADT_dateTime \
+     FULL JOIN deltabase.LSI_30min_delta ON aapl_30min_delta.AAPL_dateTime = AEE_dateTime \
+     FULL JOIN deltabase.LU_30min_delta ON aapl_30min_delta.AAPL_dateTime = AEP_dateTime \
+     FULL JOIN deltabase.LUMN_30min_delta ON aapl_30min_delta.AAPL_dateTime = AES_dateTime \
+     FULL JOIN deltabase.LUV_30min_delta ON aapl_30min_delta.AAPL_dateTime = AFL_dateTime \
+     FULL JOIN deltabase.LVS_30min_delta ON aapl_30min_delta.AAPL_dateTime = AIG_dateTime \
+     FULL JOIN deltabase.LW_30min_delta ON aapl_30min_delta.AAPL_dateTime = AINV_dateTime \
+     FULL JOIN deltabase.LYB_30min_delta ON aapl_30min_delta.AAPL_dateTime = AIV_dateTime \
+     FULL JOIN deltabase.LYV_30min_delta ON aapl_30min_delta.AAPL_dateTime = AIZ_dateTime \
+     FULL JOIN deltabase.M_30min_delta ON aapl_30min_delta.AAPL_dateTime = AJG_dateTime \
+     FULL JOIN deltabase.MA_30min_delta ON aapl_30min_delta.AAPL_dateTime = AKAM_dateTime \
+     FULL JOIN deltabase.alb_30min_delta ON aapl_30min_delta.AAPL_dateTime = ALB_dateTime \
+     FULL JOIN deltabase.algn_30min_delta ON aapl_30min_delta.AAPL_dateTime = ALGN_dateTime \
+     FULL JOIN deltabase.alk_30min_delta ON aapl_30min_delta.AAPL_dateTime = ALK_dateTime \
+     FULL JOIN deltabase.all_30min_delta ON aapl_30min_delta.AAPL_dateTime = ALL_dateTime \
+     FULL JOIN deltabase.alle_30min_delta ON aapl_30min_delta.AAPL_dateTime = ALLE_dateTime \
+     FULL JOIN deltabase.altr_30min_delta ON aapl_30min_delta.AAPL_dateTime = ALTR_dateTime \
+     FULL JOIN deltabase.amat_30min_delta ON aapl_30min_delta.AAPL_dateTime = AMAT_dateTime \
+     FULL JOIN deltabase.ambc_30min_delta ON aapl_30min_delta.AAPL_dateTime = AMBC_dateTime \
+     FULL JOIN deltabase.amcr_30min_delta ON aapl_30min_delta.AAPL_dateTime = AMCR_dateTime \
+     FULL JOIN deltabase.amd_30min_delta ON aapl_30min_delta.AAPL_dateTime = AMD_dateTime \
+     FULL JOIN deltabase.ame_30min_delta ON aapl_30min_delta.AAPL_dateTime = AME_dateTime \
+     FULL JOIN deltabase.amg_30min_delta ON aapl_30min_delta.AAPL_dateTime = AMG_dateTime \
+     FULL JOIN deltabase.amgn_30min_delta ON aapl_30min_delta.AAPL_dateTime = AMGN_dateTime \
+     FULL JOIN deltabase.amp_30min_delta ON aapl_30min_delta.AAPL_dateTime = AMP_dateTime \
+     FULL JOIN deltabase.amt_30min_delta ON aapl_30min_delta.AAPL_dateTime = AMT_dateTime \
+     FULL JOIN deltabase.amzn_30min_delta ON aapl_30min_delta.AAPL_dateTime = AMZN_dateTime \
+     FULL JOIN deltabase.an_30min_delta ON aapl_30min_delta.AAPL_dateTime = AN_dateTime \
+     FULL JOIN deltabase.anet_30min_delta ON aapl_30min_delta.AAPL_dateTime = ANET_dateTime \
+     FULL JOIN deltabase.anf_30min_delta ON aapl_30min_delta.AAPL_dateTime = ANF_dateTime \
+     FULL JOIN deltabase.anss_30min_delta ON aapl_30min_delta.AAPL_dateTime = ANSS_dateTime \
+     FULL JOIN deltabase.antm_30min_delta ON aapl_30min_delta.AAPL_dateTime = ANTM_dateTime \
+     FULL JOIN deltabase.aon_30min_delta ON aapl_30min_delta.AAPL_dateTime = AON_dateTime \
+     FULL JOIN deltabase.aos_30min_delta ON aapl_30min_delta.AAPL_dateTime = AOS_dateTime \
+     FULL JOIN deltabase.apa_30min_delta ON aapl_30min_delta.AAPL_dateTime = APA_dateTime \
+     FULL JOIN deltabase.apd_30min_delta ON aapl_30min_delta.AAPL_dateTime = APD_dateTime \
+     FULL JOIN deltabase.aph_30min_delta ON aapl_30min_delta.AAPL_dateTime = APH_dateTime \
+     FULL JOIN deltabase.aptv_30min_delta ON aapl_30min_delta.AAPL_dateTime = APTV_dateTime \
+     FULL JOIN deltabase.are_30min_delta ON aapl_30min_delta.AAPL_dateTime = ARE_dateTime \
+     FULL JOIN deltabase.arnc_30min_delta ON aapl_30min_delta.AAPL_dateTime = ARNC_dateTime \
+     FULL JOIN deltabase.ash_30min_delta ON aapl_30min_delta.AAPL_dateTime = ASH_dateTime \
+     FULL JOIN deltabase.aso_30min_delta ON aapl_30min_delta.AAPL_dateTime = ASO_dateTime \
+     FULL JOIN deltabase.atge_30min_delta ON aapl_30min_delta.AAPL_dateTime = ATGE_dateTime \
+     FULL JOIN deltabase.ati_30min_delta ON aapl_30min_delta.AAPL_dateTime = ATI_dateTime \
+     FULL JOIN deltabase.ato_30min_delta ON aapl_30min_delta.AAPL_dateTime = ATO_dateTime \
+     FULL JOIN deltabase.atvi_30min_delta ON aapl_30min_delta.AAPL_dateTime = ATVI_dateTime \
+     FULL JOIN deltabase.avb_30min_delta ON aapl_30min_delta.AAPL_dateTime = AVB_dateTime \
+     FULL JOIN deltabase.avgo_30min_delta ON aapl_30min_delta.AAPL_dateTime = AVGO_dateTime \
+     FULL JOIN deltabase.avy_30min_delta ON aapl_30min_delta.AAPL_dateTime = AVY_dateTime \
+     FULL JOIN deltabase.awk_30min_delta ON aapl_30min_delta.AAPL_dateTime = AWK_dateTime \
+     FULL JOIN deltabase.axp_30min_delta ON aapl_30min_delta.AAPL_dateTime = AXP_dateTime \
+     FULL JOIN deltabase.ayi_30min_delta ON aapl_30min_delta.AAPL_dateTime = AYI_dateTime \
+     FULL JOIN deltabase.azo_30min_delta ON aapl_30min_delta.AAPL_dateTime = AZO_dateTime \
      ORDER BY aapl_30min_delta.AAPL_dateTime ASC;
 ")
 
@@ -685,8 +980,9 @@ display(data_pd_pct)
 
 from sklearn.preprocessing import StandardScaler
 
-data_testTwo = data.na.drop().pandas_api()
-data_testTwo = data_testTwo.reshape((-1, 1))
+scaler = StandardScaler()
+
+train_data = scaler.fit(data_pd_pct)
 
 # COMMAND ----------
 
@@ -697,7 +993,7 @@ initial_n = 4
 initial_model = KMeans(n_clusters=initial_n)
  
 # fit and predict per-household cluster assignment
-init_clusters = initial_model.fit_predict(data_testTwo.reshape((-1, 1)))
+init_clusters = initial_model.fit_predict(train_data)
 
 # COMMAND ----------
 
