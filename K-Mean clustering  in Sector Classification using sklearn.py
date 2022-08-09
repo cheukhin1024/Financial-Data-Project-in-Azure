@@ -1016,6 +1016,28 @@ data = spark.sql("SELECT AAPL_adjClose, \
      FULL JOIN deltabase.phm_30min_delta ON aapl_30min_delta.AAPL_dateTime = PHM_dateTime \
      FULL JOIN deltabase.pkg_30min_delta ON aapl_30min_delta.AAPL_dateTime = PKG_dateTime \
      FULL JOIN deltabase.pki_30min_delta ON aapl_30min_delta.AAPL_dateTime = PKI_dateTime \
+     FULL JOIN deltabase.pld_30min_delta ON aapl_30min_delta.AAPL_dateTime = PLD_dateTime \
+     FULL JOIN deltabase.pll_30min_delta ON aapl_30min_delta.AAPL_dateTime = PLL_dateTime \
+     FULL JOIN deltabase.pm_30min_delta ON aapl_30min_delta.AAPL_dateTime = PM_dateTime \
+     FULL JOIN deltabase.pnc_30min_delta ON aapl_30min_delta.AAPL_dateTime = PNC_dateTime \
+     FULL JOIN deltabase.pnr_30min_delta ON aapl_30min_delta.AAPL_dateTime = PNR_dateTime \
+     FULL JOIN deltabase.pnw_30min_delta ON aapl_30min_delta.AAPL_dateTime = PNW_dateTime \
+     FULL JOIN deltabase.pool_30min_delta ON aapl_30min_delta.AAPL_dateTime = POOL_dateTime \
+     FULL JOIN deltabase.ppg_30min_delta ON aapl_30min_delta.AAPL_dateTime = PPG_dateTime \
+     FULL JOIN deltabase.ppl_30min_delta ON aapl_30min_delta.AAPL_dateTime = PPL_dateTime \
+     FULL JOIN deltabase.prgo_30min_delta ON aapl_30min_delta.AAPL_dateTime = PRGO_dateTime \
+     FULL JOIN deltabase.pri_30min_delta ON aapl_30min_delta.AAPL_dateTime = PRI_dateTime \
+     FULL JOIN deltabase.pru_30min_delta ON aapl_30min_delta.AAPL_dateTime = PRU_dateTime \
+     FULL JOIN deltabase.psa_30min_delta ON aapl_30min_delta.AAPL_dateTime = PSA_dateTime \
+     FULL JOIN deltabase.psx_30min_delta ON aapl_30min_delta.AAPL_dateTime = PSX_dateTime \
+     FULL JOIN deltabase.ptc_30min_delta ON aapl_30min_delta.AAPL_dateTime = PTC_dateTime \
+     FULL JOIN deltabase.pvh_30min_delta ON aapl_30min_delta.AAPL_dateTime = PVH_dateTime \
+     FULL JOIN deltabase.pwr_30min_delta ON aapl_30min_delta.AAPL_dateTime = PWR_dateTime \
+     FULL JOIN deltabase.pxd_30min_delta ON aapl_30min_delta.AAPL_dateTime = PXD_dateTime \
+     FULL JOIN deltabase.pypl_30min_delta ON aapl_30min_delta.AAPL_dateTime = PYPL_dateTime \
+     FULL JOIN deltabase.qcom_30min_delta ON aapl_30min_delta.AAPL_dateTime = QCOM_dateTime \
+     FULL JOIN deltabase.qgen_30min_delta ON aapl_30min_delta.AAPL_dateTime = QGEN_dateTime \
+     FULL JOIN deltabase.qrvo_30min_delta ON aapl_30min_delta.AAPL_dateTime = QRVO_dateTime \
      ORDER BY aapl_30min_delta.AAPL_dateTime ASC;
 ")
 
