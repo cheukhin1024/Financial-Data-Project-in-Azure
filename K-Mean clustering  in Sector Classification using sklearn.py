@@ -986,6 +986,36 @@ data = spark.sql("SELECT AAPL_adjClose, \
      FULL JOIN deltabase.nyt_30min_delta ON aapl_30min_delta.AAPL_dateTime = NYT_dateTime \
      FULL JOIN deltabase.o_30min_delta ON aapl_30min_delta.AAPL_dateTime = O_dateTime \
      FULL JOIN deltabase.odfl_30min_delta ON aapl_30min_delta.AAPL_dateTime = ODFL_dateTime \
+     FULL JOIN deltabase.odp_30min_delta ON aapl_30min_delta.AAPL_dateTime = ODP_dateTime \
+     FULL JOIN deltabase.ogn_30min_delta ON aapl_30min_delta.AAPL_dateTime = OGN_dateTime \
+     FULL JOIN deltabase.oi_30min_delta ON aapl_30min_delta.AAPL_dateTime = OI_dateTime \
+     FULL JOIN deltabase.oke_30min_delta ON aapl_30min_delta.AAPL_dateTime = OKE_dateTime \
+     FULL JOIN deltabase.omc_30min_delta ON aapl_30min_delta.AAPL_dateTime = OMC_dateTime \
+     FULL JOIN deltabase.one_30min_delta ON aapl_30min_delta.AAPL_dateTime = ONE_dateTime \
+     FULL JOIN deltabase.orcl_30min_delta ON aapl_30min_delta.AAPL_dateTime = ORCL_dateTime \
+     FULL JOIN deltabase.orly_30min_delta ON aapl_30min_delta.AAPL_dateTime = ORLY_dateTime \
+     FULL JOIN deltabase.otis_30min_delta ON aapl_30min_delta.AAPL_dateTime = OTIS_dateTime \
+     FULL JOIN deltabase.oxy_30min_delta ON aapl_30min_delta.AAPL_dateTime = OXY_dateTime \
+     FULL JOIN deltabase.par_30min_delta ON aapl_30min_delta.AAPL_dateTime = PAR_dateTime \
+     FULL JOIN deltabase.payc_30min_delta ON aapl_30min_delta.AAPL_dateTime = PAYC_dateTime \
+     FULL JOIN deltabase.payx_30min_delta ON aapl_30min_delta.AAPL_dateTime = PAYX_dateTime \
+     FULL JOIN deltabase.pbct_30min_delta ON aapl_30min_delta.AAPL_dateTime = PBCT_dateTime \
+     FULL JOIN deltabase.pbi_30min_delta ON aapl_30min_delta.AAPL_dateTime = PBI_dateTime \
+     FULL JOIN deltabase.pcar_30min_delta ON aapl_30min_delta.AAPL_dateTime = PCAR_dateTime \
+     FULL JOIN deltabase.pcg_30min_delta ON aapl_30min_delta.AAPL_dateTime = PCG_dateTime \
+     FULL JOIN deltabase.pdco_30min_delta ON aapl_30min_delta.AAPL_dateTime = PDCO_dateTime \
+     FULL JOIN deltabase.peak_30min_delta ON aapl_30min_delta.AAPL_dateTime = PEAK_dateTime \
+     FULL JOIN deltabase.peg_30min_delta ON aapl_30min_delta.AAPL_dateTime = PEG_dateTime \
+     FULL JOIN deltabase.penn_30min_delta ON aapl_30min_delta.AAPL_dateTime = PENN_dateTime \
+     FULL JOIN deltabase.pep_30min_delta ON aapl_30min_delta.AAPL_dateTime = PEP_dateTime \
+     FULL JOIN deltabase.pfe_30min_delta ON aapl_30min_delta.AAPL_dateTime = PFE_dateTime \
+     FULL JOIN deltabase.pfg_30min_delta ON aapl_30min_delta.AAPL_dateTime = PFG_dateTime \
+     FULL JOIN deltabase.pg_30min_delta ON aapl_30min_delta.AAPL_dateTime = PG_dateTime \
+     FULL JOIN deltabase.pgr_30min_delta ON aapl_30min_delta.AAPL_dateTime = PGR_dateTime \
+     FULL JOIN deltabase.ph_30min_delta ON aapl_30min_delta.AAPL_dateTime = PH_dateTime \
+     FULL JOIN deltabase.phm_30min_delta ON aapl_30min_delta.AAPL_dateTime = PHM_dateTime \
+     FULL JOIN deltabase.pkg_30min_delta ON aapl_30min_delta.AAPL_dateTime = PKG_dateTime \
+     FULL JOIN deltabase.pki_30min_delta ON aapl_30min_delta.AAPL_dateTime = PKI_dateTime \
      ORDER BY aapl_30min_delta.AAPL_dateTime ASC;
 ")
 
