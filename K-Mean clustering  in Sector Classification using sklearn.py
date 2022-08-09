@@ -30,14 +30,6 @@ spark.sql("set spark.databricks.delta.autoCompact.enabled = true")
 
 # COMMAND ----------
 
-
-data_test = spark.sql("SELECT AAPL_dateTime, \
-                              AA_adjClose \
-                       FROM deltabase.aapl_30min_delta \
-                       FULL JOIN deltabase.aa_30min_delta ON aapl_30min_delta.AAPL_dateTime = AA_dateTime")
-
-# COMMAND ----------
-
 data = spark.sql("SELECT AAPL_adjClose, \
                          AA_adjClose, \
                          AAL_adjClose, \
