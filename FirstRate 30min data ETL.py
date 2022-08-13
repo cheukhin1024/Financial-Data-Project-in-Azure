@@ -1,13 +1,18 @@
 # Databricks notebook source
 #Mount an Azure Blob storage container
+#If you mount it already, please comment the following code
+
+"""
 dbutils.fs.mount(
   source = "wasbs://finance@finstorage6ef5xpkr7mo3s.blob.core.windows.net",
   mount_point = "/mnt/finance",  
   extra_configs = {"fs.azure.account.key.finstorage6ef5xpkr7mo3s.blob.core.windows.net":"n1cT5j8fFP+qHHI6ve/K2rWAIT/xf/yrTA19WmMZSneFYKYvHt3ux2KRcvIfqZ365meXDXzAOqMX+AStJdrpEA=="})
+"""
 
 # COMMAND ----------
 
 #Unmount a mount point
+
 #dbutils.fs.unmount("/mnt/finance")
 
 # COMMAND ----------
@@ -31,8 +36,6 @@ dbutils.fs.mount(
 # COMMAND ----------
 
 import os
-import numpy as np
-import pandas as pd
 
 from pyspark import SparkFiles
 from pyspark import SparkContext
@@ -42,7 +45,6 @@ from pyspark.sql.functions import * #import avg, col, udf
 from pyspark.sql import SQLContext
 from pyspark.sql import DataFrame
 from pyspark.sql.types import *
-import json
 
 #LIST, RENAME, AND SAVE ALL FILES AS DELTA LAKE AUTOMATICALLY
 #Data written to mount point paths ( /mnt ) is stored outside of the DBFS root
@@ -59,7 +61,7 @@ for filename_30min in os.listdir(path_30min):
     name_30min = rawname_30min.split('-')[0]
     
     #create clolumn header names
-    temp_30min = StructType([StructField(name_30min+"_dateTime", StringType(), True),StructField(name_30min+"_adjOpen", FloatType(), True),StructField(name_30min+"_adjHigh", FloatType(), True),StructField(name_30min+"_adjLow", FloatType(), True),StructField(name_30min+"_adjClose", FloatType(), True),StructField(name_30min+"_adjVolume", IntegerType(), True)])
+    temp_30min = StructType([StructField(name_30min+"_dateTime", TimestampType(), True),StructField(name_30min+"_adjOpen", FloatType(), True),StructField(name_30min+"_adjHigh", FloatType(), True),StructField(name_30min+"_adjLow", FloatType(), True),StructField(name_30min+"_adjClose", FloatType(), True),StructField(name_30min+"_adjVolume", IntegerType(), True)])
     
     #list and create csv dataframes
     temp_df_30min = spark.read.format("csv").option("header", "false").schema(temp_30min).load("/mnt/finance/FirstRate30min/"+filename_30min).withColumn("Ticker", lit(name_30min))
