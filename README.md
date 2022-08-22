@@ -58,11 +58,13 @@ For details, https://docs.microsoft.com/en-us/azure/databricks/data-sharing/delt
 ![ms image](https://user-images.githubusercontent.com/70860455/160276772-a8624e36-8d0d-438c-8b98-20c90c29aea5.PNG)
 1. Count the color area of the satallite image using OpenCV
 
+###### Count number of file in directory.py
 
-###### Stream Count satallite image color area.py [testing]
+1. Validate files completeness by counting number of files
 
-1. Stream Count the color area of the satallite image using OpenCV and Microsoft Planetary Computer.
+###### Check Empty File.py
 
+1. Validate files completeness by checking empty files
 
 ###### Get data from Delta Lake.py
 
