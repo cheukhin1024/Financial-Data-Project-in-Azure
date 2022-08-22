@@ -85,6 +85,11 @@ For details, https://docs.microsoft.com/en-us/azure/databricks/data-sharing/delt
 3. Combine multiple columns of multiple dataframes
 4. Create Azure Databricks Delta Lake
 
+###### Stream IEX Market data for last trade updates
+
+![iex market data](https://user-images.githubusercontent.com/70860455/186009051-0dfbf87d-5ad0-4034-81fa-272ab698d856.JPG)
+
+1. Stream IEX market data for last trade updates using websocket.
 
 ###### Financial Machine Learning using pyspark ml.py
 
@@ -96,8 +101,8 @@ For details, https://docs.microsoft.com/en-us/azure/databricks/data-sharing/delt
 1. K-mean Clustering using sklearn on delta format data
 
 ###### Hierarchical Risk Parity Algorithm.py
-![下載](https://user-images.githubusercontent.com/70860455/186008175-34c2f6f0-8489-4a47-b7a9-7847d1c6016b.png)
-![下載 (1)](https://user-images.githubusercontent.com/70860455/186008188-260b0348-e764-4983-a502-2bef757948ec.png)
+![下載](https://user-images.githubusercontent.com/70860455/186008175-34c2f6f0-8489-4a47-b7a9-7847d1c6016b.png))
+![下載 (1)](https://user-images.githubusercontent.com/70860455/186008188-260b0348-e764-4983-a502-2bef757948ec.png))
 
 ###### FirstRate 1 min data ETL.py / FirstRate 30 min data ETL.py / FirstRate 1 hour data ETL.py
 
