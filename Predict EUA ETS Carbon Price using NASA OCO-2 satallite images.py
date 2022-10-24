@@ -8,8 +8,8 @@ import urllib2
 
 # The user credentials that will be used to authenticate access to the data
  
-username = "dicer4201"
-password = "Cheukhin1024!"
+username = "<Your Earthdata login username>"
+password = "<Your Earthdata login password>"
 
 # COMMAND ----------
 
