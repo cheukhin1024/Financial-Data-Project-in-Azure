@@ -1,5 +1,4 @@
 # Databricks notebook source
-#!/usr/bin/python
 from cookielib import CookieJar
 from urllib import urlencode
  
