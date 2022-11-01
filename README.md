@@ -13,6 +13,9 @@ and NASA satellite images).
 developed by Marcos Lopez de Prado (PhD)).
 7. Create end-to-end DevOps CI/CD data pipelines in Azure Databricks Delta Live Tables
 
+## System Design
+![system design drawio](https://user-images.githubusercontent.com/70860455/199190785-72f1a5fb-4eb9-43b8-8132-d2c179c2bf56.png)
+
 ## Website
 https://matroidevolved.com/
 
