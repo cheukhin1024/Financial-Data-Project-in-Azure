@@ -63,8 +63,7 @@ For details, https://docs.microsoft.com/en-us/azure/databricks/data-sharing/delt
 
 ###### Count satallite image color area.py
 
-![ms image](https://user-images.githubusercontent.com/70860455/160276772-a8624e36-8d0d-438c-8b98-20c90c29aea5.PNG)
-1. Count the color area of the satallite image using OpenCV
+1. Count the color area of the satallite image using OpenCV. The result can be transformed into time series structured data index for predicting future agricultural price.
 
 ###### Count number of file in directory.py
 
