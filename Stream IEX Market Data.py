@@ -13,7 +13,6 @@ subscribe = {
         'eventData': {
             'thresholdLevel': 5,
             'tickers': ['SPY', 
-                        'AAPL',
                         'MMM',
                         'AOS',
                         'ABT',
