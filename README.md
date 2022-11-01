@@ -40,6 +40,9 @@ Allows for read, write and delete access to Azure Storage blob containers and da
 
 For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
 
+Examples: 
+- Get BRK.B 2007/01/1 - 2021/12/31 1min adjusted close.
+`spark.sql("select BRKB_adjClose from deltabase.brkb_30min_delta where DATE_FORMAT(BRKB_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'"`
 ## Datasets
 
 Contains 1-minute, 5-minute, 30-minute and 1-hour historical intraday data for :
@@ -1198,7 +1201,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 - XONE-DELISTED (The Exone Company) First Date:7-Feb-2013 -> Last Date:11-Nov-2021
 - YHOO-DELISTED (YAHOO!) First Date:1-Jan-2005 -> Last Date:16-Jun-2017
 
-## Main Files Explanations:
+## Files Explanations:
 
 ###### Count satallite image color area.py
 
