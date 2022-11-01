@@ -28,102 +28,29 @@ https://stackoverflow.com/c/algorithmic-trading-for-beginners
 Notice: 
 - Email invitation required. 
 
-## How to access the data?
+## Quickstarts: How to access the data?
+There are 2 solutions:
 
-
-
-There are 4 solutions:
-
-1. Download raw .txt zip files from Google Drive
-
-Notice: download links are in StackOverFlow private team.
-
-
-2. Access Azure Blob Storage
+1. Access Azure Blob Storage
 
 We can assign you as a "Storage Blob Data Contributor -
 Allows for read, write and delete access to Azure Storage blob containers and data". Then, you can accept the email invitation and access the data.
 
-3. Access Azure Databricks Delta Lake
-We can assign you as a "Contributor -
-Allows for read, write and delete access to Azure Databricks". Then, you can accept the email invitation and access the data.
-
-4. Access data through Azure Databricks Delta Sharing (Developing)
+2. Access data through Azure Databricks Delta Sharing 
 
 For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
 
+## Datasets
 
-5. Acess data through Azure Data Share 
-
-Accept the email invitation and access the data.
-
-For details, https://docs.microsoft.com/en-us/azure/databricks/data-sharing/delta-sharing/
-
-## Main Files Explanations:
-
-###### Count satallite image color area.py
-
-1. Count the color area of the satallite image using OpenCV. The result can be transformed into time series structured data index for predicting future agricultural price.
-
-###### Count number of file in directory.py
-
-1. Validate files completeness by counting number of files
-
-###### Check Empty File.py
-
-1. Validate files completeness by checking empty files
-
-###### Get data from Delta Lake.py
-
-1. Examples of getting different datasets from Delta Lake in Azure Databricks 
-- Current S&P 500 constituents 1-min stock data
-- Delisted S&P 500 constituents 1-min stock data
-- Current S&P 500 constituents 30-mins stock data
-- Delisted S&P 500 constituents 30-mins stock data
-- [Aruoba-Diebold-Scotti Business Conditions Index](https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7) in [Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads) 
-- [US Daily News Index](https://www.policyuncertainty.com/media/All_Daily_Policy_Data.csv) in [Economic Policy Uncertainty](https://www.policyuncertainty.com/us_monthly.html)
-
-###### Financial Data Engineering.py
-
-1. REST API getting data from: 
-- [Tiingo](https://api.tiingo.com/), 
-- [Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads), 
-- [Economic Policy Uncertainity Index Website](https://www.policyuncertainty.com/),
-- [NASA](https://data.nasa.gov/).
-2. Rename column names
-3. Combine multiple columns of multiple dataframes
-4. Create Azure Databricks Delta Lake
-
-###### Stream IEX Market data for last trade updates
-
-![iex market data](https://user-images.githubusercontent.com/70860455/186009051-0dfbf87d-5ad0-4034-81fa-272ab698d856.JPG)
-
-1. Stream IEX market data for last trade updates using websocket.
-
-###### Financial Machine Learning using pyspark ml.py
-
-1. K-mean Clustering using pyspark.ml on delta format data
-
-
-###### Financial Machine Learning using sklearn.py
-
-1. K-mean Clustering using sklearn on delta format data
-
-###### Hierarchical Risk Parity Algorithm.py
-![下載](https://user-images.githubusercontent.com/70860455/186008175-34c2f6f0-8489-4a47-b7a9-7847d1c6016b.png))
-![下載 (1)](https://user-images.githubusercontent.com/70860455/186008188-260b0348-e764-4983-a502-2bef757948ec.png))
-
-###### FirstRate 1 min data ETL.py / FirstRate 30 min data ETL.py / FirstRate 1 hour data ETL.py
-
-1. Contains 1-minute, 5-minute, 30-minute and 1-hour historical intraday data for :
-   500 component stocks of the S&P500
-   active stocks previously included in the S&P500
-   delisted stocks previously included in the S&P500
-   SPX index
-   Listing of S&P500 component changes back to 2004
-   Data is adjusted for dividends and splits. Out-of-hours trades are included.
-2. Add headers and Rename column names 
-3. Create Azure Databricks Delta Data Lake. 
+Contains 1-minute, 5-minute, 30-minute and 1-hour historical intraday data for :
+- 500 component stocks of the S&P500
+- Active stocks previously included in the S&P500
+- Delisted stocks previously included in the S&P500
+- SPX index
+- Listing of S&P500 component changes back to 2004
+   
+Notice: 
+Data is adjusted for dividends and splits. Out-of-hours trades are included.
 
 The intraday bars and tick data for stocks and ETFs are aggregated from trades on the below exchanges:
 
@@ -154,15 +81,10 @@ The intraday bars and tick data for stocks and ETFs are aggregated from trades o
 - XBOS (NASDAQ BX Options/ETF)
 
 Updates (Dec 2021): Added Signature Bank (SBNY)
-
 Updates (Dec 2021): Added SolarEdge (SEDG)
-
 Updates (Dec 2021): Added FactSet (FDS)
-
 Updates (Dec 2021): Added EPAM Systems (EPAM)
-
 Updates (Sept 2021): Added Match Group (MTCH), Ceridian (CDAY) Brown and Brown (BRO)
-
 Updates (August 2021) : Added Bio-Techne (TECH)
 
 - A (Agilent Technologies Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
@@ -1275,3 +1197,58 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 - XLRN-DELISTED (Acceleron Pharma) First Date:19-Sep-2013 -> Last Date:19-Nov-2021
 - XONE-DELISTED (The Exone Company) First Date:7-Feb-2013 -> Last Date:11-Nov-2021
 - YHOO-DELISTED (YAHOO!) First Date:1-Jan-2005 -> Last Date:16-Jun-2017
+
+## Main Files Explanations:
+
+###### Count satallite image color area.py
+
+1. Count the color area of the satallite image using OpenCV. The result can be transformed into time series structured data index for predicting future agricultural price.
+
+###### Count number of file in directory.py
+
+1. Validate files completeness by counting number of files
+
+###### Check Empty File.py
+
+1. Validate files completeness by checking empty files
+
+###### Get data from Delta Lake.py
+
+1. Examples of getting different datasets from Delta Lake in Azure Databricks 
+- Current S&P 500 constituents 1-min stock data
+- Delisted S&P 500 constituents 1-min stock data
+- Current S&P 500 constituents 30-mins stock data
+- Delisted S&P 500 constituents 30-mins stock data
+- [Aruoba-Diebold-Scotti Business Conditions Index](https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7) in [Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads) 
+- [US Daily News Index](https://www.policyuncertainty.com/media/All_Daily_Policy_Data.csv) in [Economic Policy Uncertainty](https://www.policyuncertainty.com/us_monthly.html)
+
+###### Financial Data Engineering.py
+
+1. REST API getting data from: 
+- [Tiingo](https://api.tiingo.com/), 
+- [Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads), 
+- [Economic Policy Uncertainity Index Website](https://www.policyuncertainty.com/),
+- [NASA](https://data.nasa.gov/).
+2. Rename column names
+3. Combine multiple columns of multiple dataframes
+4. Create Azure Databricks Delta Lake
+
+###### Stream IEX Market data for last trade updates
+
+![iex market data](https://user-images.githubusercontent.com/70860455/186009051-0dfbf87d-5ad0-4034-81fa-272ab698d856.JPG)
+
+1. Stream IEX market data for last trade updates using websocket.
+
+###### K-Mean clustering in Sector Classification using SparkML.py
+
+1. K-mean Clustering using pyspark.ml on delta format data
+
+###### K-Mean clustering in Sector Classification using sklearn.py
+
+1. K-mean Clustering using sklearn on delta format data
+
+###### Hierarchical Risk Parity Algorithm.py
+![下載](https://user-images.githubusercontent.com/70860455/186008175-34c2f6f0-8489-4a47-b7a9-7847d1c6016b.png))
+![下載 (1)](https://user-images.githubusercontent.com/70860455/186008188-260b0348-e764-4983-a502-2bef757948ec.png))
+
+###### FirstRate 1 min data ETL.py / FirstRate 30 min data ETL.py / FirstRate 1 hour data ETL.py
