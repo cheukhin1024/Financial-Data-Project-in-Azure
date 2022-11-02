@@ -40,7 +40,7 @@ print (final_mc)
 ###### Shapley Additive Explanations (SHAP) for Apache Spark Distributed System for small datasets
 import shap
 
-def shap_small(data):
+def shap_small():
     explainer = shap.TreeExplainer(clf)
     shap_values = explainer.shap_values(df)
 return shap_values
@@ -48,6 +48,7 @@ return shap_values
 
 ###### Shapley Additive Explanations (SHAP) for Apache Spark Distributed System
 # https://www.databricks.com/blog/2022/02/02/scaling-shap-calculations-with-pyspark-and-pandas-udf.html
+
 def calculate_shap(iterator: Iterator[pd.DataFrame]) -> Iterator[pd.DataFrame]:
     for X in iterator:
         yield pd.DataFrame(
