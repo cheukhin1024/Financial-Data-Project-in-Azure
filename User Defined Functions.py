@@ -37,7 +37,7 @@ final_mc = (sum / 10000.)
 print (final_mc)
 
 
-###### Shapley Additive Explanations (SHAP) for Apache Spark Distributed System for small datasets
+###### Shapley Additive Explanations (SHAP) for small datasets
 import shap
 
 def shap_small():
