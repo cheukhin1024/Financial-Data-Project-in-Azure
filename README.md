@@ -1262,11 +1262,5 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 ###### Stream IEX Market data for last trade updates
 1. Stream IEX market data for all S&P500 consitutents last trade updates and SPY S&P500 last trade update.
 
-###### Get data from Delta Lake.py
-1. Examples of getting different datasets from Delta Lake in Azure Databricks 
-- Current S&P 500 constituents 1-min stock data
-- Delisted S&P 500 constituents 1-min stock data
-- Current S&P 500 constituents 30-mins stock data
-- Delisted S&P 500 constituents 30-mins stock data
-- [Aruoba-Diebold-Scotti Business Conditions Index](https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7) in [Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads) 
-- [US Daily News Index](https://www.policyuncertainty.com/media/All_Daily_Policy_Data.csv) in [Economic Policy Uncertainty](https://www.policyuncertainty.com/us_monthly.html)
+###### VACUUM FirstRate 30min delta tables
+1. VACUUM FirstRate 30min delta lake tables
