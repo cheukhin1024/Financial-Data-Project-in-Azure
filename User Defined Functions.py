@@ -1,4 +1,4 @@
-###### Monte Carlo Simulation
+###### Monte Carlo Simulation for Apache Spark Distributed System
 
 import random
 import time
@@ -35,3 +35,31 @@ sum = results.reduce(add)
 final_mc = (sum / 10000.)
 #Display the average return
 print (final_mc)
+
+
+###### Shapley Additive Explanations (SHAP) for Apache Spark Distributed System for small datasets
+import shap
+
+def shap_small(data):
+    explainer = shap.TreeExplainer(clf)
+    shap_values = explainer.shap_values(df)
+return shap_values
+
+
+###### Shapley Additive Explanations (SHAP) for Apache Spark Distributed System
+# https://www.databricks.com/blog/2022/02/02/scaling-shap-calculations-with-pyspark-and-pandas-udf.html
+def calculate_shap(iterator: Iterator[pd.DataFrame]) -> Iterator[pd.DataFrame]:
+    for X in iterator:
+        yield pd.DataFrame(
+            explainer.shap_values(np.array(X), check_additivity=False)[0],
+            columns=columns_for_shap_calculation,
+        )
+
+return_schema = StructType()
+for feature in columns_for_shap_calculation:
+    return_schema = return_schema.add(StructField(feature, FloatType()))
+
+shap_values = df.mapInPandas(calculate_shap, schema=return_schema)
+
+#Strike a balance between creating small enough partitions and not so small that the overhead of creating them outweighs the benefits of parallelizing the calculations.
+df = df.repartition(sc.defaultParallelism)
