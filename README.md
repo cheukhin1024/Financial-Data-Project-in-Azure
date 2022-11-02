@@ -3,7 +3,7 @@
 
 ## Description
 1. Provide over 2 billion historical S&P 500 constituents with high-frequency data rows (no survivorship
-bias) to different users in Azure Databricks Delta Lake.Data can back to 2005.
+bias) to different users in Azure Databricks Delta Lake. Data can back to 2005.
 2. Increased query performance by at least 1000% compared to a traditional database.
 3. Introduce a better data-driven sector classification than the traditional S&P GICS sector classification.
 4. Provide alternative data (such as Bloomberg TV real-time market sentiment data, Twitter sentiment,
