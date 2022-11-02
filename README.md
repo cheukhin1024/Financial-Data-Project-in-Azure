@@ -40,7 +40,7 @@ Allows for read, write and delete access to Azure Storage blob containers and da
 
 For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
 
-All <ticker> delta tables follow the following setting:
+All <ticker> delta tables have the following columns:
 - `<TICKER>_dateTime` `<TICKER>_adjOpen` `<TICKER>_adjHigh` `<TICKER>_adjLow` `<TICKER>_adjClose` `<TICKER>_adjVolume`
    
 Python Examples: 
