@@ -40,12 +40,12 @@ Allows for read, write and delete access to Azure Storage blob containers and da
 
 For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
 
-Examples: 
-- Get BRK.B 2007/01/1 - 2021/12/31 30min adjusted close: `spark.sql("select BRKB_adjClose from deltabase.brkb_30min_delta where DATE_FORMAT(BRKB_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'"`
+Python Examples: 
+- Get BRK.B 2007/01/1 - 2021/12/31 30min adjusted close: `df = spark.sql("select BRKB_adjClose from deltabase.brkb_30min_delta where DATE_FORMAT(BRKB_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'"`
 
-- Get AAPL 2007/01/1 - 2021/12/31 1min adjusted close: `spark.sql("select AAPL_adjClose from deltabase.aapl_1min_delta where DATE_FORMAT(AAPL_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'"`
+- Get AAPL 2007/01/1 - 2021/12/31 1min adjusted close: `df = spark.sql("select AAPL_adjClose from deltabase.aapl_1min_delta where DATE_FORMAT(AAPL_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'"`
 
-- Get AAPL 2007/01/1 - 2021/12/31 regular trading hours 1d adjusted open and adjusted close: `spark.sql("select AAPL_adjOpen, AAPL_adjClose from deltabase.aapl_1min_delta where DATE_FORMAT(AAPL_dateTime,'HHmm') = '1600' and DATE_FORMAT(AAPL_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'"`
+- Get AAPL 2007/01/1 - 2021/12/31 regular trading hours 1d adjusted open and adjusted close: `df = spark.sql("select AAPL_adjOpen, AAPL_adjClose from deltabase.aapl_1min_delta where DATE_FORMAT(AAPL_dateTime,'HHmm') = '1600' and DATE_FORMAT(AAPL_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'"`
 
 ## Datasets
 
@@ -1211,21 +1211,58 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 - YHOO-DELISTED (YAHOO!) First Date:1-Jan-2005 -> Last Date:16-Jun-2017
 
 ## Files Explanations:
-
-###### Count satallite image color area.py
-
-1. Count the color area of the satallite image using OpenCV. The result can be transformed into time series structured data index for predicting future agricultural price.
-
-###### Count number of file in directory.py
-
-1. Validate files completeness by counting number of files
+###### Bloomberg Speech to Text.py 
+1. Convert Bloomberg TV speech to text data using Azure Cognitive Services.
 
 ###### Check Empty File.py
-
 1. Validate files completeness by checking empty files
 
-###### Get data from Delta Lake.py
+###### Count number of file in directory.py
+1. Validate files completeness by counting number of files
 
+###### Count satallite image color area.py
+1. Count the color area of the satallite image using OpenCV. The result can be transformed into time series structured data index for predicting future agricultural price.
+
+###### Delete Files or Directory.py
+1. Delete Files or Directory
+
+###### Financial Data Engineering.py
+1. REST API getting data from: 
+- [Tiingo](https://api.tiingo.com/), 
+- [Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads), 
+- [Economic Policy Uncertainity Index Website](https://www.policyuncertainty.com/),
+- [NASA](https://data.nasa.gov/).
+2. ETL to Delta Lake
+
+###### FirstRate 1min data ETL.py
+1. FirstRate 1min data ETL to Delta Lake
+
+###### FirstRate 30min data ETL.py
+1. FirstRate 30 min data ETL to Delta Lake
+
+###### Get NASA OCO-2 satallite images data.sh
+1. Get NASA OCO-2 satallite images data using bash script
+ 
+###### Get NASA OCO-2 satallite images data.py
+1. Get NASA OCO-2 satallite images data using Python
+2. 
+###### Hierarchical Risk Parity Algorithm.py
+![下載](https://user-images.githubusercontent.com/70860455/186008175-34c2f6f0-8489-4a47-b7a9-7847d1c6016b.png))
+![下載 (1)](https://user-images.githubusercontent.com/70860455/186008188-260b0348-e764-4983-a502-2bef757948ec.png)) 
+
+###### K-Mean clustering in Sector Classification using SparkML.py
+1. K-mean Clustering using pyspark.ml on delta format data
+
+###### K-Mean clustering in Sector Classification using sklearn.py
+1. K-mean Clustering using sklearn on delta format data
+
+###### List Tables
+1. list all delta lake tables
+
+###### Stream IEX Market data for last trade updates
+1. Stream IEX market data for last trade updates using websocket.
+
+###### Get data from Delta Lake.py
 1. Examples of getting different datasets from Delta Lake in Azure Databricks 
 - Current S&P 500 constituents 1-min stock data
 - Delisted S&P 500 constituents 1-min stock data
@@ -1234,33 +1271,6 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 - [Aruoba-Diebold-Scotti Business Conditions Index](https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7) in [Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads) 
 - [US Daily News Index](https://www.policyuncertainty.com/media/All_Daily_Policy_Data.csv) in [Economic Policy Uncertainty](https://www.policyuncertainty.com/us_monthly.html)
 
-###### Financial Data Engineering.py
-
-1. REST API getting data from: 
-- [Tiingo](https://api.tiingo.com/), 
-- [Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads), 
-- [Economic Policy Uncertainity Index Website](https://www.policyuncertainty.com/),
-- [NASA](https://data.nasa.gov/).
-2. Rename column names
-3. Combine multiple columns of multiple dataframes
-4. Create Azure Databricks Delta Lake
-
-###### Stream IEX Market data for last trade updates
-
-![iex market data](https://user-images.githubusercontent.com/70860455/186009051-0dfbf87d-5ad0-4034-81fa-272ab698d856.JPG)
-
-1. Stream IEX market data for last trade updates using websocket.
-
-###### K-Mean clustering in Sector Classification using SparkML.py
-
-1. K-mean Clustering using pyspark.ml on delta format data
-
-###### K-Mean clustering in Sector Classification using sklearn.py
-
-1. K-mean Clustering using sklearn on delta format data
-
 ###### Hierarchical Risk Parity Algorithm.py
 ![下載](https://user-images.githubusercontent.com/70860455/186008175-34c2f6f0-8489-4a47-b7a9-7847d1c6016b.png))
 ![下載 (1)](https://user-images.githubusercontent.com/70860455/186008188-260b0348-e764-4983-a502-2bef757948ec.png))
-
-###### FirstRate 1 min data ETL.py / FirstRate 30 min data ETL.py / FirstRate 1 hour data ETL.py
