@@ -1273,5 +1273,8 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 ###### Stream IEX Market data for last trade updates
 1. Stream IEX market data for all S&P500 consitutents last trade updates and SPY S&P500 last trade update.
 
+###### User Defined Functions.py 
+1. Monte Carlo Simulation in Apache Spark Distributed System 
+
 ###### VACUUM FirstRate 30min delta tables
 1. VACUUM FirstRate 30min delta lake tables
