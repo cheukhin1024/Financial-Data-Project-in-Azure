@@ -88,10 +88,15 @@ The intraday bars and tick data for stocks and ETFs are aggregated from trades o
 - XBOS (NASDAQ BX Options/ETF)
 
 Updates (Dec 2021): Added Signature Bank (SBNY)
+
 Updates (Dec 2021): Added SolarEdge (SEDG)
+
 Updates (Dec 2021): Added FactSet (FDS)
+
 Updates (Dec 2021): Added EPAM Systems (EPAM)
+
 Updates (Sept 2021): Added Match Group (MTCH), Ceridian (CDAY) Brown and Brown (BRO)
+
 Updates (August 2021) : Added Bio-Techne (TECH)
 
 - A (Agilent Technologies Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
