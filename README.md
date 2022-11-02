@@ -1240,12 +1240,12 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 ###### FirstRate 30min data ETL.py
 1. FirstRate 30 min data ETL to Delta Lake
 
-###### Get NASA OCO-2 satallite images data.sh
-1. Get NASA OCO-2 satallite images data using bash script
- 
 ###### Get NASA OCO-2 satallite images data.py
 1. Get NASA OCO-2 satallite images data using Python
-2. 
+ 
+###### Get NASA OCO-2 satallite images data.sh
+1. Get NASA OCO-2 satallite images data using Bash Script
+
 ###### Hierarchical Risk Parity Algorithm.py
 ![下載](https://user-images.githubusercontent.com/70860455/186008175-34c2f6f0-8489-4a47-b7a9-7847d1c6016b.png))
 ![下載 (1)](https://user-images.githubusercontent.com/70860455/186008188-260b0348-e764-4983-a502-2bef757948ec.png)) 
@@ -1270,7 +1270,3 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 - Delisted S&P 500 constituents 30-mins stock data
 - [Aruoba-Diebold-Scotti Business Conditions Index](https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7) in [Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/ads) 
 - [US Daily News Index](https://www.policyuncertainty.com/media/All_Daily_Policy_Data.csv) in [Economic Policy Uncertainty](https://www.policyuncertainty.com/us_monthly.html)
-
-###### Hierarchical Risk Parity Algorithm.py
-![下載](https://user-images.githubusercontent.com/70860455/186008175-34c2f6f0-8489-4a47-b7a9-7847d1c6016b.png))
-![下載 (1)](https://user-images.githubusercontent.com/70860455/186008188-260b0348-e764-4983-a502-2bef757948ec.png))
