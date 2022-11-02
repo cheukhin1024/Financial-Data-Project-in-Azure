@@ -48,8 +48,12 @@ return shap_values
 
 ###### Shapley Additive Explanations (SHAP) for Apache Spark Distributed System
 # https://www.databricks.com/blog/2022/02/02/scaling-shap-calculations-with-pyspark-and-pandas-udf.html
+import shap
 
 def calculate_shap(iterator: Iterator[pd.DataFrame]) -> Iterator[pd.DataFrame]:
+    explainer = shap.TreeExplainer(clf)
+    shap_values = explainer.shap_values(df)
+
     for X in iterator:
         yield pd.DataFrame(
             explainer.shap_values(np.array(X), check_additivity=False)[0],
