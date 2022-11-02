@@ -50,6 +50,9 @@ Python Examples:
 
 - Get AAPL 2007/01/1 - 2021/12/31 regular trading hours 1d adjusted open and adjusted close: `df = spark.sql("select AAPL_adjOpen, AAPL_adjClose from deltabase.aapl_1min_delta where DATE_FORMAT(AAPL_dateTime,'HHmm') = '1600' and DATE_FORMAT(AAPL_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'"`
 
+- Get YHOO 2005/01/1 - 2021/12/31 regular trading hours 1d adjusted open and adjusted volume: `df = spark.sql("select YHOO_adjOpen, YHOO_adjClose from deltabase.yhoo_1min_delta where DATE_FORMAT(YHOO_dateTime,'HHmm') = '1600' and DATE_FORMAT(YHOO_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'"`
+Note: As YHOO is delisted after 16/06/2017, the datapoints will be null/NaN from 17/06/2017 to 2021/12/31.
+
 ## Datasets
 
 Contains 1-minute, 5-minute, 30-minute and 1-hour historical intraday data for :
