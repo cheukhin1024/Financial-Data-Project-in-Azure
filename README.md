@@ -40,6 +40,9 @@ Allows for read, write and delete access to Azure Storage blob containers and da
 
 For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
 
+All <ticker> tables follow the following setting:
+`<TICKER>_dateTime`  `<TICKER>_adjOpen` `<TICKER>_adjHigh` `<TICKER>_adjLow`   `<TICKER>_adjClose`
+   
 Python Examples: 
 - Get BRK.B 2007/01/1 - 2021/12/31 30min adjusted close: `df = spark.sql("select BRKB_adjClose from deltabase.brkb_30min_delta where DATE_FORMAT(BRKB_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'"`
 
