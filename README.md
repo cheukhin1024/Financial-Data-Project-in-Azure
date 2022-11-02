@@ -1260,7 +1260,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 1. list all delta lake tables
 
 ###### Stream IEX Market data for last trade updates
-1. Stream IEX market data for last trade updates using websocket.
+1. Stream IEX market data for all S&P500 consitutents last trade updates and SPY S&P500 last trade update.
 
 ###### Get data from Delta Lake.py
 1. Examples of getting different datasets from Delta Lake in Azure Databricks 
