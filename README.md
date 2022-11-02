@@ -1276,7 +1276,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 ###### User Defined Functions.py 
 1. Monte Carlo Simulation in Apache Spark Distributed System.
 2. Shapley Additive Explanations (SHAP) for small datasets.
-3. Shapley Additive Explanations (SHAP) for Apache Spark Distributed System.
+3. Shapley Additive Explanations (SHAP) for Apache Spark Distributed System. (Developing)
 
 ###### VACUUM FirstRate 30min delta tables
 1. VACUUM FirstRate 30min delta lake tables
