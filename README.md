@@ -1221,6 +1221,10 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 - XONE-DELISTED (The Exone Company) First Date:7-Feb-2013 -> Last Date:11-Nov-2021
 - YHOO-DELISTED (YAHOO!) First Date:1-Jan-2005 -> Last Date:16-Jun-2017
 
+## Azure Databricks Runtime & Libraries:
+- Databricks Runtime 11.2 (includes Photon): https://docs.databricks.com/release-notes/runtime/11.2.html
+- Databricks Runtime 11.2 for Machine Learning: https://docs.databricks.com/release-notes/runtime/11.2ml.html
+
 ## Files Explanations:
 ###### Bloomberg Speech to Text.py 
 1. Convert Bloomberg TV speech to text data using Azure Cognitive Services.
