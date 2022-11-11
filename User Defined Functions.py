@@ -12,8 +12,11 @@ def TransposeDF(df, columns, pivotCol):
                    .withColumnRenamed("col0", pivotCol)
     return final_df
 
+#First parameter is input DataFrame.
+#Second Parameter is Sequence of columns of Input DataFrame that need to transpose into rows. 
+#Third Parameter is pivot column.
 df = TransposeDF(df, df.columns, "AAPL_dateTime")
-#df = TransposeDF(df, ColumnList, "Products")
+
 
 ###### Monte Carlo Simulation for Apache Spark Distributed System
 
