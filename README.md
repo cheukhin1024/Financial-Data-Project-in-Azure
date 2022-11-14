@@ -25,8 +25,7 @@ https://matroidevolved.com/
 ## StackOverflow
 https://stackoverflow.com/c/algorithmic-trading-for-beginners
 
-Notice: 
-- Email invitation required. 
+Notice: Email invitation required. 
 
 ## Quickstarts: How to access the data?
 There are 2 solutions:
@@ -55,8 +54,7 @@ Python Examples:
 
 - Get YHOO 2005/01/1 - 2021/12/31 regular trading hours 1d adjusted open and adjusted volume: `df = spark.sql("select YHOO_adjOpen, YHOO_adjClose from deltabase.yhoo_1min_delta where DATE_FORMAT(YHOO_dateTime,'HHmm') = '1600' and DATE_FORMAT(YHOO_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'")`
 
-Notice: 
-As YHOO is delisted after 16/06/2017, the datapoints will be null/NaN from 17/06/2017 to 2021/12/31.
+  Notice: As YHOO is delisted after 16/06/2017, the datapoints will be null/NaN from 17/06/2017 to 2021/12/31.
 
 ## Datasets
 
@@ -67,8 +65,7 @@ Contains 1-minute, 5-minute, 30-minute and 1-hour historical intraday data for :
 - SPX index
 - Listing of S&P500 component changes back to 2004
    
-Notice: 
-Data is adjusted for dividends and splits. Out-of-hours trades are included.
+Notice: Data is adjusted for dividends and splits. Out-of-hours trades are included.
 
 The intraday bars and tick data for stocks and ETFs are aggregated from trades on the below exchanges:
 
