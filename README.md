@@ -19,8 +19,8 @@ developed by Marcos Lopez de Prado (PhD)).
 ## Website
 https://matroidevolved.com/
 
-## Contributors 
-1. Jesstlyn Clarissa (The University of Hong Kong) 
+## Other Contributors 
+1. ![Jesstlyn Clarissa](https://www.linkedin.com/in/jesstlyn-clarissa-199344220/) (The University of Hong Kong) 
 
 ## StackOverflow
 https://stackoverflow.com/c/algorithmic-trading-for-beginners
