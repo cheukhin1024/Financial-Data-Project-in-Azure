@@ -10,7 +10,7 @@
 6. QuickStarts
 7. Datasets 
 8. Azure Databricks Runtime & Libraries
-9. File Explainations
+9. Code File Explainations
 
 ## Description
 1. Provide over 2 billion historical S&P 500 constituents with high-frequency data rows (no survivorship
