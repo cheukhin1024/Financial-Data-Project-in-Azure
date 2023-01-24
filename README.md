@@ -1,6 +1,17 @@
 # Financial Data Project in Azure (Official Release)
 ![Me main3](https://user-images.githubusercontent.com/70860455/160253345-b4b9484a-966d-4f03-9419-1354fc8b1934.PNG)
 
+## Summary
+1. Description
+2. System Design
+3. Website
+4. Other Contributors
+5. StackOverflow
+6. QuickStarts
+7. Datasets 
+8. Azure Databricks Runtime & Libraries
+9. File Explainations
+
 ## Description
 1. Provide over 2 billion historical S&P 500 constituents with high-frequency data rows (no survivorship
 bias) to different users in East US Azure Databricks Delta Lake. Data can back to 2005.
@@ -39,11 +50,11 @@ Allows for read, write and delete access to Azure Storage blob containers and da
 
 For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
 
-
-Price Delta tables have the following columns:
+Price Delta tables `<TICKER>_<TIMESTAMP>_delta` have the following columns:
 - `<TICKER>_dateTime` `<TICKER>_adjOpen` `<TICKER>_adjHigh` `<TICKER>_adjLow` `<TICKER>_adjClose` `<TICKER>_adjVolume`
 
-Notice: <TICKER>_dateTime is based on Eastern Standard Time Zone (EST) 
+Notice: `<TICKER>_dateTime` is based on Eastern Standard Time Zone (EST). 
+Notice: `<TICKER>_<TIMESTAMP>_delta` tables provide `1_min` and `30_min` timestamp choices.
 
 Python Examples: 
 - Get BRK.B 2007/01/1 - 2021/12/31 30min adjusted close: `df = spark.sql("select BRKB_adjClose from deltabase.brkb_30min_delta where DATE_FORMAT(BRKB_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'")`
