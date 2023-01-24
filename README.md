@@ -54,6 +54,7 @@ Price Delta tables `<TICKER>_<TIMESTAMP>_delta` have the following columns:
 - `<TICKER>_dateTime` `<TICKER>_adjOpen` `<TICKER>_adjHigh` `<TICKER>_adjLow` `<TICKER>_adjClose` `<TICKER>_adjVolume`
 
 Notice: `<TICKER>_dateTime` is based on Eastern Standard Time Zone (EST). 
+
 Notice: `<TICKER>_<TIMESTAMP>_delta` tables provide `1_min` and `30_min` timestamp choices.
 
 Python Examples: 
