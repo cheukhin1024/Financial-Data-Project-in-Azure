@@ -14,15 +14,15 @@
 
 ## Description
 1. Provide over 2 billion historical S&P 500 constituents with high-frequency data rows (no survivorship
-bias) to different users in East US Azure Databricks Delta Lake. Data can back to 2005.
+bias) to different users in Databricks Delta Lake. Data can be back to 2004.
 2. Increased query performance by at least 1000% compared to a traditional database.
 3. Introduce a better data-driven sector classification than the traditional S&P GICS sector classification.
-4. Provide alternative data (such as Bloomberg TV real-time market sentiment data, Twitter sentiment,
-and NASA satellite images).
-5. Streaming all IEX market data.
-6. Introduce financial portfolio optimization methods (such as the hierarchical risk parity algorithm
+4. Provide alternative data.
+5. Streaming all IEX real-time market data for last trade updates.
+6. Create end-to-end DevOps CI/CD data pipelines.
+7. Introduce financial portfolio optimisation methods (such as the hierarchical risk parity algorithm
 developed by Marcos Lopez de Prado (PhD)).
-7. Create end-to-end DevOps CI/CD data pipelines in Azure Databricks Delta Live Tables
+8. Boruta SHAP Feature importance
 
 ## System Design
 ![system design drawio](https://user-images.githubusercontent.com/70860455/199191296-d5d06a08-c074-46f0-a6ce-d15571aea13a.png)
