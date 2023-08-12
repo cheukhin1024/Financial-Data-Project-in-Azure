@@ -60,6 +60,12 @@ input_df['Last Date'] = input_df['Timeframe'].str.split('Last Date:').str[1]
 # Drop the original Timeframe column
 input_df.drop(columns=['Timeframe'], inplace=True)
 
+#Convert pandas object data type to datetime
+input_df[["First Date", "Last Date"]] = input_df[["First Date", "Last Date"]].apply(pd.to_datetime)
+
+#Sort datetime
+input_df.sort_values(by=['First Date', 'Last Date'], inplace = True)
+
 # Print the DataFrame
 print(input_df)
 
