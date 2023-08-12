@@ -1252,6 +1252,9 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 ###### Delete Files or Directory.py
 1. Delete Files or Directory
 
+###### Extract FirstRate Stock Tickers Issue Date & Delisted Date.py
+1. Extract and sort the first date and last date for every ticker in text file.
+
 ###### Financial Data Engineering.py
 1. REST API getting data from: 
 - [Tiingo](https://api.tiingo.com/), 
