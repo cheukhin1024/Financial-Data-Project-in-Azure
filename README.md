@@ -17,12 +17,13 @@
 bias) to different users in Databricks Delta Lake. Data can be back to 2004.
 2. Increased query performance by at least 1000% compared to a traditional database.
 3. Introduce a better data-driven sector classification than the traditional S&P GICS sector classification.
-4. Provide alternative data.
+4. Provide alternative data
 5. Streaming all IEX real-time market data for last trade updates.
 6. Create end-to-end DevOps CI/CD data pipelines.
 7. Introduce financial portfolio optimisation methods (such as the hierarchical risk parity algorithm
 developed by Marcos Lopez de Prado (PhD)).
 8. Boruta SHAP Feature importance
+9. Web scraping 
 
 ## System Design
 ![system design drawio](https://user-images.githubusercontent.com/70860455/199191296-d5d06a08-c074-46f0-a6ce-d15571aea13a.png)
@@ -1291,7 +1292,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 ###### Pair Trading.py
 1. Pair Trading using cointegration, statmodels...
 
-###### Stream IEX Market data for last trade updates
+###### Stream IEX Market Data.py
 1. Stream IEX market data for all S&P500 consitutents last trade updates and SPY S&P500 last trade update.
 
 ###### User Defined Functions.py 
@@ -1301,3 +1302,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 
 ###### VACUUM FirstRate 30min delta tables
 1. VACUUM FirstRate 30min delta lake tables
+
+###### Web Scraping.py
+1. Web scraping data from Hindenburg Research
+2. Web Scraping data from Muddy Waters Research 
