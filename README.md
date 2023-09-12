@@ -1304,5 +1304,23 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 1. VACUUM FirstRate 30min delta lake tables
 
 ###### Web Scraping.py
-1. Web scraping data from Hindenburg Research
-2. Web Scraping data from Muddy Waters Research 
+1. Get email title subjects from short selling firms:
+   - Wolfpack Research
+   - White Diamond Research
+   - Viceroy Research
+   - Spruce Point Capital Management
+   - Richard Pearson
+   - Prescience Point Capital Management
+   - Muddy Waters Research
+   - Marcus Aurelius Value
+   - Mako Research
+   - Kynikos Associates LP
+   - Kerrisdale Capital
+   - Jcapital Research
+   - Hindenburg Research
+   - Gotham City Research LLC
+   - Glaucus Research
+   - Citron Research
+   - Blue Orca Capital    
+2. Web scraping data from Hindenburg Research
+3. Web Scraping data from Muddy Waters Research 
