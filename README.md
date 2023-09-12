@@ -1309,18 +1309,25 @@ Updates (August 2021) : Added Bio-Techne (TECH)
    - White Diamond Research
    - Viceroy Research
    - Spruce Point Capital Management
-   - Richard Pearson
+   - Richard Pearson (Missing)
    - Prescience Point Capital Management
    - Muddy Waters Research
-   - Marcus Aurelius Value
-   - Mako Research
-   - Kynikos Associates LP
-   - Kerrisdale Capital
+   - Marcus Aurelius Value (Pending)
+   - Mako Research (Missing)
+   - Kynikos Associates LP (Found but no short selling reports posted) 
+   - Kerrisdale Capital (Pending)
    - Jcapital Research
    - Hindenburg Research
    - Gotham City Research LLC
    - Glaucus Research
-   - Citron Research
-   - Blue Orca Capital    
-2. Web scraping data from Hindenburg Research
-3. Web Scraping data from Muddy Waters Research 
+   - Bonitas Research (Pending)
+   - Citron Research (Missing)
+   - Blue Orca Capital
+  
+    Note:
+   1. "Missing" means the company website cannot be found in the internet, so that their reports cannot be email subscriped.
+   2. "Found but no short selling reports posted" means the company may no longer focus on sharing short selling reports in the internet.
+   3. "Pending" means the subscription is waiting for being added.
+   
+3. Web scraping data from Hindenburg Research
+4. Web Scraping data from Muddy Waters Research 
