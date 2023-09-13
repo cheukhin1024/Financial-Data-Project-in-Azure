@@ -1305,24 +1305,24 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 
 ###### Web Scraping.py
 1. Get email title subjects from short selling firms:
-   - Wolfpack Research
-   - White Diamond Research
-   - Viceroy Research
-   - Spruce Point Capital Management
+   - Wolfpack Research (https://wolfpackresearch.com/research/)
+   - White Diamond Research (https://whitediamondresearch.com/)
+   - Viceroy Research (https://viceroyresearch.org/research/)
+   - Spruce Point Capital Management (https://www.sprucepointcap.com/research/)
    - Richard Pearson (Missing)
-   - Prescience Point Capital Management
-   - Muddy Waters Research
-   - Marcus Aurelius Value (Pending)
-   - Mako Research (Missing)
-   - Kynikos Associates LP (Found but no short selling reports posted) 
-   - Kerrisdale Capital (Pending)
-   - Jcapital Research
-   - Hindenburg Research
-   - Gotham City Research LLC
-   - Glaucus Research
-   - Bonitas Research (Pending)
-   - Citron Research (Missing)
-   - Blue Orca Capital
+   - Prescience Point Capital Management (https://www.presciencepoint.com/research/)
+   - Muddy Waters Research (https://www.muddywatersresearch.com/research/)
+   - Marcus Aurelius Value (Pending) (http://www.mavalue.org/research/)
+   - Mako Research (Missing) ()
+   - Kynikos Associates LP (Found but no short selling reports posted) (https://kynikos.com/)
+   - Kerrisdale Capital (Pending) (https://www.kerrisdalecap.com/blog/?cat=short)
+   - Jcapital Research (https://www.jcapitalresearch.com/company-reports.html)
+   - Hindenburg Research (https://hindenburgresearch.com/)
+   - Gotham City Research LLC (https://www.gothamcityresearch.com/main)
+   - Glaucus Research (https://glaucusresearch.com/corporate-corruption/)
+   - Bonitas Research (Pending)  (https://www.bonitasresearch.com/research/)
+   - Citron Research (Found but no short selling reports posted) (https://citronresearch.com/)
+   - Blue Orca Capital (https://www.blueorcacapital.com/)
   
     Note:
    1. "Missing" means the company website cannot be found in the internet, so that their reports cannot be email subscriped.
