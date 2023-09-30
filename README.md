@@ -1316,22 +1316,34 @@ Updates (August 2021) : Added Bio-Techne (TECH)
    - Mako Research (Missing) ()
    - Kynikos Associates LP (Found but no short selling reports posted) (https://kynikos.com/)
    - Kerrisdale Capital (Pending) (https://www.kerrisdalecap.com/blog/?cat=short)
-   - Jcapital Research (https://www.jcapitalresearch.com/company-reports.html)
    - Hindenburg Research (https://hindenburgresearch.com/)
-   - Gotham City Research LLC (https://www.gothamcityresearch.com/main)
+   - arch (Pending)  (https://www.bonitasresearch.com/research/)
+   - Citron Research (FouGotham City Research LLC (https://www.gothamcityresearch.com/main)
    - Glaucus Research (https://glaucusresearch.com/corporate-corruption/)
-   - Bonitas Research (Pending)  (https://www.bonitasresearch.com/research/)
-   - Citron Research (Found but no short selling reports posted) (https://citronresearch.com/)
+   - Grizzly Research (https://grizzlyreports.com/)
+   - Bonitas Resend but no short selling reports posted) (https://citronresearch.com/)
    - Blue Orca Capital (https://www.blueorcacapital.com/)
    - GMT Research (https://www.gmtresearch.com/en/library/companies/?offset=0&limit=20)
-  
+   - Sumerian Research (Pending)
+   - Fuzzy Panda Research (https://fuzzypandaresearch.com/)
+   - Ningi Research (https://ningiresearch.com/research/)
+   - Peabody Street Research (https://peabodystreet.substack.com/)
+     
+2. Get data by Web scraping:
+   - Jcapital Research (https://www.jcapitalresearch.com/company-reports.html)
+   - Culper Research (https://culperresearch.com/latest-research)
+   - Iceberg Research (https://iceberg-research.com/)
+
+3. Manutally check:
+   - Kerrisdale Capital (https://www.kerrisdalecap.com/)
+     
     Note:
    1. "Missing" means the company website cannot be found in the internet, so that their reports cannot be email subscriped.
    2. "Found but no short selling reports posted" means the company may no longer focus on sharing short selling reports in the internet.
    3. "Pending" means the subscription is waiting for being added.
    
-3. Web scraping data from Hindenburg Research
-4. Web Scraping data from Muddy Waters Research
+5. Web scraping data from Hindenburg Research
+6. Web Scraping data from Muddy Waters Research
 
 ###### Strategies Resarch based:
 1. BSIC "Activist Short-Sellers: Manipulative Profit Seekers or Bearers of Justice?" (https://bsic.it/activist-short-sellers-manipulative-profit-seekers-or-bearers-of-justice/)
