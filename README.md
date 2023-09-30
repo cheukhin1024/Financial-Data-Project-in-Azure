@@ -1323,6 +1323,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
    - Bonitas Research (Pending)  (https://www.bonitasresearch.com/research/)
    - Citron Research (Found but no short selling reports posted) (https://citronresearch.com/)
    - Blue Orca Capital (https://www.blueorcacapital.com/)
+   - GMT Research (https://www.gmtresearch.com/en/library/companies/?offset=0&limit=20)
   
     Note:
    1. "Missing" means the company website cannot be found in the internet, so that their reports cannot be email subscriped.
@@ -1330,4 +1331,9 @@ Updates (August 2021) : Added Bio-Techne (TECH)
    3. "Pending" means the subscription is waiting for being added.
    
 3. Web scraping data from Hindenburg Research
-4. Web Scraping data from Muddy Waters Research 
+4. Web Scraping data from Muddy Waters Research
+
+###### Strategies Resarch based:
+1. BSIC "Activist Short-Sellers: Manipulative Profit Seekers or Bearers of Justice?" (https://bsic.it/activist-short-sellers-manipulative-profit-seekers-or-bearers-of-justice/)
+2. "Textual Analysis of Short-seller Research Reports, Stock Prices, and Real Investment" (https://cdn.gmtresearch.com/public-ckfinder/Short-sellers/Ash%20Illuminations/Ash%20Illuminations%20Research%20-%20LUCKIN%20COFFEE%20(LK_O)%20Was%20Involved%20In%20Serious%20Financial%20%26%20Business%20Fraud.pdf)
+
