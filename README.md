@@ -1347,5 +1347,5 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 
 ###### Strategies Resarch based:
 1. BSIC "Activist Short-Sellers: Manipulative Profit Seekers or Bearers of Justice?" (https://bsic.it/activist-short-sellers-manipulative-profit-seekers-or-bearers-of-justice/)
-2. "Textual Analysis of Short-seller Research Reports, Stock Prices, and Real Investment" (https://cdn.gmtresearch.com/public-ckfinder/Short-sellers/Ash%20Illuminations/Ash%20Illuminations%20Research%20-%20LUCKIN%20COFFEE%20(LK_O)%20Was%20Involved%20In%20Serious%20Financial%20%26%20Business%20Fraud.pdf)
+2. "Textual Analysis of Short-seller Research Reports, Stock Prices, and Real Investment" ([https://cdn.gmtresearch.com/public-ckfinder/Short-sellers/Ash%20Illuminations/Ash%20Illuminations%20Research%20-%20LUCKIN%20COFFEE%20(LK_O)%20Was%20Involved%20In%20Serious%20Financial%20%26%20Business%20Fraud.pdf](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3965873)https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3965873)
 
