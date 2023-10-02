@@ -1305,9 +1305,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 
 ###### Web Scraping.py
 1. Get email title subjects from short-selling firms:
-   - arch (Pending)
    - Blue Orca Capital (https://www.blueorcacapital.com/)
-   - Bonitas Research (https://www.bonitasresearch.com/research/)
    - Citron Research (Pending) (https://citronresearch.com/)
    - Fuzzy Panda Research (https://fuzzypandaresearch.com/)
    - Glaucus Research (https://glaucusresearch.com/corporate-corruption/)
@@ -1315,38 +1313,33 @@ Updates (August 2021) : Added Bio-Techne (TECH)
    - Gotham City Research LLC (https://www.gothamcityresearch.com/main)
    - Grizzly Research (https://grizzlyreports.com/)
    - Hindenburg Research (https://hindenburgresearch.com/)
-   - Kerrisdale Capital (Pending) (https://www.kerrisdalecap.com/blog/?cat=short)
+   - Kerrisdale Capital (https://www.kerrisdalecap.com/commentary?cat=short)
    - Kynikos Associates LP (Found but no short selling reports posted) (https://kynikos.com/)
-   - Mako Research (Missing) ()
    - Muddy Waters Research (https://www.muddywatersresearch.com/research/)
-   - Marcus Aurelius Value (Pending) (http://www.mavalue.org/research/)
    - Ningi Research (https://ningiresearch.com/research/)
    - Peabody Street Research (https://peabodystreet.substack.com/)
    - Prescience Point Capital Management (https://www.presciencepoint.com/research/)
    - Richard Pearson (Missing)
    - Spruce Point Capital Management (https://www.sprucepointcap.com/research/)
-   - Sumerian Research (Pending)
+   - Sumerian Research (Missing)
    - Viceroy Research (https://viceroyresearch.org/research/)
    - Wolfpack Research (https://wolfpackresearch.com/research/)
    - White Diamond Research (https://whitediamondresearch.com/)
      
-3. Get data by Web scraping:
+3. Get data by Web scraping/ Manually check:
    - Culper Research (https://culperresearch.com/latest-research)
    - Iceberg Research (https://iceberg-research.com/)
    - Jcapital Research (https://www.jcapitalresearch.com/company-reports.html)
-
-5. Manually check:
-   - Kerrisdale Capital (https://www.kerrisdalecap.com/)
+   - Bonitas Research (https://www.bonitasresearch.com/research/)
+   - Marcus Aurelius Value (http://www.mavalue.org/research/)
+   - Mako Research (https://seekingalpha.com/author/mako-research)
      
     Note:
-   1. "Missing" means the company website cannot be found in the internet, so that their reports cannot be email subscriped.
-   2. "Found but no short selling reports posted" means the company may no longer focus on sharing short selling reports in the internet.
-   3. "Pending" means the subscription is waiting for being added.
-   
-6. Web scraping data from Hindenburg Research
-7. Web Scraping data from Muddy Waters Research
+   1. "Missing" means the company website cannot be found on the internet so their reports cannot be email subscriped.
+   2. "Found but no short selling reports posted" means the company may no longer focus on sharing short selling reports on the internet.
+   3. "Pending" means the subscription is waiting to be added.
 
-###### Strategies Resarch based:
+###### Strategies Research based:
 1. BSIC "Activist Short-Sellers: Manipulative Profit Seekers or Bearers of Justice?" (https://bsic.it/activist-short-sellers-manipulative-profit-seekers-or-bearers-of-justice/)
 2. "Textual Analysis of Short-seller Research Reports, Stock Prices, and Real Investment" (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3965873)
 
