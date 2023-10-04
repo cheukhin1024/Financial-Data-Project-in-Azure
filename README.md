@@ -1325,6 +1325,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
    - Viceroy Research (https://viceroyresearch.org/research/)
    - Wolfpack Research (https://wolfpackresearch.com/research/)
    - White Diamond Research (https://whitediamondresearch.com/)
+   - Bleecker Street Research (https://www.bleeckerstreetresearch.com/)
      
 3. Get data by Web scraping/ Manually check:
    - Culper Research (https://culperresearch.com/latest-research)
