@@ -39,6 +39,15 @@ https://stackoverflow.com/c/algorithmic-trading-for-beginners
 
 Notice: Email invitation required. 
 
+## Data Governance Policy:
+1. Azure Zone-redundant storage (ZRS) is adopted.
+2. All Azure data are stored in East US.
+3. For storage account data protection, we enable both "soft delete for blobs" and "soft delete for containers" for 90 days.
+4. "AllowBlobPublicAccess" property is enabled for our open dataset only, so that public users can request data in storage account from public without having Azure RBAC role assigned by us in advance.
+5. Only SSH File Transfer Protocol (SFTP) can be used for public access storage account.
+6. Only a maximum 1000 local users for the storage account. Only the top 1000 active local users will not be removed. This checking is done every 3 months.
+7. Public users have "Container (anonymous read access for containers and blobs)" access level. 
+
 ## Quickstarts: How to access the data?
 There are 2 solutions:
 
