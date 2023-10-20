@@ -1316,6 +1316,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 1. Get email title subjects from short-selling firms:
    - Blue Orca Capital (https://www.blueorcacapital.com/)
    - Citron Research (Pending) (https://citronresearch.com/)
+   - Culper Research (https://culperresearch.com/latest-research)
    - Fuzzy Panda Research (https://fuzzypandaresearch.com/)
    - Glasshouse Research (https://www.glasshouseresearch.com/research.html)
    - Glaucus Research (https://glaucusresearch.com/corporate-corruption/)
@@ -1339,8 +1340,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
    - White Diamond Research (https://whitediamondresearch.com/)
    - Bleecker Street Research (https://www.bleeckerstreetresearch.com/)
      
-3. Get data by Web scraping/ Manually check:
-   - Culper Research (https://culperresearch.com/latest-research)
+2. Get data by Web scraping/ Manually check:
    - Dirty Bubble Media (https://dirtybubblemedia.substack.com/)
    - Iceberg Research (https://iceberg-research.com/)
    - Jcapital Research (https://www.jcapitalresearch.com/company-reports.html)
