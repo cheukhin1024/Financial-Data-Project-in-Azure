@@ -1352,7 +1352,8 @@ Updates (August 2021) : Added Bio-Techne (TECH)
    1. "Missing" means the company website cannot be found on the internet so their reports cannot be email subscriped.
    2. "Found but no short selling reports posted" means the company may no longer focus on sharing short selling reports on the internet.
    3. "Pending" means the subscription is waiting to be added.
-
+   4. Short-selling reseach firms that require substack.com subscription usually release their reports during regular trading hours (before EST 13:00) while normal research firms tend to release posts before market open.
+      
 ###### Strategies Research based:
 1. BSIC "Activist Short-Sellers: Manipulative Profit Seekers or Bearers of Justice?" (https://bsic.it/activist-short-sellers-manipulative-profit-seekers-or-bearers-of-justice/)
 2. "Textual Analysis of Short-seller Research Reports, Stock Prices, and Real Investment" (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3965873)
