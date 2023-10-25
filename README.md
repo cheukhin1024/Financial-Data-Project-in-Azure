@@ -1333,6 +1333,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
    - Prescience Point Capital Management (https://www.presciencepoint.com/research/)
    - Richard Pearson (Missing)
    - Scorpion Capital (https://scorpioncapital.com/)
+   - ShadowFall Research (https://www.shadowfall.com/researchreports/)
    - Spruce Point Capital Management (https://www.sprucepointcap.com/research/)
    - Sumerian Research (Missing)
    - Viceroy Research (https://viceroyresearch.org/research/)
@@ -1341,20 +1342,21 @@ Updates (August 2021) : Added Bio-Techne (TECH)
    - Bleecker Street Research (https://www.bleeckerstreetresearch.com/)
      
 2. Get data by Web scraping/ Manually check:
+   - Bonitas Research (https://www.bonitasresearch.com/research/)
    - Dirty Bubble Media (https://dirtybubblemedia.substack.com/)
    - Iceberg Research (https://iceberg-research.com/)
-   - Jcapital Research (https://www.jcapitalresearch.com/company-reports.html)
-   - Bonitas Research (https://www.bonitasresearch.com/research/)
+   - Jcapital Research (https://jcapitalresearch.substack.com/) & (https://www.jcapitalresearch.com/company-reports.html)
    - Marcus Aurelius Value (http://www.mavalue.org/research/)
    - Mako Research (https://seekingalpha.com/author/mako-research)
+   - Ragnarok Research (https://researchragnarok.substack.com/)
      
     Note:
    1. "Missing" means the company website cannot be found on the internet so their reports cannot be email subscriped.
    2. "Found but no short selling reports posted" means the company may no longer focus on sharing short selling reports on the internet.
    3. "Pending" means the subscription is waiting to be added.
-   4. Short-selling reseach firms that require substack.com subscription usually release their reports during regular trading hours (before EST 13:00) while normal research firms tend to release posts before market open.
+   4. Short-selling research firms that require substack.com subscription usually release their reports during regular trading hours (before EST 13:00) while normal research firms tend to release posts before the market open.
       
-###### Strategies Research based:
+###### Strategies Research-based:
 1. BSIC "Activist Short-Sellers: Manipulative Profit Seekers or Bearers of Justice?" (https://bsic.it/activist-short-sellers-manipulative-profit-seekers-or-bearers-of-justice/)
 2. "Textual Analysis of Short-seller Research Reports, Stock Prices, and Real Investment" (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3965873)
 
