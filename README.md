@@ -1343,6 +1343,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
      
 2. Get data by Web scraping/ Manually check:
    - Bonitas Research (https://www.bonitasresearch.com/research/)
+   - DF Research (https://dfresearch.substack.com/)
    - Dirty Bubble Media (https://dirtybubblemedia.substack.com/)
    - Iceberg Research (https://iceberg-research.com/)
    - Jcapital Research (https://jcapitalresearch.substack.com/) & (https://www.jcapitalresearch.com/company-reports.html)
