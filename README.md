@@ -39,6 +39,26 @@ https://stackoverflow.com/c/algorithmic-trading-for-beginners
 
 Notice: Email invitation required. 
 
+## Quickstarts: How to access the data?
+There are 2 solutions:
+
+1. Access Azure Blob Storage
+
+We can assign you as a "Storage Blob Data Contributor -
+Allows for read, write and delete access to Azure Storage blob containers and data". Then, you can accept the email invitation and access the data.
+
+2. Access data through Azure Databricks Delta Sharing [Upcoming]
+
+For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
+
+3. Access data thorugh Wincp (https://winscp.net/eng/index.php)
+
+File protocol:SFTP
+Host name: finstorage6ef5xpkr7mo3s.blob.core.windows.net 
+Port number: 22
+User name: finstorage6ef5xpkr7mo3s.sftpuser
+Password: HL0j0x3WH4ltZ7m2cVFYT34LcPY3bowl
+
 ## Data Governance Policy:
 1. Azure Zone-redundant storage (ZRS) is adopted.
 2. All Azure data are stored in East US.
@@ -49,19 +69,6 @@ Notice: Email invitation required.
 7. Public users have "Container (anonymous read access for containers and blobs)" access level. 
 
 ## Quickstarts: How to access the data?
-There are 2 solutions:
-
-1. Access Azure Blob Storage
-
-We can assign you as a "Storage Blob Data Contributor -
-Allows for read, write and delete access to Azure Storage blob containers and data". Then, you can accept the email invitation and access the data.
-
-2. Access data through Azure Databricks Delta Sharing 
-
-For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
-
-
-
 Price Delta tables `<TICKER>_<TIMESTAMP>_delta` have the following columns:
 - `<TICKER>_dateTime` `<TICKER>_adjOpen` `<TICKER>_adjHigh` `<TICKER>_adjLow` `<TICKER>_adjClose` `<TICKER>_adjVolume`
 
@@ -80,8 +87,9 @@ Python Examples:
 
   Notice: As YHOO is delisted after 16/06/2017, the datapoints will be null/NaN from 17/06/2017 to 2021/12/31.
 
-## Datasets
+## Data 
 
+###### S&P500 component stocks & SPX Index
 Contains 1-minute, 5-minute, 30-minute and 1-hour historical intraday data for :
 - 500 component stocks of the S&P500
 - Active stocks previously included in the S&P500
@@ -1241,6 +1249,11 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 - XLRN-DELISTED (Acceleron Pharma) First Date:19-Sep-2013 -> Last Date:19-Nov-2021
 - XONE-DELISTED (The Exone Company) First Date:7-Feb-2013 -> Last Date:11-Nov-2021
 - YHOO-DELISTED (YAHOO!) First Date:1-Jan-2005 -> Last Date:16-Jun-2017
+
+###### Short-selling reserach firms
+- Hindenburg Research
+- Muddy Waters Research
+- Viceroy Research
 
 ## Azure Databricks Runtime & Libraries:
 - Databricks Runtime 11.2 (includes Photon): https://docs.databricks.com/release-notes/runtime/11.2.html
