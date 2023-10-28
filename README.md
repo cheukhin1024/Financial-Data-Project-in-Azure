@@ -53,11 +53,11 @@ For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql
 
 3. Access data thorugh Wincp (https://winscp.net/eng/index.php)
 
-File protocol:SFTP
-Host name: finstorage6ef5xpkr7mo3s.blob.core.windows.net 
-Port number: 22
-User name: finstorage6ef5xpkr7mo3s.sftpuser
-Password: HL0j0x3WH4ltZ7m2cVFYT34LcPY3bowl
+- File protocol:SFTP
+- Host name: finstorage6ef5xpkr7mo3s.blob.core.windows.net 
+- Port number: 22
+- User name: finstorage6ef5xpkr7mo3s.sftpuser
+- Password: HCZkFf8x43jCblJvcKU0T5gcspbHLe5c
 
 ## Data Governance Policy:
 1. Azure Zone-redundant storage (ZRS) is adopted.
