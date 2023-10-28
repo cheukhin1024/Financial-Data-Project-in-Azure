@@ -7,10 +7,39 @@
 3. Website
 4. Other Contributors
 5. StackOverflow
-6. QuickStarts
-7. Datasets 
-8. Azure Databricks Runtime & Libraries
-9. Code File Explainations
+6. Quickstarts: How to access the data?
+   - Access Azure Blob Storage
+   - Access data through Azure Databricks Delta Sharing [Upcoming]
+   - Access data through Wincp (https://winscp.net/eng/index.php)
+7. Data Governance Policy
+8. Databricks Delta Lake Data Structure
+    - S&P500 component stocks & SPX Index
+    - Short-selling research firms data [Upcoming]
+9. Data
+    - S&P500 component stocks & SPX Index
+    - Short-selling research firms data
+10. Azure Databricks Runtime & Libraries
+11. Files Explanations
+    - Bloomberg Speech to Text.py
+    - Check Empty File.py
+    - Count the number of files in directory.py
+    - Count satellite image color area.py
+    - Delete Files or Directory.py
+    - Extract FirstRate Stock Tickers Issue Date & Delisted Date.py
+    - Financial Data Engineering.py
+    - FirstRate 1min data ETL.py
+    - FirstRate 30min data ETL.py
+    - Get NASA OCO-2 satellite images data.py
+    - Get NASA OCO-2 satellite images data.sh
+    - Hierarchical Risk Parity Algorithm.py
+    - K-Mean clustering in Sector Classification using SparkML.py
+    - K-Mean clustering in Sector Classification using sklearn.py
+    - List Tables
+    - Pair Trading.py
+    - Stream IEX Market Data.py
+    - User Defined Functions.py 
+    - VACUUM FirstRate 30min delta tables
+    - Web Scraping.py
 
 ## Description
 1. Provide over 2 billion historical S&P 500 constituents with high-frequency data rows (no survivorship
@@ -18,9 +47,9 @@ bias) to different users in Databricks Delta Lake. Data can be back to 2004.
 2. Increased query performance by at least 1000% compared to a traditional database.
 3. Introduce a better data-driven sector classification than the traditional S&P GICS sector classification.
 4. Provide alternative data
-5. Streaming all IEX real-time market data for last trade updates.
+5. Stream all IEX real-time market data for the last trade updates.
 6. Create end-to-end DevOps CI/CD data pipelines.
-7. Introduce financial portfolio optimisation methods (such as the hierarchical risk parity algorithm
+7. Introduce financial portfolio optimization methods (such as the hierarchical risk parity algorithm
 developed by Marcos Lopez de Prado (PhD)).
 8. Boruta SHAP Feature importance
 9. Web scraping 
@@ -45,15 +74,15 @@ There are 2 solutions:
 1. Access Azure Blob Storage
 
 We can assign you as a "Storage Blob Data Contributor -
-Allows for read, write and delete access to Azure Storage blob containers and data". Then, you can accept the email invitation and access the data.
+Allows for read, write, and delete access to Azure Storage blob containers and data". Then, you can accept the email invitation and access the data.
 
 2. Access data through Azure Databricks Delta Sharing [Upcoming]
 
 For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql/language-manual/sql-ref-sharing
 
-3. Access data thorugh Wincp (https://winscp.net/eng/index.php)
+3. Access data through Wincp (https://winscp.net/eng/index.php)
 
-- File protocol:SFTP
+- File protocol: SFTP
 - Host name: finstorage6ef5xpkr7mo3s.blob.core.windows.net 
 - Port number: 22
 - User name: finstorage6ef5xpkr7mo3s.sftpuser
@@ -61,14 +90,17 @@ For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql
 
 ## Data Governance Policy:
 1. Azure Zone-redundant storage (ZRS) is adopted.
-2. All Azure data are stored in East US.
+2. All Azure data are stored in the East US.
 3. For storage account data protection, we enable both "soft delete for blobs" and "soft delete for containers" for 90 days.
-4. "AllowBlobPublicAccess" property is enabled for our open dataset only, so that public users can request data in storage account from public without having Azure RBAC role assigned by us in advance.
-5. Only SSH File Transfer Protocol (SFTP) can be used for public access storage account.
-6. Only a maximum 1000 local users for the storage account. Only the top 1000 active local users will not be removed. This checking is done every 3 months.
+4. The "AllowBlobPublicAccess" property is enabled for our open dataset only so that public users can request data in a storage account from public without having the Azure RBAC role assigned by us in advance.
+5. Only SSH File Transfer Protocol (SFTP) can be used for public access storage accounts.
+6. Only a maximum of 1000 local users for the storage account. Only the top 1000 active local users will not be removed. This checking is done every 3 months.
 7. Public users have "Container (anonymous read access for containers and blobs)" access level. 
 
-## Quickstarts: How to access the data?
+## Databricks Delta Lake Data Structure 
+
+###### S&P500 component stocks & SPX Index
+
 Price Delta tables `<TICKER>_<TIMESTAMP>_delta` have the following columns:
 - `<TICKER>_dateTime` `<TICKER>_adjOpen` `<TICKER>_adjHigh` `<TICKER>_adjLow` `<TICKER>_adjClose` `<TICKER>_adjVolume`
 
@@ -85,9 +117,13 @@ Python Examples:
 
 - Get YHOO 2005/01/1 - 2021/12/31 regular trading hours 1d adjusted open and adjusted volume: `df = spark.sql("select YHOO_adjOpen, YHOO_adjClose from deltabase.yhoo_1min_delta where DATE_FORMAT(YHOO_dateTime,'HHmm') = '1600' and DATE_FORMAT(YHOO_dateTime,'yyyy-MM-dd') between '2007-01-01' and '2021-12-31'")`
 
-  Notice: As YHOO is delisted after 16/06/2017, the datapoints will be null/NaN from 17/06/2017 to 2021/12/31.
+  Notice: As YHOO is delisted after 16/06/2017, the data points will be null/NaN from 17/06/2017 to 2021/12/31.
+
+###### Short-selling research firms data [Upcoming]
 
 ## Data 
+1. S&P500 component stocks & SPX Index
+2. Short-selling research firms data
 
 ###### S&P500 component stocks & SPX Index
 Contains 1-minute, 5-minute, 30-minute and 1-hour historical intraday data for :
@@ -137,7 +173,7 @@ Updates (Dec 2021): Added EPAM Systems (EPAM)
 
 Updates (Sept 2021): Added Match Group (MTCH), Ceridian (CDAY) Brown and Brown (BRO)
 
-Updates (August 2021) : Added Bio-Techne (TECH)
+Updates (August 2021): Added Bio-Techne (TECH)
 
 - A (Agilent Technologies Inc) First Date:3-Jan-2005 -> Last Date:15-Feb-2022
 - AA (ALCOA CORPORATION) First Date:18-Oct-2016 -> Last Date:15-Feb-2022
@@ -1250,7 +1286,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 - XONE-DELISTED (The Exone Company) First Date:7-Feb-2013 -> Last Date:11-Nov-2021
 - YHOO-DELISTED (YAHOO!) First Date:1-Jan-2005 -> Last Date:16-Jun-2017
 
-###### Short-selling reserach firms
+###### Short-selling research firms data
 - Hindenburg Research
 - Muddy Waters Research
 - Viceroy Research
@@ -1264,19 +1300,19 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 1. Convert Bloomberg TV speech to text data using Azure Cognitive Services.
 
 ###### Check Empty File.py
-1. Validate files completeness by checking empty files
+1. Validate file completeness by checking empty files
 
-###### Count number of file in directory.py
-1. Validate files completeness by counting number of files
+###### Count the number of files in directory.py
+1. Validate file completeness by counting the number of files
 
-###### Count satallite image color area.py
-1. Count the color area of the satallite image using OpenCV. The result can be transformed into time series structured data index for predicting future agricultural price.
+###### Count satellite image color area.py
+1. Count the color area of the satellite image using OpenCV. The result can be transformed into a time series structured data index for predicting future agricultural prices.
 
 ###### Delete Files or Directory.py
 1. Delete Files or Directory
 
 ###### Extract FirstRate Stock Tickers Issue Date & Delisted Date.py
-1. Extract and sort the first date and last date for every ticker in text file.
+1. Extract and sort the first date and last date for every ticker in a text file.
 
 ###### Financial Data Engineering.py
 1. REST API getting data from: 
@@ -1292,11 +1328,11 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 ###### FirstRate 30min data ETL.py
 1. FirstRate 30 min data ETL to Delta Lake
 
-###### Get NASA OCO-2 satallite images data.py
-1. Get NASA OCO-2 satallite images data using Python
+###### Get NASA OCO-2 satellite images data.py
+1. Get NASA OCO-2 satellite images data using Python
  
-###### Get NASA OCO-2 satallite images data.sh
-1. Get NASA OCO-2 satallite images data using Bash Script
+###### Get NASA OCO-2 satellite images data.sh
+1. Get NASA OCO-2 satellite images data using Bash Script
 
 ###### Hierarchical Risk Parity Algorithm.py
 ![下載](https://user-images.githubusercontent.com/70860455/186008175-34c2f6f0-8489-4a47-b7a9-7847d1c6016b.png))
@@ -1315,7 +1351,7 @@ Updates (August 2021) : Added Bio-Techne (TECH)
 1. Pair Trading using cointegration, statmodels...
 
 ###### Stream IEX Market Data.py
-1. Stream IEX market data for all S&P500 consitutents last trade updates and SPY S&P500 last trade update.
+1. Stream IEX market data for all S&P500 constituents last trade updates and SPY S&P500 last trade update.
 
 ###### User Defined Functions.py 
 1. Monte Carlo Simulation in Apache Spark Distributed System.
