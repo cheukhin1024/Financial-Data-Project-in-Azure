@@ -1364,6 +1364,7 @@ Updates (August 2021): Added Bio-Techne (TECH)
 ###### Web Scraping.py
 1. Get email title subjects from short-selling firms:
    - Blue Orca Capital (https://www.blueorcacapital.com/)
+   - Boatman Capital Research (https://theboatmancapital.com/research/)
    - Citron Research (Pending) (https://citronresearch.com/)
    - Culper Research (https://culperresearch.com/latest-research)
    - Fuzzy Panda Research (https://fuzzypandaresearch.com/)
@@ -1392,12 +1393,14 @@ Updates (August 2021): Added Bio-Techne (TECH)
      
 2. Get data by Web scraping/ Manually check:
    - Bonitas Research (https://www.bonitasresearch.com/research/)
+   - Buceph Research (https://www.buceph.com/)
    - DF Research (https://dfresearch.substack.com/)
    - Dirty Bubble Media (https://dirtybubblemedia.substack.com/)
    - Iceberg Research (https://iceberg-research.com/)
    - Jcapital Research (https://jcapitalresearch.substack.com/) & (https://www.jcapitalresearch.com/company-reports.html)
    - Marcus Aurelius Value (http://www.mavalue.org/research/)
    - Mako Research (https://seekingalpha.com/author/mako-research)
+   - PAA Research (https://www.pleaseactaccordingly.com/the-library)
    - Ragnarok Research (https://researchragnarok.substack.com/)
    - Quintessential Fund (https://www.qcmfunds.com/the-dark-side-of-darktrace/)
      
