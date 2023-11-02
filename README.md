@@ -1399,6 +1399,7 @@ Updates (August 2021): Added Bio-Techne (TECH)
    - Marcus Aurelius Value (http://www.mavalue.org/research/)
    - Mako Research (https://seekingalpha.com/author/mako-research)
    - Ragnarok Research (https://researchragnarok.substack.com/)
+   - Quintessential Fund (https://www.qcmfunds.com/the-dark-side-of-darktrace/)
      
     Note:
    1. "Missing" means the company website cannot be found on the internet so their reports cannot be email subscriped.
