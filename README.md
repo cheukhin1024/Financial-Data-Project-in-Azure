@@ -85,7 +85,7 @@ For details, please visit: https://docs.microsoft.com/en-us/azure/databricks/sql
 - File protocol: SFTP
 - Host name: finstorage6ef5xpkr7mo3s.blob.core.windows.net 
 - Port number: 22
-- User name: finstorage6ef5xpkr7mo3s.sftpuser
+- User name: finstorage6ef5xpkr7mo3s.finance.sftpuser
 - Password: HCZkFf8x43jCblJvcKU0T5gcspbHLe5c
 
 ## Data Governance Policy:
