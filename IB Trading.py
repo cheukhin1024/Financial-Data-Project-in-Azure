@@ -1,3 +1,5 @@
+# Databricks notebook source
+
 import datetime
 import time
 import requests
@@ -6,11 +8,11 @@ from lxml import html
 from ib_insync import *
 from pytz import timezone
 
-util.startLoop()  # uncomment this line when in a notebook
+util.startLoop()   #uncomment this line when in a notebook
 
 ib = IB()
-#ib.connect('10.1.0.4', 7496, clientId=1, timeout=30)  
-ib.connect('10.1.0.4', 4002, clientId=2, timeout=30) 
+#ib.connect('10.1.0.4', 7496, clientId=1, timeout=30)   #Uncomment if using TWS
+ib.connect('10.1.0.4', 4002, clientId=2, timeout=30)   #Uncomment if using IB Gateway
 
 session = requests.session()
 
@@ -142,21 +144,17 @@ if __name__ == '__main__':
 
         get_data()
         print(placedOrder_Symbol_arr)
-        #print(f'Symbol_arr = \n{Symbol_arr}')
-        #print(f'Company_arr = \n{Company_arr}')
-        #print(f'ShortActivist_arr = \n{ShortActivist_arr}')
-        #print(f'ReleaseDate_arr = \n{ReleaseDate_arr}')
-        
+
         for eachSymbol_Release_date_idx in range(0, 20, 1):
             if datetime.datetime.strptime(ReleaseDate_arr[eachSymbol_Release_date_idx],'%Y-%m-%d') == current_date_datetime and Symbol_arr[eachSymbol_Release_date_idx] not in placedOrder_Symbol_arr:
                 
                 contract = Stock(Symbol_arr[eachSymbol_Release_date_idx], 'SMART', 'USD')
 
-                ##print(f'Start Time in US Eastern Timezone: {datetime.datetime.now(tz)}')
                 if OPG_time_datetime < current_time_datetime < MOC_time_datetime:
                     ib.qualifyContracts(contract)
 
                     nlv = float([v.value for v in ib.accountValues() if v.tag == 'NetLiquidationByCurrency' and v.currency == 'BASE'][0])
+                    nlv = nlv/7.75   #Base curreney: HKD. Uncomment if it is USD.
                     historical_data = ib.reqHistoricalData(
                                             contract=contract, 
                                             endDateTime='', 
@@ -178,7 +176,7 @@ if __name__ == '__main__':
                     ib.qualifyContracts(contract)
 
                     nlv = float([v.value for v in ib.accountValues() if v.tag == 'NetLiquidationByCurrency' and v.currency == 'BASE'][0])
-                    nlv = nlv/7.75
+                    nlv = nlv/7.75   #Base curreney: HKD. Uncomment if it is USD.
                     historical_data = ib.reqHistoricalData(
                                             contract=contract, 
                                             endDateTime='', 
@@ -204,7 +202,5 @@ if __name__ == '__main__':
 
                 placedOrder_Symbol_arr.append(Symbol_arr[eachSymbol_Release_date_idx])
                 
-                ##print(placedOrder_Symbol_arr)
-                ##print(f'End Time in US Eastern Timezone: {datetime.datetime.now(tz)}')
         print(f'End Time in US Eastern Timezone: {datetime.datetime.now(tz)}')
         time.sleep(60)
