@@ -171,8 +171,8 @@ if __name__ == '__main__':
 
                     mktSellOrder = Order(action="SELL", totalQuantity=qty, orderType="MTL",tif="DAY",outsideRth=False)
                     mktSellOrder_trade = ib.placeOrder(contract, mktSellOrder)
-                    #print(mktSellOrder_trade.log)
-                    #print(mktSellOrder_trade.orderStatus.status)
+                    print(mktSellOrder_trade.log)
+                    print(mktSellOrder_trade.orderStatus.status)
 
                 elif OPG_time_datetime > current_time_datetime < MOC_time_datetime:
                     ib.qualifyContracts(contract)
@@ -193,8 +193,8 @@ if __name__ == '__main__':
 
                     OPGmktSellOrder = Order(action="SELL", totalQuantity=qty, orderType="MKT",tif="OPG")
                     OPGmktSellOrder_trade = ib.placeOrder(contract, OPGmktSellOrder)
-                    #print(OPGmktSellOrder_trade.log)
-                    #print(OPGmktSellOrder_trade.orderStatus.status)
+                    print(OPGmktSellOrder_trade.log)
+                    print(OPGmktSellOrder_trade.orderStatus.status)
 
                 ib.qualifyContracts(contract)
                 mocBuyOrder = Order(action="BUY", totalQuantity=qty, orderType="MOC",tif="DAY",outsideRth=False)
