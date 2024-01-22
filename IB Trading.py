@@ -1,21 +1,16 @@
-# Databricks notebook source
 import datetime
 import time
 import requests
 import json
 from lxml import html
 from ib_insync import *
+from pytz import timezone
 
-# COMMAND ----------
-
-#util.startLoop()  # uncomment this line when in a notebook
-
-# COMMAND ----------
+util.startLoop()  # uncomment this line when in a notebook
 
 ib = IB()
-ib.connect('10.0.0.4', 7496, clientId=1)
-
-# COMMAND ----------
+#ib.connect('10.1.0.4', 7496, clientId=1, timeout=30)  
+ib.connect('10.1.0.4', 4002, clientId=2, timeout=30) 
 
 session = requests.session()
 
@@ -126,39 +121,90 @@ def get_data():
     ShortActivist_arr = tmp_shortactivist_lst + ShortActivist_arr
     ReleaseDate_arr = tmp_relase_date_lst + ReleaseDate_arr
 
-placeOrder_Symbol_arr = []
-placeOrder_Company_arr = []
-placeOrder_ShortActivist_arr = []
-placeOrder_ReleaseDate_arr = []
-
-# COMMAND ----------
+placedOrder_Symbol_arr = []
+placedOrder_Company_arr = []
+placedOrder_ShortActivist_arr = []
+placedOrder_ReleaseDate_arr = []
 
 if __name__ == '__main__':
     login()
     while True:
-        print(f'Start: {datetime.datetime.now()}')
+        tz = timezone('EST')
+        current_date_str = datetime.datetime.now(tz).strftime('%Y-%m-%d')
+        current_date_datetime = datetime.datetime.strptime(current_date_str, '%Y-%m-%d')
+
+        OPG_time_datetime = datetime.datetime.strptime('09:15:00', '%H:%M:%S')
+        current_time_str = datetime.datetime.now(tz).strftime('%H:%M:%S')
+        current_time_datetime = datetime.datetime.strptime(current_time_str, '%H:%M:%S')
+        MOC_time_datetime = datetime.datetime.strptime('15:45:00', '%H:%M:%S')
+        
+        print(f'Start Time in US Eastern Timezone: {datetime.datetime.now(tz)}')
 
         get_data()
-        print(placeOrder_Symbol_arr)
+        print(placedOrder_Symbol_arr)
         #print(f'Symbol_arr = \n{Symbol_arr}')
         #print(f'Company_arr = \n{Company_arr}')
         #print(f'ShortActivist_arr = \n{ShortActivist_arr}')
-        #print(f'ReleaseDate_arr = \n{ReleaseDate_arr}') 
-        if Symbol_arr[0] not in placeOrder_Symbol_arr:
-            contract = Stock(Symbol_arr[0], 'SMART', 'USD')
-            
-            ib.qualifyContracts(contract)
-            mktSellOrder = Order(action="SELL", totalQuantity=100, orderType="MKT",tif="DAY",outsideRth=False)
-            mktSellOrder_trade = ib.placeOrder(contract, mktSellOrder)
-            print(mktSellOrder_trade.log)
-            print(mktSellOrder_trade.orderStatus.status)
-            placeOrder_Symbol_arr.append(Symbol_arr[0])
+        #print(f'ReleaseDate_arr = \n{ReleaseDate_arr}')
+        
+        for eachSymbol_Release_date_idx in range(0, 20, 1):
+            if datetime.datetime.strptime(ReleaseDate_arr[eachSymbol_Release_date_idx],'%Y-%m-%d') == current_date_datetime and Symbol_arr[eachSymbol_Release_date_idx] not in placedOrder_Symbol_arr:
+                
+                contract = Stock(Symbol_arr[eachSymbol_Release_date_idx], 'SMART', 'USD')
 
-            ib.qualifyContracts(contract)
-            mocBuyOrder = Order(action="BUY", totalQuantity=100, orderType="MOC",tif="DAY",outsideRth=False)
-            mocBuyOrder_trade = ib.placeOrder(contract, mocBuyOrder)
-            print(mocBuyOrder_trade.log)
-            print(mocBuyOrder_trade.orderStatus.status)
+                ##print(f'Start Time in US Eastern Timezone: {datetime.datetime.now(tz)}')
+                if OPG_time_datetime < current_time_datetime < MOC_time_datetime:
+                    ib.qualifyContracts(contract)
 
-        print(f'End: {datetime.datetime.now()}')
+                    nlv = float([v.value for v in ib.accountValues() if v.tag == 'NetLiquidationByCurrency' and v.currency == 'BASE'][0])
+                    historical_data = ib.reqHistoricalData(
+                                            contract=contract, 
+                                            endDateTime='', 
+                                            barSizeSetting='1 secs', 
+                                            durationStr='60 S', 
+                                            whatToShow='MIDPOINT', 
+                                            useRTH=False)
+                    last_historical_data = historical_data[-1].open
+                    available_shortSell_nlv = nlv/2
+                    positionSizePercentage = 0.25
+                    qty = (available_shortSell_nlv*positionSizePercentage)//last_historical_data
+
+                    mktSellOrder = Order(action="SELL", totalQuantity=qty, orderType="MTL",tif="DAY",outsideRth=False)
+                    mktSellOrder_trade = ib.placeOrder(contract, mktSellOrder)
+                    #print(mktSellOrder_trade.log)
+                    #print(mktSellOrder_trade.orderStatus.status)
+
+                elif OPG_time_datetime > current_time_datetime < MOC_time_datetime:
+                    ib.qualifyContracts(contract)
+
+                    nlv = float([v.value for v in ib.accountValues() if v.tag == 'NetLiquidationByCurrency' and v.currency == 'BASE'][0])
+                    nlv = nlv/7.75
+                    historical_data = ib.reqHistoricalData(
+                                            contract=contract, 
+                                            endDateTime='', 
+                                            barSizeSetting='1 secs', 
+                                            durationStr='60 S', 
+                                            whatToShow='MIDPOINT', 
+                                            useRTH=False)
+                    last_historical_data = historical_data[-1].open
+                    available_shortSell_nlv = nlv/2
+                    positionSizePercentage = 0.25
+                    qty = (available_shortSell_nlv*positionSizePercentage)//last_historical_data
+
+                    OPGmktSellOrder = Order(action="SELL", totalQuantity=qty, orderType="MKT",tif="OPG")
+                    OPGmktSellOrder_trade = ib.placeOrder(contract, OPGmktSellOrder)
+                    #print(OPGmktSellOrder_trade.log)
+                    #print(OPGmktSellOrder_trade.orderStatus.status)
+
+                ib.qualifyContracts(contract)
+                mocBuyOrder = Order(action="BUY", totalQuantity=qty, orderType="MOC",tif="DAY",outsideRth=False)
+                mocBuyOrder_trade = ib.placeOrder(contract, mocBuyOrder)
+                print(mocBuyOrder_trade.log)
+                print(mocBuyOrder_trade.orderStatus.status)
+
+                placedOrder_Symbol_arr.append(Symbol_arr[eachSymbol_Release_date_idx])
+                
+                ##print(placedOrder_Symbol_arr)
+                ##print(f'End Time in US Eastern Timezone: {datetime.datetime.now(tz)}')
+        print(f'End Time in US Eastern Timezone: {datetime.datetime.now(tz)}')
         time.sleep(60)
