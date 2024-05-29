@@ -52,6 +52,7 @@ developed by Marcos Lopez de Prado (PhD)).
 6. Web scraping short selling data report release signals.
 7. Create a Short Selling strategyby using ib_insync API and web scraping. Idea: Short sell the target stock if a new short selling report of the target is released.
 
+
 ## System Design
 ![system design drawio](https://user-images.githubusercontent.com/70860455/199191296-d5d06a08-c074-46f0-a6ce-d15571aea13a.png)
 
@@ -1284,16 +1285,19 @@ Updates (August 2021): Added Bio-Techne (TECH)
 - XONE-DELISTED (The Exone Company) First Date:7-Feb-2013 -> Last Date:11-Nov-2021
 - YHOO-DELISTED (YAHOO!) First Date:1-Jan-2005 -> Last Date:16-Jun-2017
 
-###### Short-selling research firms data
-- Hindenburg Research
-- Muddy Waters Research
-- Viceroy Research
-
 ## Azure Databricks Runtime & Libraries:
 - Databricks Runtime 11.2 (includes Photon): https://docs.databricks.com/release-notes/runtime/11.2.html
 - Databricks Runtime 11.2 for Machine Learning: https://docs.databricks.com/release-notes/runtime/11.2ml.html
 
 ## Files Explanations:
+###### Backtest Short Selling.py 
+1. Collect data (e.g. target security, release date) from the short selling data provider.
+2. Use ib_insync to short sell the target stock if a new short selling report of the target is released.
+
+The short selling strategy idea comes from the following papers:
+- BSIC "Activist Short-Sellers: Manipulative Profit Seekers or Bearers of Justice?" (https://bsic.it/activist-short-sellers-manipulative-profit-seekers-or-bearers-of-justice/)
+- "Textual Analysis of Short-seller Research Reports, Stock Prices, and Real Investment" (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3965873)
+
 ###### Bloomberg Speech to Text.py 
 1. Convert Bloomberg TV speech to text data using Azure Cognitive Services.
 
@@ -1302,9 +1306,6 @@ Updates (August 2021): Added Bio-Techne (TECH)
 
 ###### Count the number of files in directory.py
 1. Validate file completeness by counting the number of files
-
-###### Count satellite image color area.py
-1. Count the color area of the satellite image using OpenCV. The result can be transformed into a time series structured data index for predicting future agricultural prices.
 
 ###### Delete Files or Directory.py
 1. Delete Files or Directory
@@ -1326,21 +1327,15 @@ Updates (August 2021): Added Bio-Techne (TECH)
 ###### FirstRate 30min data ETL.py
 1. FirstRate 30 min data ETL to Delta Lake
 
-###### Get NASA OCO-2 satellite images data.py
-1. Get NASA OCO-2 satellite images data using Python
- 
-###### Get NASA OCO-2 satellite images data.sh
-1. Get NASA OCO-2 satellite images data using Bash Script
-
 ###### Hierarchical Risk Parity Algorithm.py
 ![下載](https://user-images.githubusercontent.com/70860455/186008175-34c2f6f0-8489-4a47-b7a9-7847d1c6016b.png))
 ![下載 (1)](https://user-images.githubusercontent.com/70860455/186008188-260b0348-e764-4983-a502-2bef757948ec.png)) 
 
 ###### K-Mean clustering in Sector Classification using SparkML.py
-1. K-mean Clustering using pyspark.ml on delta format data
+1. Run Clustering using pyspark.ml
 
 ###### K-Mean clustering in Sector Classification using sklearn.py
-1. K-mean Clustering using sklearn on delta format data
+1. Run Clustering using sklearn
 
 ###### List Tables
 1. list all delta lake tables
@@ -1359,7 +1354,10 @@ Updates (August 2021): Added Bio-Techne (TECH)
 ###### VACUUM FirstRate 30min delta tables
 1. VACUUM FirstRate 30min delta lake tables
 
-###### Web Scraping.py
+###### Web Scraping from BreakoutPoint.py
+1. Get the short selling data of short-selling firms from the short selling report data provider:
+   
+###### Web Scraping.py [deprecated]
 1. Get email title subjects from short-selling firms:
    - Blue Orca Capital (https://www.blueorcacapital.com/)
    - Boatman Capital Research (https://theboatmancapital.com/research/)
@@ -1407,8 +1405,3 @@ Updates (August 2021): Added Bio-Techne (TECH)
    2. "Found but no short selling reports posted" means the company may no longer focus on sharing short selling reports on the internet.
    3. "Pending" means the subscription is waiting to be added.
    4. Short-selling research firms that require substack.com subscription usually release their reports during regular trading hours (before EST 13:00) while normal research firms tend to release posts before the market open.
-      
-###### Strategies Research-based:
-1. BSIC "Activist Short-Sellers: Manipulative Profit Seekers or Bearers of Justice?" (https://bsic.it/activist-short-sellers-manipulative-profit-seekers-or-bearers-of-justice/)
-2. "Textual Analysis of Short-seller Research Reports, Stock Prices, and Real Investment" (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3965873)
-
