@@ -1,48 +1,25 @@
 # Databricks notebook source
-import numpy as np
-import pandas as pd
+from pyspark.mllib.stat import Statistics
+from pyspark.sql.functions import *
+import pyspark.pandas as ps
 import matplotlib.pyplot as plt
 
-from pyspark.ml.clustering import KMeans
-from pyspark.ml.evaluation import ClusteringEvaluator
-from pyspark.ml.feature import VectorAssembler
-from pyspark.ml.feature import StandardScaler
+%sql
+Use deltabase
 
-import pyspark.pandas as ps
+%sql
+set spark.databricks.delta.properties.defaults.autoOptimize.optimizeWrite = true;
+set spark.databricks.delta.properties.defaults.autoOptimize.autoCompact = true;
+set spark.sql.cbo.enabled = true;
 
-# COMMAND ----------
-
-data_2005 = spark.sql("SELECT AAPL_adjClose, \
-                         AA_adjClose, \
-                         AAL_adjClose, \
-                         AAP_adjClose, \
-                         A_adjClose, \
-                         ABBV_adjClose, \
-                         ABC_adjClose, \
-                         ABMD_adjClose, \
-                         ABT_adjClose, \
-                         ACN_adjClose, \
-                         ACV_adjClose \
-                   FROM deltabase.aapl_30min_delta \
-     FULL JOIN deltabase.aa_30min_delta ON AAPL_dateTime = AA_dateTime \
-     FULL JOIN deltabase.aal_30min_delta ON AAPL_dateTime = AAL_dateTime \
-     FULL JOIN deltabase.aap_30min_delta ON AAPL_dateTime = AAP_dateTime \
-     FULL JOIN deltabase.a_30min_delta ON AAPL_dateTime = A_dateTime \
-     FULL JOIN deltabase.abbv_30min_delta ON AAPL_dateTime = ABBV_dateTime \
-     FULL JOIN deltabase.abc_30min_delta ON AAPL_dateTime = ABC_dateTime \
-     FULL JOIN deltabase.abmd_30min_delta ON AAPL_dateTime = ABMD_dateTime \
-     FULL JOIN deltabase.abt_30min_delta ON AAPL_dateTime = ABT_dateTime \
-     FULL JOIN deltabase.acn_30min_delta ON AAPL_dateTime = ACN_dateTime \
-     FULL JOIN deltabase.acv_30min_delta ON AAPL_dateTime = ACV_dateTime \
-     WHERE DATE_FORMAT(AAPL_dateTime,'HHmm') between '0930' and '1630' and DATE_FORMAT(AAPL_dateTime,'yyyy-MM-dd') between '2021-01-03' and '2022-12-31'\
-     ORDER BY AAPL_dateTime asc \
-")
-
-display(data_2005)
+# Enable Arrow-based columnar data transfers
+spark.conf.set("spark.sql.execution.arrow.pyspark.enabled", "true")
+#spark.conf.set("spark.sql.execution.arrow.pyspark.fallback.enabled", "true");
+ps.set_option('compute.max_rows', 10000000)
 
 # COMMAND ----------
 
-data_2005 = spark.sql("SELECT AAPL_adjClose, \
+df = spark.sql("SELECT   AAPL_adjClose, \
                          AA_adjClose, \
                          AAL_adjClose, \
                          AAP_adjClose, \
@@ -1346,59 +1323,98 @@ data_2005 = spark.sql("SELECT AAPL_adjClose, \
      FULL JOIN deltabase.zbra_30min_delta ON AAPL_dateTime = ZBRA_dateTime \
      FULL JOIN deltabase.zion_30min_delta ON AAPL_dateTime = ZION_dateTime \
      FULL JOIN deltabase.zts_30min_delta ON AAPL_dateTime = ZTS_dateTime \
-     WHERE DATE_FORMAT(AAPL_dateTime,'HHmm') between '0930' and '1630' and DATE_FORMAT(AAPL_dateTime,'yyyy-MM-dd') between '2005-01-03' and '2005-12-31'\
+     WHERE DATE_FORMAT(AAPL_dateTime,'HHmm') =='1600' and DATE_FORMAT(AAPL_dateTime,'yyyy-MM-dd') between '2005-01-03' and '2022-04-29'\
      ORDER BY AAPL_dateTime asc \
-")
+     ")
 
 # COMMAND ----------
 
-data_2005_dropna = data_2005.dropna()   
+# Spark Kmeans Clustering
 
-#assemble = VectorAssembler(inputCols =["AAPL_adjClose","AA_adjClose","AAL_adjClose","AAP_adjClose","A_adjClose","ABBV_adjClose","ABC_adjClose","ABMD_adjClose","ABT_adjClose","ACN_adjClose","ACV_adjClose"], outputCol = 'features')
+import mlflow
+from pyspark.ml.feature import VectorAssembler
+from pyspark.ml.feature import Normalizer
+from pyspark.ml.feature import Imputer
+from pyspark.ml.feature import PCA
+from pyspark.ml.clustering import KMeans
+from pyspark.ml.clustering import BisectingKMeans
+from pyspark.ml.evaluation import ClusteringEvaluator
+from pyspark.sql import DataFrame
+import pyspark.pandas as ps
+import pandas as pd
+from sklearn.impute import SimpleImputer
+from databricks import feature_store
+from databricks.feature_store import feature_table, FeatureLookup
 
-assemble = VectorAssembler(inputCols =data_2005_dropna.columns, outputCol = 'features')
+# Calculate percent change
+df_ps_pct = df.pandas_api().pct_change().to_spark()
 
-assembled_data = assemble.transform(data_2005_dropna)
+#Create Delta Lake for saving percent changed data.
+df_ps_pct.write.format("delta").mode("overwrite").option("overwriteSchema","True").saveAsTable('sp500_components_pctChanged_delta')
 
-assembled_data.show()
+# Option 1: Drop rows with NaN values
+#df_pd_pct_FilteredNA = df_pd_pct.dropna()
 
-# COMMAND ----------
+# Option 2: Use imputer with NaN values
+imputer = Imputer(strategy = 'mean')
+imputer.setInputCols(df_pd_pct.columns)
 
-scale=StandardScaler(inputCol='features',outputCol='standardized')
+output_col = []
+for col in df_pd_pct.columns:
+    output_col.append("out_" + col)
+print(output_col)
 
-data_scale=scale.fit(assembled_data)
+imputer.setOutputCols(output_col)
 
-data_scale_output=data_scale.transform(assembled_data)
+model = imputer.fit(df_pd_pct)
+df_spark_pct_FilteredNA = model.transform(df_pd_pct)
 
-data_scale_output.show(2)
+#Create Delta Lake for saving imputed percent changed data.
+df_spark_pct_FilteredNA.write.format("delta").mode("overwrite").option("overwriteSchema","True").saveAsTable('sp500_components_imputed_pctChanged_delta')
 
-# COMMAND ----------
+df_spark_pct_FilteredNA.pandas_api().transpose()
 
-silhouette_score=[]
-evaluator = ClusteringEvaluator(predictionCol='prediction', featuresCol='standardized', \
-                                metricName='silhouette', distanceMeasure='squaredEuclidean')
+#Start mlflow
+mlflow.autolog(exclusive=False)
 
-kmean_range = range(7,20)
+with mlflow.start_run() as run:
+    # Define vector assembler
+    #assembler = VectorAssembler(inputCols=df_spark_pct_FilteredNA.columns, outputCol="features")
+    #assembled_df = assembler.transform(df_spark_pct_FilteredNA)
+    assembled_df = VectorAssembler(inputCols=df_spark_pct_FilteredNA.columns, outputCol="features").transform(df_spark_pct_FilteredNA)
 
-for i in kmean_range:
+    # Define normalizer
+    #normalizer = Normalizer(inputCol="features", outputCol="normalized_features")
+    #normalized_df = normalizer.transform(assembled_df)
+    normalized_df = Normalizer(inputCol="features", outputCol="normalized_features").transform(assembled_df)
     
-    KMeans_algo=KMeans(featuresCol='standardized', k=i)
-    
-    KMeans_fit=KMeans_algo.fit(data_scale_output)
-    
-    output=KMeans_fit.transform(data_scale_output)
-    
-    score=evaluator.evaluate(output)
-    
-    silhouette_score.append(score)
-    
-    print("Silhouette Score:",score)
+    # Visualize the results
+    pca = PCA(k=2, inputCol="normalized_features", outputCol="reduced_features")
+    #model = pca.fit(normalized_df)
+    #reduced_data = model.transform(normalized_df).select("reduced_features")
+    reduced_data = pca.fit(normalized_df).transform(normalized_df).select("reduced_features")
 
-# COMMAND ----------
+    # Run K-means on reduced data
+    kmeans = BisectingKMeans(k=11, featuresCol="reduced_features")
+    model = kmeans.fit(reduced_data)
+    prediction = model.transform(reduced_data)
+    labels = prediction.select("prediction")
 
-#Visualizing the silhouette scores in a plot
+    # Evaluate clustering by computing Silhouette score
+    evaluator = ClusteringEvaluator(predictionCol='prediction',featuresCol="reduced_features")
+    silhouette = evaluator.evaluate(prediction)
+    print("Silhouette with squared euclidean distance = " + str(silhouette))
 
-fig, ax = plt.subplots(1,1, figsize =(8,6))
-ax.plot(kmean_range,silhouette_score)
-ax.set_xlabel('k')
-ax.set_ylabel('cost')
+    centers = model.clusterCenters()
+    print("Cluster Centers: ")
+    for center in centers:
+        print(center)
+
+    # create DataFrame aligning labels & companies
+    df_result = pd.DataFrame({'labels': labels.collect(), 'companies': df_pd_pct.columns})
+    df_result= spark.createDataFrame(df_result)
+
+    # Display df sorted by cluster labels
+    display(df_result.orderBy("labels"))
+
+df_result.write.format("delta").mode("overwrite").option("overwriteSchema","True").saveAsTable('sp500_components_features')
