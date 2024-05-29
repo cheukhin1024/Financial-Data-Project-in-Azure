@@ -10,7 +10,7 @@
 6. Quickstarts: How to access the data?
    - Access Azure Blob Storage
    - Access data through Azure Databricks Delta Sharing [Upcoming]
-   - Access data through Wincp (https://winscp.net/eng/index.php)
+   - Access data through Wincp (https://winscp.net/eng/index.php) [Not provided anymore due to high usage cost]
 7. Data Governance Policy
 8. Databricks Delta Lake Data Structure
     - S&P500 component stocks & SPX Index
@@ -20,39 +20,37 @@
     - Short-selling research firms data
 10. Azure Databricks Runtime & Libraries
 11. Files Explanations
+    - Backtest Short Selling.py
     - Bloomberg Speech to Text.py
     - Check Empty File.py
     - Count the number of files in directory.py
-    - Count satellite image color area.py
     - Delete Files or Directory.py
     - Extract FirstRate Stock Tickers Issue Date & Delisted Date.py
     - Financial Data Engineering.py
     - FirstRate 1min data ETL.py
     - FirstRate 30min data ETL.py
-    - Get NASA OCO-2 satellite images data.py
-    - Get NASA OCO-2 satellite images data.sh
     - Hierarchical Risk Parity Algorithm.py
-    - K-Mean clustering in Sector Classification using SparkML.py
+    - IB Trading.py
     - K-Mean clustering in Sector Classification using sklearn.py
+    - K-Mean clustering in Sector Classification using SparkML.py
     - List Tables
     - Pair Trading.py
     - Stream IEX Market Data.py
     - User Defined Functions.py 
     - VACUUM FirstRate 30min delta tables
+    - Web Scraping from BreakoutPoint
     - Web Scraping.py
 
 ## Description
 1. Provide over 2 billion historical S&P 500 constituents with high-frequency data rows (no survivorship
-bias) to different users in Databricks Delta Lake. Data can be back to 2004.
+bias) to different users in Databricks Delta Lake. Data can be back to 2005/01/03.
 2. Increased query performance by at least 1000% compared to a traditional database.
 3. Introduce a better data-driven sector classification than the traditional S&P GICS sector classification.
-4. Provide alternative data
-5. Stream all IEX real-time market data for the last trade updates.
-6. Create end-to-end DevOps CI/CD data pipelines.
-7. Introduce financial portfolio optimization methods (such as the hierarchical risk parity algorithm
+4. Stream real-time market data for the last trade updates.
+5. Introduce financial portfolio optimization methods (such as the hierarchical risk parity algorithm
 developed by Marcos Lopez de Prado (PhD)).
-8. Boruta SHAP Feature importance
-9. Web scraping 
+6. Web scraping short selling data report release signals.
+7. Create a Short Selling strategyby using ib_insync API and web scraping. Idea: Short sell the target stock if a new short selling report of the target is released.
 
 ## System Design
 ![system design drawio](https://user-images.githubusercontent.com/70860455/199191296-d5d06a08-c074-46f0-a6ce-d15571aea13a.png)
