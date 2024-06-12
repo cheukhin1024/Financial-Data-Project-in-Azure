@@ -30,15 +30,16 @@
     - FirstRate 1min data ETL.py
     - FirstRate 30min data ETL.py
     - Hierarchical Risk Parity Algorithm.py
-    - IB Trading.py
     - K-Mean clustering in Sector Classification using sklearn.py
     - K-Mean clustering in Sector Classification using SparkML.py
     - List Tables
     - Pair Trading.py
+    - Short Selling IB Trading.py
     - Stream IEX Market Data.py
+    - US Sector Rotational IB Trading.py
     - User Defined Functions.py 
     - VACUUM FirstRate 30min delta tables
-    - Web Scraping from BreakoutPoint
+    - Web Scraping from BreakoutPoint.py
     - Web Scraping.py
 
 ## Description
@@ -50,7 +51,7 @@ bias) to different users in Databricks Delta Lake. Data can be back to 2005/01/0
 5. Introduce financial portfolio optimization methods (such as the hierarchical risk parity algorithm
 developed by Marcos Lopez de Prado (PhD)).
 6. Web scraping short selling data report release signals.
-7. Create a Short Selling strategyby using ib_insync API and web scraping. Idea: Short sell the target stock if a new short selling report of the target is released.
+7. Create a Short Selling strategy by using ib_insync API and web scraping. Idea: Short sell the target stock if a new short selling report of the target is released.
 
 
 ## System Design
