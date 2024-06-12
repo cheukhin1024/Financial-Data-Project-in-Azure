@@ -1292,7 +1292,6 @@ Updates (August 2021): Added Bio-Techne (TECH)
 ## Files Explanations:
 ###### Backtest Short Selling.py 
 1. Collect data (e.g. target security, release date) from the short selling data provider.
-2. Use ib_insync to short sell the target stock if a new short selling report of the target is released.
 
 The short selling strategy idea comes from the following papers:
 - BSIC "Activist Short-Sellers: Manipulative Profit Seekers or Bearers of Justice?" (https://bsic.it/activist-short-sellers-manipulative-profit-seekers-or-bearers-of-justice/)
@@ -1343,9 +1342,15 @@ The short selling strategy idea comes from the following papers:
 ###### Pair Trading.py
 1. Pair Trading using cointegration, statmodels...
 
+###### Short Selling IB Trading.py
+1. Use ib_insync to short sell the target stock if a new short selling report of the target is released.
+    
 ###### Stream IEX Market Data.py
 1. Stream IEX market data for all S&P500 constituents last trade updates and SPY S&P500 last trade update.
 
+###### US Sector Rotational IB Trading.py
+1. Find the best target ETF and then use ib_insync to buy the target ETF if the target ETF drops below certain threshold near the market close.
+   
 ###### User Defined Functions.py 
 1. Monte Carlo Simulation in Apache Spark Distributed System.
 2. Shapley Additive Explanations (SHAP) for small datasets.
