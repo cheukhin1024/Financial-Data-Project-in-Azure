@@ -21,6 +21,7 @@
 10. Azure Databricks Runtime & Libraries
 11. Files Explanations
     - Backtest Short Selling.py
+    - Backtest US Sector Rotational Strategy.py
     - Bloomberg Speech to Text.py
     - Check Empty File.py
     - Count the number of files in directory.py
@@ -51,7 +52,7 @@ bias) to different users in Databricks Delta Lake. Data can be back to 2005/01/0
 5. Introduce financial portfolio optimization methods (such as the hierarchical risk parity algorithm
 developed by Marcos Lopez de Prado (PhD)).
 6. Web scraping short selling data report release signals.
-7. Create a Short Selling strategy by using ib_insync API and web scraping. Idea: Short sell the target stock if a new short selling report of the target is released.
+7. Create a Short Selling strategy by using ib_insync API and web scraping.
 
 
 ## System Design
@@ -1293,11 +1294,16 @@ Updates (August 2021): Added Bio-Techne (TECH)
 ## Files Explanations:
 ###### Backtest Short Selling.py 
 1. Collect data (e.g. target security, release date) from the short selling data provider.
+2. Backtest the idea: Short sell the target stock if a new short selling report of the target is released.
 
 The short selling strategy idea comes from the following papers:
 - BSIC "Activist Short-Sellers: Manipulative Profit Seekers or Bearers of Justice?" (https://bsic.it/activist-short-sellers-manipulative-profit-seekers-or-bearers-of-justice/)
 - "Textual Analysis of Short-seller Research Reports, Stock Prices, and Real Investment" (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3965873)
 
+###### Backtest US Sector Rotational Strategy.py
+1. Collect data (e.g. target security, release date) from the short selling data provider.
+2. Backtest 11 US Sector ETFs Rotational Trading Idea.
+         
 ###### Bloomberg Speech to Text.py 
 1. Convert Bloomberg TV speech to text data using Azure Cognitive Services.
 
